@@ -1,0 +1,60 @@
+---
+layout: post
+title: Problems on Riemann Integration
+tags: [Integration]
+---
+
+**Question 1:** Define $f:[0,1] \rightarrow [0,1]$ by $f(x)= \frac{2^k-1}{2^k}$ for $x \in \left[\frac{2^{k-1}-1}{2^{k-1}}, \frac{2^k-1}{2^k} \right] $, $k \geq 1$, Then $f$ is a Riemann-integrable function such that
+
+1. $\int_0^1 f(x) dx=\frac{2}{3}$
+2. $\frac{1}{2}<\int_0^1 f(x) dx< \frac{2}{3}$
+3. $\int_0^1 f(x) dx=1$
+4. $\frac{2}{3}<\int_0^1 f(x) dx<1$
+
+**Answer:** Riemann integration is the area under the curve, hence 
+\begin{align*}\require{cancel}\int_0^1 f(x) dx&=\sum_{k=1}^{\infty}\left [\frac{2^k-1}{2^k}-\frac{2^{k-1}-1}{2^{k-1}} \right ]\frac{2^k-1}{2^k} \cr
+&=\sum_{k=1}^{\infty}\left [\cancel{2^k}-1-2(\cancel{2^{k-1}}-1 )\right]\frac{2^k-1}{2^{2k}} \cr
+&=\sum_{k=1}^{\infty}\frac{2^k-1}{2^{2k}} \cr
+&=\sum_{k=1}^{\infty}\left [\frac{1}{2^{k}}-\frac{1}{2^{2k}}\right ] =\sum_{k=1}^{\infty}\left [\frac{1}{2^{k}}-\frac{1}{4^{k}}\right ]\cr 
+&= \frac{1}{2}\frac{1}{1-\frac{1}{2}}-\frac{1}{4}\frac{1}{1-\frac{1}{4}}\cr
+&=1-\frac{1}{3}=2/3.
+\end{align*} 
+
+Hence **1** is correct choice.
+
+--------
+**Question 2:** Let $f,g$ and $h$ be bounded function on the closed interval $[a,b]$, such that $f(x) \leq g(x) \leq h(x)$ for all $x\in [a,b]$. Let $P= \{ a=a_0 <a_1 <a_2< \cdots  <a_n=b \}$ be a partition of $[a,b]$. We denote by $U(f,P)$ and $L(f,P)$, the upper and lower Riemann sums of $f$ with respect to the partition and similarly for $g$ and $h$. Which of the following statements is necessarily true?
+
+1. If $U(h,P)-U(f,P)<1$ then $U(g,P)-L(g,P)<1$
+2. If $L(h,P)-L(f,P)<1$ then $U(g,P)-L(g,P)<1$
+3. If $U(h,P)-L(f,P)<1$ then $U(g,P)-L(g,P)<1$
+4. If $L(h,P)-U(f,P)<1$ then $U(g,P)-L(g,P)<1$
+
+**Answer:** Given that $f,g$ and $h$ be bounded function on the closed interval $[a,b]$, such that $f(x) \leq g(x) \leq h(x)$ for all $x\in [a,b]$ and $P$ is any partition of $[a,b]$, then 
+\begin{align} L(f,P)\leq L(g,P) \leq L(h,P) \cr 
+U(f,P)\leq U(g,P) \leq U(h,P)
+ \end{align}
+Clearly $U(h,P)$ has highest and $L(f,P)$ has lowest value in the given equation, all other lies between these tow. Hence If $U(h,P)-L(f,P)<1$ then $U(g,P)-L(g,P)<1$.
+
+Hence **3** is correct choice.
+
+-------
+**Question 3:** Let $f$ be a continuously differentiable real-valued function on $[a,b]$, such that $f'(x)<K$ for all $x\in [a,b]$. For a partition $P= \{ a=a_0 <a_1 <a_2< \cdots  <a_n=b \}$, let $U(f,P)$ and $L(f,P)$ denote the upper and lower Riemann sums of $f$ with respect to the $P$. Then
+
+1. If $|L(f,P)| \leq K(b-a) \leq |U(f,p)|$ then If $U(g,P)-L(g,P)<1$
+2. If $U(f,P)-L(f,P) \leq K(b-a) $
+3. If $U(f,P)-L(f,P) \leq K ||P|| $, where $||P||=\max_{0 \leq i \leq n-1} (a_{i+1}-a_i)$ is the norm of the partition.
+4. $U(f,P)-L(f,P) \leq K||P||(b-a) $
+
+**Answer:** Let in each $i-th$ interval of partition $m_i$ be the minimum and $M_i$ be the maximum value of $f$ $i.e.$,  
+\begin{align}m_i &= \inf \, \{f(x): x\in [a_{i-1}, a_i]\} \cr 
+M_i &= \sup \{f(x): x\in \,[a_{i-1}, a_i]\}
+\end{align} 
+Then 
+$$U(f,P)-L(f,P)= \sum_{i = 1}^n (M_i -m_i)(a_i-a_{i-1})\tag{*}$$
+Consider the $i-th$ interval $[a_{i-1}, a_i]$. Since this interval is compact the maximum and minimum value is attained in some point of interval. Let $x_{*}, x^{*} \in [a_{i-1}, a_i]$ such that $f(x_{*})=m_i$ and $f(x^{*})=M_i$, by mean value theorem we have 
+$$M_i - m_i= f(x^{*})-f(x_{*}) \leq K(x^{*}-x_{*}) \leq K\Vert P \Vert $$
+Using this inequity in $(*)$ we get, 
+\begin{align}U(f,P)-L(f,P) &= \sum_{i = 1}^n K\Vert P \Vert(a_i-a_{i-1}) \cr &\leq  K\Vert P \Vert \sum_{i = 1}^n (a_i-a_{i-1}) \cr &= K||P||(b-a) \end{align}
+
+Hence **4** is correct choice. 

@@ -1,0 +1,47 @@
+---
+layout: post
+title: Qualitative Treatment of Autonomous ODE
+tags: [ODE]
+---
+
+A differential equation is called **autonomous** if it has no independent term. Hence a first order general ode will look like
+$$\dfrac{dy}{dt} = f(y) \phantom{csir net}\text{  [Independent of $t$]}.$$
+
+**Qualitative Treatment of Autonomous ODE**
+**STEP I:** Find the critical points $y_0$(solution of $f(y)=0$). These are horizontal solution of the given ode.
+![horizontal solution of ODE](https://googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/Horizontal%20solution%20of%20ODE.png)
+Since two solutions(called integral curve) can't intersect, hence other solution will be in the region bounded by these horizontal solution.
+**STEP II:** As we have partition the space with horizontal solution, now identify the region with $f(y)>0$ and $f(y)<0$.
+![regions of ode](https://googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/region%20of%20ODE.png)
+As we know that 
+\begin{align*}
+\left [\dfrac{dy}{dt} = f(y) \right ]
+\begin{matrix} >0 &\Rightarrow y(t)\text{ is increasing}\\
+<0 &\Rightarrow y(t)\text{ is decreasing}
+\end{matrix}
+\end{align*}
+Hence the solution will look like
+![plot of solution of autonomous ode](https://googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/plot%20of%20solution%20of%20autonomous%20ODE.png)
+
+---
+Now we will apply these concept to a question of CSIR-NET.
+
+
+**Question:** Let $y:\mathbb{R} \rightarrow \mathbb{R}$ satisfy the initial value problem 
+$$y'(t)=1-y^2,t\in \mathbb{R},~y(0)=0.$$ Then 
+
+
+1. $y(t_1)=1$ for some $t\in R$. 
+2. $y(t)>-1$ for all $t\in R$.
+3. $y$ is strictly increasing in $\mathbb{R}$. 
+4. $y$ is increasing in $(0, 1)$ and decreasing in $(1,\infty)$. 
+
+**Answer:** Here $f(y)=1-y^2=(1-y)(1+y)$, so $y=\pm 1$ are two horizontal solution of the given ode
+\begin{matrix}
+\text{Region 1}&y > 1 & f(y) < 0 & y(t) \text{ is decreasing}\\
+\text{Region 2}&-1>y>1 & f(y) > 0 &y(t) \text{ is increasing}\\
+\text{Region 3}&y <-1 & f(y) < 0 & y(t) \text{ is decreasing}\\
+\end{matrix}
+The required integral curve will pass through $(0,0)$, which lies in region 2, so the solution is increasing and bounded by $y \in (-1,1)$. Here 2nd and 4th option are correct.
+
+Hence **2 and 4** are correct choices.

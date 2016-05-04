@@ -1,0 +1,71 @@
+---
+layout: post
+title: Problems on Euler's Theorem
+tags: [Euler-Phi Function, Modular Arithmetic]
+---
+
+**Question 1:** The number of elements in the set $\{m:1\leq m \leq 1000, m \text{ and } 1000 \text{ are relatively prime} \}$ is
+
+$1.~100 \quad 2.~250 \quad 3.~300 \quad 4.~400 $
+
+**Answer:** The question asks for $\phi(1000)$.
+> And $\phi(n)$ can be calculated using following formula.
+>  1. $\phi(p_1^{m_1}p_2^{m_2} \cdots p_r^{m_r}) = \phi(p_1^{m_1})\phi(p_2^{m_2}) \cdots \phi(p_r^{m_r})$.
+>  2. $\phi(p^m) = \begin{cases}2^{m-1} &\text{ if } p= 2 \\ p^m - p^{m-1} &\text{ if } p \neq 2\end{cases} $
+
+> Or equivalently, it can be calculated by a single formula as follows
+> $$\phi(n) = n \prod_{p|n}\left(1-\frac{1}{p} \right)$$
+
+$\phi(1000)=\phi(2^3)\cdot \phi(5^3) = 2^2(5^3-5^2)=400$.
+
+Hence **4** is correct choice.
+
+****
+**Question 2:** The last two digit of $7^{81}$ are
+
+$1.~07 \quad 2.~17 \quad3.~37 \quad4.~47$
+
+**Answer:** In this problem we have to use Euler's Theorem
+> If $(a, n ) = 1$, then $a^{\phi(n)}$ = $1$ mod $n$.
+
+Here, $7$ and $100$ are relatively primes,
+\begin{align}\phi(100) &= \phi(2^2\cdot 5^2)\\& = \phi(2^2)\phi(5^2) \\ &=2\cdot(5^2-5)\\&=40.\end{align}
+Thus $7^{40} = 1 \Rightarrow 7^{1+2\cdot 40} = 7$.
+
+Hence **1** is correct option.
+
+****
+**Question 3:** If $n$ is a positive integer such that the sum of all positive integers $a$ satisfy $1 \leq a \leq n$ and $\gcd(a,n) = 1$ is equal to $240n$, then the number of summands, namely, $\phi(n)$ is
+
+$1.~120 \quad 2.~124 \quad 3.~240 \quad 4.~480$
+
+**Answer:** The solution depends on the fact that relative prime number exist in pair.
+
+> Note that $(k,n) = (n-k,n)$. Hence $(k,n) =(n-k,n)=1$, $i.e.$, $k$ and $n-k$ are relatively prime together and their sum is equal to $n$. Hence, $$\sum_{\{1\leq a \leq n \text{ and } (a,n)=1\}}a = \frac{\phi(n)}{2} \times n.$$
+
+Here,
+ $$\frac{\phi(n)}{2} \times n = 240\times n \Rightarrow \boxed{\phi(n) = 480 }. $$
+
+Hence **4** is correct choice.
+
+*****
+**Question 4:** For a positive integer $m$, let $\phi(m)$ denote the number of integers $k$ such that $1 \leq k \leq m$ and $\gcd(k,m)=1$. Then which of the following statements are necessarily true?
+
+1. $\phi(n)$ divides $n$ for every positive integer $n$.
+2. $n$ divides $\phi(a^n-1)$ for all positive integers $a$ and $n$.
+3. $n$ divides $\phi(a^n-1)$ for all positive integers $a$ and $n$ such that $\gcd(a,n)=1$
+4. $a$ divides $\phi(a^n-1)$ for all positive integers $a$ and $n$ such that $\gcd(a,n)=1$
+
+**Answer:** More than one choices can be true so we have to analyze each option separately.
+
+**Option 1:** For any prime number $p$ we know that $\phi(p)=p-1 \nmid p$, hence false.
+
+**Option 2 and 3:** For any positive integer $a, n$ we have
+$$a^n - 1 = 0 \Rightarrow a^n = 1 \quad [\text{ mod } (a^n - 1)]$$
+Also, note that $(a, a^n-1) = 1$, Using Euler's theorem
+$$a^{\phi(a^n - 1)} = 1 \quad [\text{ mod } (a^n - 1)]$$
+Hence $n | \phi(a^n - 1)$ without any restriction on $a$ and $b$ regarding gcd.
+
+**Option 4:** Take $n = 1$ then $(a,1)=1$. Here $a$ can't divide $\phi(a - 1)<(a-1)$, hence false.
+
+Hence **2 and 3** are correct options.

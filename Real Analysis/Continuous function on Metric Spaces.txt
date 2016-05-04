@@ -1,0 +1,106 @@
+---
+layout: post
+title: Continuous function on Metric Spaces
+tags: [Metric Space, Continuity]
+---
+
+**Question 1:** For a continuous function $f: \mathbb{R} \rightarrow \mathbb{R}$, let $Z(f) = \left \{x \in \mathbb{R}: f(x) = 0 \right \}$. Then $Z(f)$ is always
+
+ 1. compact   
+ 2. open   
+ 3. connected    
+ 4. closed 
+
+**Answer** This is basic property of continuous function used as definition of continuity in topological spaces.
+> - $f:X \rightarrow Y$ is continuous if for open set $U$ in $Y$, it's inverse image $f^{-1}(U)$ is open in $X$.
+> 
+> **Note:** Since complement of open set is closed this property holds for closed set. 
+
+Here $f$ is continuous and $Z(f)=f^{-1}(0)$, since $\{0\}$ is closed in $\mathbb{R}$ it's preimage will be closed in $\mathbb{R}$ Hence $Z(f)=f^{-1}(0)$ is closed.
+
+Hence **4** is correct choice. 
+
+****
+**Question 2:** Let $E$ be a subset of $\mathbb{R}$. Then the characteristic function $ \chi_E : \mathbb{R} \rightarrow \mathbb{R}$ is continuous if and only if 
+
+1. $E$ is closed 
+2. $E$ is open 
+3. $E$ is both open and closed 
+4. $E$ is neither open nor closed 
+
+**Answer:** Characteristic function is defined as follows 
+$$f(x)=\begin{cases}1 & x \in E \\ 0 & x \in \mathbb{R}\setminus E \end{cases}$$
+
+Hence $E=f^{-1}(1) \Rightarrow E$ is closed.
+Also $\mathbb{R}\setminus E =f^{-1}(0) \Rightarrow \mathbb{R}\setminus E$ is closed $\Rightarrow E$ is open.
+
+Hence **3** is correct choice.
+
+*****
+**Question 3:** In which of the following cases, there is no continuous function $f$ form the set $S$ onto the set $T$?
+
+1. $S=[0,1],T=\mathbb{R}$
+2. $S=(0,1),T=\mathbb{R}$
+3. $S=[0,1],T=(0,1]$
+4. $S=\mathbb{R},T=(0,1)$
+
+**Answer:** Continuous function preserve topological properties like compactness and connectedness. $i.e.$,
+> For a continuous function $f: X \rightarrow Y$ Let $K$ is subset of $X$, then 
+> 
+>  - $K$ is compact $\Rightarrow$ $f(K)$ is compact. 
+>  - $K$ is connected $\Rightarrow$ $f(K)$ is connected.
+
+Here all the sets are connected so we need to use compactness only. $[0,1]$ is compact but $\mathbb{R}$ and $(0,1]$ is not compact by Heine-Borel Theorem. Hence mapping in option 1 and 3 is not possible.
+
+For option 2 and 4, there exist continuous bijection between open interval $(0,1)$ and real number[Continuous bijection usually called *Homeomorphism*] as follows
+![csir-net-math](http://i.stack.imgur.com/aFj2d.png)
+
+Hence **1 and 3** are correct choice. 
+
+****
+**Question 4:** If $f:[0,1] \rightarrow (0,1)$ is continuous mapping then which of the following is NOT true?
+
+1. $F \subset [0,1]$ is a closed set implies $f(F)$ is closed in $\mathbb{R}$
+2. $f(0)<f(1)$ then $f([0,1])$ must be equal to $[f(0),f(1)]$
+3. There must exist $x \in (0,1)$ such that $f(x)=x$
+4. $f([0,1]) \neq (0,1)$
+
+**Answer:** Checking each option one by one,
+**Option 1:** $F \subset [0,1]$ is any closed then it will be also compact. Since $f$ is compact hence $f(F)$ will also compact, hence closed in $\mathbb{R}$. This option is true. 
+
+**Option 2:** Consider $f(x)= \frac{1}{2}\sin 2\pi x$, then $f(0)=f(1)=0$ but $[f(0),f(1)] \neq \{0\}$. This is false.
+
+**Option 3:** Let $g(x)=f(x)-x$, then $g(0)=f(0)-0 \geq 0$ and $g(1)=f(1)-1 \leq 0$. Hence by intermediate value theorem we have at least one $c \in [0,1]$ such that $g(c)=f(c)-c =0 \Rightarrow f(c)=c$. Hence this is true.
+
+**Option 4:** $[0,1]$ is compact so it's image under continuous function should be compact, but $(0,1)$ is not compact. Hence true.
+
+Hence **2** is correct choice.
+
+<!--
+**Question:** Let $X$ be a metric space and $f:X \rightarrow \mathbb{R}$ be a continuous function. Let $G = \{(x, f(x)):x \in X \} $ be the graph of $f$. Then 
+
+1. $G$ is homeomorphic to $X$  
+2. $G$ is homeomorphic to $\mathbb{R}$  
+3. $G$ is homeomorphic to $X \times \mathbb{R}$  
+4. $G$ is homeomorphic to $\mathbb{R} \times X$
+ 
+**Answer:** 
+ 
+
+------
+**Question:** Let $f:X \rightarrow Y$ be a function from a metric space $X$ to another metric space $Y$. For any Cauchy sequence $\{x_n\}$ in $X$, 
+
+1. If $f$ is continuous then $\{f(x_n)\}$ is a Cauchy sequence in $Y$.
+2. If $\{f(x_n)\}$ is a Cauchy then $\{f(x_n)\}$  is always convergent in  $Y$.
+3. If $\{f(x_n)\}$ is a Cauchy  in $Y$ then $f$ is continuous.
+4. $\{x_n\}$ is always convergent in $X$.
+
+------
+**Question:** Let $A$ be a subset of $\mathbb{R}$. Which of the following properties imply that $A$ is compact?
+
+1. Every continuous function $f$ from $A$ has a convergent subsequence conveging to a point in $A$ 
+2. Every sequence $\{x_n\} $ in $A$ has a convergent subsequence to a point in $A$ 
+3. There exist a continuous function from $A$ onto $[0,1]$
+4. There is no one-one and continuous function from $A$ onto $(0,1)$
+
+-->

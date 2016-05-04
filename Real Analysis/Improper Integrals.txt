@@ -1,0 +1,29 @@
+---
+layout: post
+title: Problems on Improper Integrals 
+tags: [Integration]
+---
+
+**Question 1:** Let $\alpha, p$ be real numbers and $\alpha > 1$ 
+
+1. If $p > 1$ then $\int_{-\infty}^{\infty} \frac{1}{|x|^{p \alpha}} dx < \infty $ 
+2. If $p > \frac{1}{\alpha} $ then $\int_{-\infty}^{\infty} \frac{1}{|x|^{p \alpha}} dx < \infty $ 
+3. If $p < \frac{1}{\alpha} $ then $\int_{-\infty}^{\infty} \frac{1}{|x|^{p \alpha}} dx < \infty $ 
+4. For any  $p \in \mathbb{R} $ we have  $\int_{-\infty}^{\infty} \frac{1}{|x|^{p \alpha}} dx < \infty $ 
+
+**Answer:** Let $f(x) = \frac{1}{|x|^{p \alpha}}$, then $f$ is even function, hence integral can reduce to 
+\begin{align}\int_{-\infty}^{\infty} \frac{1}{|x|^{p \alpha}} dx &= 2\int_{0}^{\infty} \frac{1}{x^{p \alpha}} dx \end{align}
+
+The integral in right side will always diverge.
+
+------
+**Question 2:** Let $\lambda > 0 $ and $F(x) = 1-e^{\lambda x}$ for $x>0$. Then for $t>0$, $\int_0^{\infty} e^{-tx} dF(x)$ equals
+
+$1.~\lambda/(\lambda + t)\quad 2.~\lambda/(\lambda -  t) \quad 3.~0 \quad 4.~\infty$
+
+**Answer:** $F(x) = 1-e^{\lambda x}\Rightarrow dF(x) = -\lambda e^{\lambda x} dx$. 
+Now the integral can be written as 
+\begin{align}\int_0^{\infty} e^{-tx} dF(x)&=\int_0^{\infty} e^{-tx}(-\lambda e^{\lambda x} dx) \cr &=-\lambda\int_0^{\infty} e^{(\lambda-t)x}dx \cr &= -\frac{\lambda}{\lambda-t}\left [  e^{(\lambda-t)x}\right ]_0^{\infty}\cr &= -\frac{\lambda}{\lambda-t}[0-1] &(\text{ Assuming, } \lambda-t <0 )\cr 
+& = \phantom{-}\frac{\lambda}{\lambda-t}\end{align}
+
+Hence **2** is correct choice.

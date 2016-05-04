@@ -1,0 +1,145 @@
+---
+layout: post
+title: Problems on Differentiability
+tags: [Differentiation]
+---
+
+**Question 1:** The function 
+$$f(x)=a_0+a_1\mid x \mid + a_2\mid x \mid^2 +a_3\mid x \mid^3$$ is differentiable
+
+1. for no values of $a_0,a_1,a_2,a_3$
+2. for any values of $a_0,a_1,a_2,a_3$
+3. only for $a_1=0$
+4. only if both $a_1=0$ and $a_3=0$.  
+
+**Answer:** Here,
+> $\vert x \vert^n $ is differentiable everywhere for all $n\geq 2$. When $n = 1$, it is not differentiable at $x = 0$.
+
+To make this function differentiable everywhere $\vert x \vert$ should vanish, hence $a_1 = 0$.
+
+Hence **3** is correct choice.
+
+*****
+**Question 2:** Consider the function $f(x)=| \cos x |+|\sin(2-x)|$. At which of the following points is $f$ not differentiable?
+
+1. $\{(2n+1)\frac{ \pi}{2}:n \in \mathbb{Z}\}$
+2. $\{n \pi:n \in \mathbb{Z}\}$
+3. $\{n \pi+2:n \in \mathbb{Z}\}$
+4. $\{\frac{ n \pi}{2}:n \in \mathbb{Z}\}$
+
+**Answer:** Function involves $\sin x $ and $\cos x$,
+> $\vert \sin x \vert $ and $\vert \cos x \vert $ are not differentiable where it's value is zero.
+
+Then given function is not differentialbe where 
+\begin{align*}&\cos x = 0 && \text{ or } &&  \sin(2-x)=0 \cr 
+\Rightarrow &x= (2n+1)\frac{\pi}{2}  && \text{ or } && 2-x= n \pi \cr 
+\Rightarrow &x= (2n+1)\frac{\pi}{2}  && \text{ or } && x= 2-n \pi =2+n\pi(\text{ as }n\in \mathbb{Z})\cr 
+\end{align*}
+
+Hence **1 and 3** are correct choices. 
+
+********
+**Question 3:** Consider the function 
+$$f(x)= \cos(|x-5|)+\sin(|x-3|)+|x+10|^3 - (|x|+4)^2.$$
+At which of the points is $f$ not differentiable?
+
+$1.~x=5 \quad 2.~x=3 \quad 3.~x=-10 \quad 4.~x=0$
+
+**Answer:** The given function is equal to 
+$$f(x)= \cos(|x-5|)+\sin(|x-3|)+|x+10|^3 - |x|^2 -8|x|-16$$
+Hence the function is not differentiable at $x=0$ due to $|x|$.
+
+> **Claim:** $\sin |x|$ is not differentiable at $x = 0$.
+> *Proof:* For differentiablility we have to check at $x=0$ by first principle,
+$$h'(0)=\lim_{k\to 0}\frac{\sin |k| -1}{k}=\text{ Does not Exists}$$
+Hence $\sin |x|$ is not differentiable at $x = 0$.
+
+The given function is not differentiable at $x=3$.
+
+> **Claim:** $\cos |x|$ is differentiable at $x = 0$.
+> *Proof:* For differentiablility we have to check at $x=0$ by first principle,
+$$h'(0)=\lim_{k\to 0}\frac{\cos |k| -1}{k}=0$$
+Hence $\cos |x|$ is differentiable every where.
+
+Hence **2 and 4** are correct choice.
+
+*****
+**Question 4:** Let $I=\{1\} \cup \{2\} \subset \mathbb{R}$. For $x \in \mathbb{R}$, let $\phi(x)=\text{dist }(x,I)=\inf \{|x-y|:y \in I\}$. Then
+
+1. $\phi$ is discontinuous on $\mathbb{R}$ but not differentiable only at $x=1$.
+2. $\phi$ is continuous on $\mathbb{R}$ but not differentiable only at $x=1$.
+3. $\phi$ is continuous on $\mathbb{R}$ but not differentiable only at $x=1$ and $x=2$.
+4. $\phi$ is continuous on $\mathbb{R}$ but not differentiable only at $x=1,3/2$ and $2$.  
+
+**Answer:** The graph of this function look like,
+
+![csir-net-math](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/function.png)
+
+Clearly function is not differentiable at $x = 1, 3/2,2$.
+
+Hence **4** is correct choice.
+
+******
+**Question 5:** Let $I=[0,1] \subset \mathbb{R}$. For $x \in \mathbb{R}$, let $\phi(x)=\text{dist }(x,I)=\inf \{|x-y|:y \in I\}$. Then
+
+1. $\phi(x)$ is discontinuous somewhere in $\mathbb{R}$.
+2. $\phi(x)$ is continuous on $\mathbb{R}$ but not continuously differentiable exactly at $x=0$.
+3. $\phi(x)$ is continuous on $\mathbb{R}$ but not continuously differentiable exactly at $x=0$ and $x=1$.
+4. $\phi(x)$ is differentiable on $\mathbb{R}$.  
+
+**Answer:** The graph of this function look like,
+
+![csir-net-math](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/function1.png)
+
+Clearly function is not differentiable at $x = 0,1$.
+
+Hence **3** is correct choice.
+
+-------
+**Question 6:** Let $F=\left \{f:\mathbb{R} \rightarrow \mathbb{R}: \vert f(x)-f(y)\vert \leq K\vert x-y \vert^{\alpha} \right \}$ for all $x,y \in \mathbb{R}$ and for some $\alpha >0$ and $K >0$. Which of the following is/are true?
+
+1. every $f \in F$ is continuous
+2. every $f \in F$ is uniformly continuous
+3. every differentiable function $f$ is in $F$ 
+4. every $f \in F$ is differentiable
+
+**Note:** One choice is missing. 
+**Answer:** This more general form of Lipschitz condition called [Holder condition](http://en.wikipedia.org/wiki/H%C3%B6lder_condition). Checking each option one by one,
+
+**Option 1:** Given function satisfy, for all $x,y$ 
+$$\lim_{x \rightarrow y}\vert f(x)-f(y)\vert \leq \lim_{x \rightarrow y} K\vert x-y \vert^{\alpha} =0$$
+Hence, $f$ is continuous for all $y \in \mathbb{R}$
+
+**Option 2:** For all $\epsilon > 0$ choose $\delta = \frac{\epsilon^{1}/\alpha}{K}$, then 
+$$|x-y|\leq \delta \Rightarrow \vert f(x)-f(y)\vert \leq \epsilon$$
+Hence, $f$ is uniformly continuous.
+
+**Option 3:** Consider $f(x)=x^2$ and $f \in F$, then there exist $\alpha , K$ such that for all $x, y $ \begin{align*}\vert x^2-y^2\vert &\leq K\vert x-y \vert^{\alpha}\cr 
+\vert x-y\vert \vert x+y\vert &\leq K\vert x-y \vert^{\alpha}\cr 
+\vert x+y\vert &\leq K\vert x-y \vert^{\alpha-1}
+\end{align*}
+Take $x = K+1, y = K$, then we have $2K+1 \leq K$. Which is not possible $\Rightarrow f \notin F$.
+
+**Option 4:** Note $g(x)=|x|$, then we know by triangle inequaliy,
+$$\vert |x|-|y| \vert \leq |x-y|$$
+Hence $g \notin F$ but it is differentiable.
+
+Hence **1 and 2** are correct choice.
+
+******
+**Question 7:** Let $f$ be a continuously differentialble function on $\mathbb{R}$. Suppose that $$ L = \lim_{x \rightarrow \infty}(f(x)+f'(x))  $$ exists. If $0 < L < \infty $, then which of the following statements is/are correct?
+
+1. If $\lim_{x\rightarrow \infty} f'(x) $ exists, then it is $0$ 
+2. If $\lim_{x\rightarrow \infty} f(x) $ exists, then it is $L$ 
+3. If $\lim_{x\rightarrow \infty} f'(x) $ exists, then $\lim_{x\rightarrow \infty}f(x) = 0$ 
+4. If $\lim_{x\rightarrow \infty} f(x) $ exists, then $\lim_{x\rightarrow \infty}f'(x) = 0$ 
+
+**Answer:** Here $f$ is continuously differentiable over $\mathbb{R}$, hence by mean value theorem we have 
+$$f(x+1)-f(x) = f'(y) \quad (y \in (x, x+1))$$
+Taking the limit $x \to \infty $,
+$$\lim_{y \to \infty}f'(y)=\lim_{x\to \infty }\left (f(x+1)-f(x)\right )=0.\tag{*}$$
+
+If $\lim_{x\rightarrow \infty} f(x) $ exists, then by simple algebra of limits,
+$$\lim_{x \rightarrow \infty}f(x)=\lim_{x \rightarrow \infty}(L-f'(x))=L\quad (\text{ Using }(*))$$
+
+Hence **1,2 and 3** are correct.

@@ -1,0 +1,134 @@
+---
+layout: post
+title: CSIR-NET June 2015 Abstract Algebra Questions(Part C)
+tags: [2015, Polynomial Rings, Group Theory, Finite Fields, Euler-phi Function, Permutation]
+---
+
+**Question 1:** Which of the following primes satisfy the congruence
+$$ a^{24} = 6a + 2 \mod 13$$
+
+1. $41$
+2. $47$
+3. $67$
+4. $83$
+
+**Answer:** If $a$ is a prime such that $a \neq 13$, then $(a,13) = 1$. By Fermat's little theorem, we have
+$$ a^{12} = 1 \mod 13$$
+Hence, the given equation becomes
+$$ 1 = 6a + 2 \Rightarrow 6a = 1-2 = 12 \quad(\!\!\!\!\mod 13)$$
+Then, $a = 2 \mod 13 \Rightarrow a = 2 + 13n$ for all $n \in \Bbb N$. Here $41$ and $67$ satisfies this equation.
+
+Hence **1 and 3** are correct.
+
+****
+**Question 2:** Which of the following polynomials are irreducible in the ring $\Bbb Z[x]$ of polynomials in one variable with integer coefficients?
+
+1. $x^2 - 5$
+2. $1 + (x+1) + (x+1)^2 + (x+1)^3 + (x+1)^4$
+3. $1 + x + x^2 + x^3 + x^4$
+4. $1 + x + x^2 + x^3$
+
+**Answer:** Checking each option one by one,
+
+**Option 1:** $x^2 - 5 \Rightarrow (x-\sqrt{5})(x+ \sqrt{5})$. Since $\pm \sqrt{5}\notin \Bbb Z $, hence it is irreducible.
+
+**Option 2 and 3:** If we substitute $(x+1) \to y$, both the polynomials behave the same, when we talk about irreducibility.
+> For all prime $p$, $\phi_p(x)$ is irreducible over $\Bbb Q$, where
+> $$ \phi_p(x) = \frac{x^p-1}{x-1} = 1+x+\cdots +x^{p-1} $$
+
+**Option 4:** It can be factored easily,
+$$\begin{align}1 + x + x^2 + x^3 &= (1 + x)+x^2(1 + x) \\ & = (1 + x)(1+x^2)\end{align}$$
+
+Hence **1, 2 and 3** are correct choice.
+
+****
+**Question 3:** Let $\sigma : \{1,2, 3, 4, 5\} \to \{1,2, 3, 4, 5\}$ be a permutation(one to one and onto function) such that
+$$ \sigma^{-1} (j) \leq \sigma(j) \quad \forall ~j, 1\leq j \leq 5.$$
+The which of the following are true?
+
+1. $\sigma\circ \sigma(j)=j$ for all $j, 1\leq j \leq 5.$
+2. $\sigma^{-1}(j) =\sigma(j)$ for all $j, 1\leq j \leq 5.$
+3. The set $\{k: \sigma(k)\neq k \}$ has an even number of elements.
+4. The set $\{k: \sigma(k)= k \}$ has an odd number of elements.
+
+**Answer:** Since $\sigma$ is a bijection, hence there exist some $i \in \{1,2, 3, 4, 5\}$ such that $\sigma(i) = 1$, then
+$$ \sigma^{-1}(i)\leq \sigma(i) = 1\Rightarrow \sigma^{-1}(i) = 1.$$
+In such case we have two possibilities if $i\neq 1$ then $\sigma$ interchanges $1$ and $i$ else $i=1$, then $\sigma$ fixes $1$.
+
+Similarly, consider $k \in \{1, 2, 3, 4, 5\}\setminus \{1,i\}$ maps to $2$ by $\sigma$, then
+$$ \sigma^{-1}(k)\leq \sigma(k) = 2\Rightarrow \sigma^{-1}(k) = 2.$$
+Again, we have two possibilities if $k\neq 2$ then $\sigma$ interchanges $2$ and $k$ else $k=2$, then $\sigma$ fixes $2$.
+
+Thus the given permutation, $\sigma$, either fixes an element or interchanges any two elements.
+
+The set $\{k: \sigma(k)\neq k \}$ contains those elements which are interchanged by $\sigma$, hence it contain elements in pair, hence even.
+
+While the set,
+$$\{k: \sigma(k)= k \} = \underbrace{\{1,2, 3, 4, 5\}}_{\rm{ODD}} \setminus \underbrace{\{k: \sigma(k)\neq k \}}_{\rm{EVEN}}$$
+Since difference of odd and even will be odd hence this set has odd number of elements.
+
+Hence **all** are correct choices.
+
+****
+**Question 4:** Determine which of the following polynomials are irreducible over the indicated rings.
+
+1. $x^5 - 3x^4 + 2x^3 -5x +8$ over $\Bbb R$.
+2. $x^3 + 2x + x +1$ over $\Bbb Q$.
+3. $x^3+3x^2-6x+3$ over $\Bbb Z$.
+4. $x^4 + x^2 +1$ over $\Bbb Z /2\Bbb Z$.
+
+**Answer:** Checking each option one by one,
+
+**Option 1:** Irreducible polynomial over $\Bbb R$ are either linear or quadratic. Since the given polynomial has degree $5$, hence it must be reducible.
+
+**Option 2:** From Gauss lemma, it is enough to show irreducibility over $\Bbb Z$. If a polynomial has degree $\leq 3$ and it is reducible, then it has a linear factor, $i.e.$,  a root will exist.
+
+An integral root of a polynomial over $\Bbb Z$ will divide it's constant term. Since only factor of $1$ are $\pm 1$. These are only possible roots of the given equation and we can check that, no one are root of equation. Hence the polynomial is irreducible.
+
+**Option 3:** By Eisenstein criterion, the given polynomial is irreducible since $3$ divides all coefficients except $x^3$ but $3^2$ does not divide the constant term.
+
+**Option 4:** If this polynomial is reducible it will have either linear or quadratic factors. Since $0,1$ doesn't satisfy the polynomial, hence it doesn't have any linear factor.
+> Only quadratic irreducible polynomial over $\Bbb Z_2$ is $x^2+x+1$.
+
+Since,
+$$(x^2+x+1)^2 = x^4 + x^2 +1 \mod 2$$
+hence the given polynomial is reducible.
+
+Hence **2 and 3** are correct choices.
+
+****
+**Question 5:** If $x, y$ and $z$ are elements of a group such that $xyz = 1$, then
+
+1. $yzx = 1$.
+2. $yxz = 1$.
+3. $zxy = 1$.
+4. $zyx = 1$.
+
+**Answer:** If $b$ is inverse of $a$, then
+$$ab = ba = 1.$$
+Hence,
+$$ xyz = zxy = yzx = 1.$$
+
+Hence **1 and 3** are correct choice.
+
+****
+**Question 6:** Which of the following can not be a class equation of a group of order $10$?
+
+1. $1+1+1+2+5 = 10$.
+2. $1+2+3+5 = 10$.
+3. $1+2+2+5 = 10$.
+4. $1+1+2+2+2+2 = 10$.
+
+**Answer:** Only group of order $10$ are cyclic group $\Bbb Z_{10}$ and dihedral group $D_{10}$. The conjugacy classes of Abelian group consist of singleton subsets only, here we have to focus on non-Abelian groups only.
+
+> Class equation of dihedral group, $D_{2n}$, is given by,
+> 
+> - when $n$ is odd, $i.e.$, $n =2m+1$,
+ $$2 n=1 + \underbrace{2 +2+ \cdots +2}_{m \rm{\,times}} +n,$$
+> - when $n$ is even, $n = 2m$,
+> $$2n = 1+1+ \underbrace {2 +2 +\cdots +2 }_{m-1 ~\rm{ times}} +m +m.$$
+
+Here, we have $n =5$, hence odd. It's class equation will be
+$$ 10=1+2+2+5.$$
+
+Hence **1, 2 and 4** are correct.

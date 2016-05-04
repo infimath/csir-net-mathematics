@@ -1,0 +1,30 @@
+---
+layout: post
+title: Problems on Divisibility in $\mathbb{Z}$
+tags: FTA
+---
+
+**Question:** The number of positive divisors of $50000$ is
+
+$1.~20 \quad 2.~30 \quad 3.~40 \quad 4.~50$
+
+**Answer:** Recall the fundamental theorem of algebra
+> Any positive integer $m \!>\!1$, can be uniquely represented as product of
+> prime powers: $$m = p_1^{\alpha_1}p_2^{\alpha_2} \cdots
+> p_k^{\alpha_k}$$ If any number $n|m$ then $n$ will be of the form $$n
+ = p_1^{\beta_1}p_2^{\beta_2} \cdots p_k^{\beta_k} \text{ such that  for all }i,~ 0 \leq \beta_i\leq \alpha_i$$
+>Hence no. of such $n = ( \alpha_1 + 1) ( \alpha_2 + 1)\cdots ( \alpha_k + 1)$.
+
+Here, $50000 = 5 \times 10^4 = 5 \times (2\times5)^4 = 2^4 \times 5^5$.
+Hence no. of divisors $= 5 \times 6 =30$. 
+
+Hence **2** is correct choice.
+
+**Question:** The number of multiplies of $10^{44}$ that divide $10^{55}$ is 
+
+$     1.~11	 \quad 2.~12	 \quad 3.~121 \quad 4.~144$
+
+**Answer:** Let $k$ be a number such that $k \times 10^{44} |  10^{55} \Rightarrow k| 10^{11}$.
+Since $10^{11} = 2^{11}\times 5^{11}$, hence no. of possibility of $k$ is $12 \times 12 = 144$.
+
+Hence **4** is correct choice. 

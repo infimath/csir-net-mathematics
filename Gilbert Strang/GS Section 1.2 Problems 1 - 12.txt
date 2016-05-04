@@ -1,0 +1,135 @@
+---
+layout: post
+title: GS Section 1.2 Problems 1 - 12
+tags: [Gilbert Strang]
+---
+
+-------
+This series of post contain solution of selective exercises from the book "**Linear Algebra and Its Application, 4e**" by **Gilbert Strang**.
+
+-----------
+
+
+#####Problem 1.
+The given system is in triangular form hence can be solved by back substitution(solving last equation first and so on).
+
+\begin{align}
+&\boxed{w = b_3} \\
+&v + w = b_2 \Rightarrow  \boxed{v = b_2 - b_3} \\
+&u-v-w= b_1 \Rightarrow u-(v+w)=b_1 \Rightarrow \boxed{u = b_1-b_2}
+\end{align} 
+
+#####Problem 2. 
+Each equation will be a line in plane. By drawing each line in plane, we can see that they don't have common intersection, hence the given system of linear equations will have no solution.
+ 
+![inconsistent system of linear equations](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/gs%201.4.2.png)
+
+
+
+#####Problem 3.
+**Row Picture:** In row picture we concentrate on the representation on each equation. Here each equation represent a line in plane and their common intersection will be a solution.
+
+![row picture](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/gs%201.4.3%20row%20picture.png)
+
+Clearly, $x = 3, y = 1$ is solution of given system. 
+
+**Column Picture:** In terms of column the given system of linear equation is given by 
+$$x \begin{bmatrix}2\\1 \end{bmatrix}+y \begin{bmatrix}-2\\1 \end{bmatrix}=\begin{bmatrix}4\\4 \end{bmatrix}$$
+
+We have to find a linear combination of column vectors to find the resultant.  Geometrically this can be done by triangle and parallelogram laws of vector addition. 
+
+![column picture](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/gs%201.4.3%20column%20picture.png)
+
+Here we get the required linear combination as 
+$$3 \begin{bmatrix}2\\1 \end{bmatrix}+1 \begin{bmatrix}-2\\1 \end{bmatrix}=\begin{bmatrix}4\\4 \end{bmatrix}$$
+Hence $x = 3, y =1$ is a solution of given system.
+
+#####Problem 4.
+The given equation in four dimensional space are 
+\begin{align}
+t & = 0 \cr 
+z &= 0 \cr 
+x+y+z+t &= 1
+\end{align}
+Putting first two equation in last we get $x+y = 1$. Choose any two distinct pair $(x,y)$ that satisfies the last equation. One can easily guess $(1,0)$ and $(0,1)$ are two such pair. Hence two points satisfying the system of linear equation will be $(1,0,0,0)$ and $(0,1,0,0)$ as we know $z=0$ and $t = 0$.
+
+#####Problem 5. 
+The given system of equations is 
+\begin{align}
+& u &+ v  &+w  &+z   &= 6 &&(5.1)\\
+& u &       &+w  &+z   &= 4 && (5.2)\\
+& u &       &+w  &       &= 2 &&(5.3)
+\end{align}
+Using eq $(5.3)$ in $(5.1)$ and $(5.2)$, we get, 
+\begin{align}
+v+z &=4&&(5.4)\\
+z&=2&&(5.5)\\
+\end{align}
+Eliminating $z$ in last two equation $v = 2$.  But we can't get the value of $u$ and $w$, hence we get a line of solution given by intersection of three independent equation in four dimensional space. 
+\begin{align}
+u+w & = 2 \\
+v & = 2 \\
+z & = 2 
+\end{align}
+
+If we bring one more equation independent from above three then we will get a unique solution. $u = -1$ can't be written as linear combination of above three equation hence it will be independent. The solution will be 
+$u = -1, v = 2, w= 3, z = 2$.
+
+#####Problem 6.
+To make whole line of solution we have to make the intersection equal to whole line, hence both line has to be same. For $a=2$ both are same line.
+
+#####Problem 7.
+By little inspection, we can observe that,
+$$1\times (\text{ Eq } 1)-1\times (\text{ Eq } 2)+1\times (\text{ Eq } 3)=2-1-0=1.$$
+Hence we get $0=1$, which is not possible $\Rightarrow $ No Solution.
+
+#####Problem 8.
+Let $(0,y_1)$, $(1, y_2)$ and $(2,y_3)$ lie on the same line $y=mx+c$. Then each point will satisfy the equation of line $i.e.$,
+$$y_1 = c \quad y_2 = m+c \quad y_3=2m +c$$
+Solving for unknown $m$ and $c$ we get,
+$c= y_1$ and $m = y_2 - y_1=(y_3-y_1)/2$. Hence required condition will be 
+$$2(y_2 - y_1) =y_3-y_1 \quad \Rightarrow \quad \boxed{2y_2=y_1 + y_3}.$$
+
+#####Problem 9.
+The given system of linear equation for $b=(2,5,7)$ will be 
+\begin{align}
+&\phantom{1} u &+ v &+ \phantom{1}w &=  2&&(9.1) \\
+& 2u & &+ 3w &=  5 &&(9.2)\\
+& 3u &+ v &+ 4w &=  7 &&(9.3)\\
+\end{align} 
+Now $(9.3)-(9.1)$: $ 2u+ 3w=  5 $, which is equal to second equation. The equations are dependent, hence we get infinitely many solution.
+
+Take $w = -1$, then $2u = 5 + 3 \Rightarrow u = 4$. Now using the value of $u$ and $w$ in eqution $(9.1)$, we get $v=-1$. Hence $(4,-1, -1)$ is another solution of given system.
+
+#####Problem 10. 
+The given system of linear equation can be solved for any vector $b$ which can be written as linear combination of columns of given system $i.e.$, 
+$$b = u\begin{bmatrix}1\\2\\3\end{bmatrix}+v\begin{bmatrix}1\\0\\1\end{bmatrix}+w\begin{bmatrix}1\\3\\4\end{bmatrix}$$
+For example take $(u,v,w)  = (1,1,1)$. we get $b=(3,5,7)$.
+For other $b$ we can take $(u,v,w)=(1,0,0)$ hence $b=(1,2,3)$.
+
+------
+To find $b$, such that the given system has no solution, row picture will be appropriate. 
+\begin{align}
+ &\phantom{1} u &+ v &+ \phantom{1}w &=  b_1&&(10.1) \\
+& 2u & &+ 3w &=  b_2 &&(10.2)\\
+& 3u &+ v &+ 4w &=  b_3 &&(10.3)\\
+\end{align} 
+Again $(10.3)-(10.1)$: $ 2u+ 3w=  b_3 -b_1$. Using equation $(10.2)$ we get $b_3-b_1 = b_2$. Hence for NO SOLUTION we have to choose $b_1, b_2, b_3$ such that $b_3-b_1 \neq b_2$. Hence $(1,1,1)$ and $(1,1,0)$  are two such $b$.
+
+#####Problem 11. 
+ To find the appropriate linear combination we have to solve 
+ $$x \begin{bmatrix}1\\1\\0 \end{bmatrix}+y \begin{bmatrix}1\\2\\1 \end{bmatrix}=\begin{bmatrix}1\\3\\2 \end{bmatrix}$$
+ We can solve this system of equation by elimination. But by little inspection we can know that $x = -1,y=2$ is a solution of this system.  Hence $(x,y)=(-1,2)$ is required solution.  
+$$u \begin{bmatrix}1\\1\\0 \end{bmatrix}+v \begin{bmatrix}1\\2\\1 \end{bmatrix}+w\begin{bmatrix}1\\3\\2 \end{bmatrix}=\begin{bmatrix}0\\0\\0 \end{bmatrix}$$
+As we know form last paragraph,
+ \begin{align}-1\times (\text{Col. } 1)+2\times (\text{Col. } 2)&=\text{Col. } 3 \\ -1\times (\text{Col. } 1)+2\times (\text{Col. } 2)-1\times(\text{Col. } 3)&= [0,0,0]^{T}
+ \end{align}
+ Hence $(u,v,w)= (-1,2,-1)$ is a solution of this system of equation. And any scalar multiple of this will also be a solution.
+
+#####Problem 12.
+A line parallel to $x+4y = 7$ will have equation $x+4y = c$ for any $c \in \mathbb{R}$. Since the second line passes through $(0,0)$ we get $c = 0$, hence the required line will be $x+4y = 0$.
+
+Second line passes through $(3,1)$ hence $c= 3 + 4 \times 1 = 7$. Hence required line will be $x+4y = 7$.
+
+
+

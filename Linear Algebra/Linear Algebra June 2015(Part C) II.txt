@@ -1,0 +1,110 @@
+---
+layout: post
+title: CSIR-NET June 2015 Linear Algebra(Part C) II
+tags: [2015, Linear Transformation, Linear Equation, Orthogonality, Trace]
+---
+Continued from [last post](http://www.csirnetmath.in/2015/11/csir-net-june-2015-linear-algebra_24.html)
+
+**Question 4:** Let $S: \Bbb R^n \rightarrow \Bbb R^n$ be given by $S(v) = \alpha v$ for a fixed $\alpha \in \Bbb R, \alpha \neq 0$.
+Let $T: \Bbb R^n \rightarrow \Bbb R^n$ be a linear transformation such that $B = \{v_1, \ldots, v_n \}$ is a set of linearly eigenvectors of $T$. Then
+
+1. The matrix of $T$ with respect to $B$ is diagonal.
+2. The matrix of $(T-S)$ with respect to $B$ is diagonal.
+3. The matrix of $T$ with respect to $B$ is not necessarily diagonal, but is upper triangular.
+4. The matrix of $T$ with respect to $B$ is diagonal but he matrix of $(T-S)$ with respect to $B$ is not diagonal.
+
+**Answer:** The linear transformation $T$ has full set of linearly independent eigenvalues that span $\Bbb R^n$, hence $T$ is diagonalizable.
+Since any non-zero vector are eigenvector of $S$, hence $S$ is diagonalizable with respect to $B$. Since $T$ and $S$ has same set of eigenvalues hence $(T-S)$ will also be diagonalizable with respect to $B$.
+
+Hence **1 and 2** are correct choice.
+
+****
+**Question 5:** Which of the following are subspaces of the vector space $\Bbb R^3$?
+
+1. $\{(x,y,z): x+y = 0\}$.
+2. $\{(x,y,z): x-y = 0\}$.
+3. $\{(x,y,z): x+y = 1\}$.
+4. $\{(x,y,z): x-y = 1\}$.
+
+**Answer:** The plane described in option 3 and 4 does not pass through origin, hence they can't be subspaces.
+
+Hence **1 and 2** are correct choices.
+
+****
+**Question 6:** An $n \times n$ complex matrix $A$ satisfies $A^k = I_n$, the $n \times n$ identity matrix, where $k$ is a positive integer $> 1$. Suppose $1$ is not an eigenvalue of $A$.  Then which of the following statements are necessarily true?
+
+1. $A$ is digonalizable.
+2. $A + A^2 + \cdots A^{k-1} = 0$, the $n \times n$ zero matrix.
+3. $tr(A) + tr(A^2) + tr(A^{k-1}) = -n.$
+4. $A^{-1} + A^{-2} + \cdots A^{-(k-1)} = -I_n.$
+
+**Answer:** The matrix satisfies the polynomial $x^k - 1$, it means it's minimal polynomial is a factor of it. Since 1 is not a eigenvalue of $A$, hence the matrix will satisfy a factor of $x^k - 1$ other than $x - 1$,
+Since,
+$$
+\begin{align}
+&x^k - 1 \\
+&= (x-1)(1 + x + x^2 + \cdots + x^{k-1})
+\end{align}
+$$
+The  matrix will satisfy $1 + x + x^2 + \cdots + x^{k-1}$ and this polynomial can be factorized into linear factors over complex field, hence the matrix is diagonalizable over complex field. Also,
+$$
+\begin{align}
+&&I + A + A^2 + \cdots + A^{k-1} &= 0 \\
+\Rightarrow &&A + A^2 + \cdots + A^{k-1} &= -I_n~(6.1)
+\end{align}
+$$
+Thus option 2 is false and, by taking the trace of equation 6.1,  we get
+$$
+\begin{align}&&tr(A + A^2 + \cdots + A^{k-1} ) &= tr(-I_n)\\
+\Rightarrow &&tr(A) + tr(A^2) + tr(A^{k-1}) &= -n.
+\end{align}
+$$
+
+ For last option observe that, $A^k = I \Rightarrow A^iA^{k-i} = I$, hence $(A^i)^{-1} = A^{-i} = A^ {k-i}$ for $i < k$. Putting this in equation 6.1, we get
+ $$ A^{-1} + A^{-2} + \cdots +A^{-(k-1)} = -I_n. $$
+
+Hence **1,3 and 4** are correct choice.
+
+*****
+**Question 7:** Let $u$ be a real $n \times 1$ vector satisfying $u'u =1$, where $u'$ is the transpose of $u$. Define $A = I - 2uu'$ where $I$ is the $n^{\text{th}}$ order identity matrix. Which of the following statements are true?
+
+1. $A$ is singular.
+2. $A^2 = A$.
+3. Trace $(A) = n -2$.
+4. $A^2 = I$.
+
+**Answer:** We have to know little bit about projection matrix.
+
+>The linear transformation that projects every vector onto a vector $\newcommand{\a}{\mathbf{a}}\a$ is given by the matrix
+>$$P = \cfrac{\a \a'}{\a'\a}$$
+>Then all the vector perpendicular to $\a$ will map to $\mathbf{0}$, while any vector parallel to $\a$ will map to itself. Hence $P$ will have  eigenvalue $1$ corresponding to eigenvector $\a$ and for $n-1$ vector perpendicular to $\a$ will have eigenvalue $0$.
+Also, note that
+>$$\require{cancel}P^2  = \cfrac{\a \a'}{\a'\a} \cfrac{\a \a'}{\a'\a} = \cfrac{\a \cancel{(\a'\a)} \a'}{\cancel{(\a'\a)}(\a'\a)} = P.$$
+
+In this problem $uu'$ is a projection matrix hence it's one eigenvalue will be $1$ and $n -1$ eigenvalues are $0$. Hence one eigenvalue of $A$ will be $1 - 2 \times 1 = -1$ and $n - 1$ eigenvalues will be $1 - 2 \times 0 = 1$.
+
+Since no eigenvalue of the matrix is $0$, hence the matrix is invertible(non-singular).
+
+Also, trace is given by sum of eigenvalues, hence,
+$$\text{trace }(A) = -1 + (n-1)\times 1=n-2$$
+
+$$\begin{align}A^2 &= (I-2uu')^2& \\&= I + 4uu'uu' - 4uu' &\\&= I + 4uu' - 4uu' &(\because  u'u =1)\end{align}$$
+
+Hence **3 and 4** are correct choices.
+
+*****
+**Question 8:** Let $A$ be and invertible $4 \times 4$ real matrix. Which of the following are NOT true?
+
+1. Rank $A =4$.
+2. For every vector $b \in \Bbb R^4$, $Ax = b$ has exactly one solution.
+3. dim (nullspace $A$) $\geq 1$.
+4. $0$ is an eigenvalue of $A$.
+
+**Answer:** Invertible matrix has full rank. For any invertible matrix $A$, we have
+$$Ax = b \Rightarrow x = A^{-1} b.$$
+Thus, we get a unique solution.
+
+Since $Ax = 0$, will have a unique solution, the dimension of nullspace will be $0$.
+Also, $0$ is not an eigenvalue of invertible matrix.
+
+Hence **3 and 4** are correct choices.

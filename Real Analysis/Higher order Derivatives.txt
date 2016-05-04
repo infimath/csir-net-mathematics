@@ -1,0 +1,61 @@
+---
+layout: post
+title: Higher Order Derivatives
+tags: [Differentiation]
+---
+
+**Question 1:** Let $f$ be a twice differentiable function on $\Bbb R$. Given that $f''(x)>0$ for all $x \in \Bbb R$
+
+1. $f(x)=0$ has exactly two solution on $\mathbb{R}$
+2. $f(x)=0$ has a positive solution if $f(0)=0$ and $f'(0)>0$
+3. $f(x)=0$ has no positive solution if $f(0)=0$ and $f'(0)>0$
+4. $f(x)=0$ has no positive solution if $f(0)=0$ and $f'(0)<0$
+
+**Answer:** The given condition $f''(x)>0$ implies that $f$ is a [convex function](http://en.wikipedia.org/wiki/Convex_function).
+
+**Option 1:** $f(x)=x^2+1$ is counterexample for this choice as it is never zero.
+
+**Option 2:** $f(x)=e^x - 1$ is counterexample for this choice.
+
+**Option 3:** $f'(x)>0$, then $f$ is always increasing hence $x>0 \Rightarrow f(x)>f(0)=0$. This choice is true.
+
+**Option 4:** $f(x)=(x-1)^2-1$ will be a counterexample for this choice.
+
+Hence **3** is correct choice.
+
+*****
+**Question 2:** Let $f:[0,1] \rightarrow [0,1]$ be any twice differentiable function satisfying $f(ax+(1-a)y) \leq af(x)+(1-a)f(y)$ for all $x,y \in [0,1]$ and any $a \in [0,1]$. Then for all $x \in (0,1)$
+
+1. $f'(x) \geq 0$
+2. $f''(x) \geq 0$
+3. $f'(x) \leq 0$
+4. $f''(x) \leq 0$
+
+**Answer:** The given condition is actually the definition of [convex function](http://en.wikipedia.org/wiki/Convex_function).
+Second derivative of function is given by 
+$$f''(a)=\lim_{h \to \infty}\frac{f(a+h)-2f(a)+f(a-h)}{h^2}\tag{*}$$
+Now $a = \frac{1}{2}((a+h)+(a-h))$ and $f$ satisfy the given condition 
+$$\begin{align}f(a)&=f\left(\frac{1}{2} ((a+h)+(a-h))\right )\\ & \leq \frac{1}{2}\left(f(a+h)+f(a-h)\right )\end{align}$$
+Hence $f(a+h)-2f(a)+f(a-h) \geq 0 $ and $h^2 \geq 0$, hence the limit in $(*)$ will be $\geq 0$ $\Rightarrow f''(x)\geq 0$.
+
+Hence **2** is correct choice.
+
+****
+**Question 3:** Let, 
+\begin{equation}
+f(x)= \begin{cases}\frac{\sin x}{x}& \text{if } x\neq 0\\1& \text{if } x =0\end{cases}
+\end{equation}
+Then $f$ is,
+
+1. discontinuous
+2. continuous but not differentiable
+3. differentiable only once
+4. differentiable more than once
+
+**Answer:** Using series expansion of $\sin x$, we have
+$$\sin x = x - \frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots $$
+Then 
+$$\frac{\sin x}{x} = 1 - \frac{x^2}{3!}+\frac{x^4}{5!}-\frac{x^6}{7!}+\cdots $$
+Clearly, this function is differentiable more than once.
+
+Hence **4** is correct choice.

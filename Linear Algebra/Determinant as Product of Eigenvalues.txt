@@ -1,0 +1,12 @@
+---
+layout: post
+title: Determinant as Product of Eigenvalues
+---
+
+**Question(June 2014):** Let $J$ denote a $101 \times 101 $ matrix with all the entries equal to $1$ and let $I$ denote the identity matrix of order $101$. Then the determinant of $J - I$ is 
+
+$1.~101 \quad  2. ~1 \quad 3. ~0  \quad 4.~100$ 
+
+**Answer:** Few thing to consider 
+> - $\det(A) = $ product of eigenvalues of $A$.
+> -  fsdfa

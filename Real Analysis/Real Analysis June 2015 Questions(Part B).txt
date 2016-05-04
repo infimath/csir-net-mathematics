@@ -1,0 +1,96 @@
+---
+layout: post
+title: CSIR-NET June 2015 Real Analysis(Part B)
+tags: [2015, Continuity, Differentiation, Sequence and Series]
+---
+
+**Question 1:** The sum of the series $\frac{1}{1!} + \frac{1+2}{2!}+ \frac{1+2+3}{3!}+\cdots$ equals
+
+1. $e$
+2. $\frac{e}{2}$
+3. $\frac{3e}{2}$
+4. $1 + \frac{e}{2}$
+
+**Answer:** The series is 
+\begin{align}
+&\phantom{=}\frac{1}{1!} + \frac{1+2}{2!}+ \frac{1+2+3}{3!}+\cdots \\  &=\sum_{n=1}^{\infty} \frac{\sum n}{n!}\\
+&= \sum_{n=1}^{\infty} \frac{\frac{1}{2}n(n+1)}{n!}\\
+& =\sum_{n=1}^{\infty} \frac{\frac{1}{2}(n+1)}{(n-1)!}\\
+&=\sum_{n=1}^{\infty} \frac{\frac{1}{2}(n-1+2)}{(n-1)!}\\
+&\text{ By taking the first term out,} \\
+&= 1 + \sum_{n=2}^{\infty} \frac{1}{2}\frac{1}{(n-2)!} + \sum_{n=2}^{\infty}\frac{1}{(n-1)!}\\
+&= \frac{1}{2}  \sum_{n=2}^{\infty} \frac{1}{(n-2)!} + \left [ 1+\sum_{n=2}^{\infty}\frac{1}{(n-1)!} \right ]\\
+&=\frac{1}{2}e +e \\
+&=\frac{3e}{2}.
+\end{align}
+
+Hence **3** is correct choice. 
+
+***
+**Question 2:** The limit 
+$$\lim_{x \rightarrow 0} \frac{1}{x} \int_x^{2x}e^{-t^2}~dt$$
+
+1.  does not exist.
+2.  is inifinite
+3.  exists and equals $1$. 
+4. exists and equals $0$.
+
+**Answer:** Here, 
+\begin{align}
+&\lim_{x \rightarrow 0} \frac{1}{x} \int_x^{2x}e^{-t^2}~dt \\=& \lim_{x \rightarrow 0} \frac{1}{x} \int_x^{2x}\left[ 1-\frac{t^2}{1!} +  \frac{t^4}{2!} - \cdots \right]~dt \\
+=& \lim_{x \rightarrow 0} \frac{1}{x} \left[ t-\frac{t^3}{3\cdot 1!} +  \frac{t^4}{4\cdot 2!} - \cdots \right]_x^{2x}\\
+=& \lim_{x \rightarrow 0} \frac{1}{x} \left[ x-\frac{(2x)^3-x^3}{3\cdot 1!} +  \frac{(2x)^4-x^4}{4\cdot 2!} - \cdots \right]\\
+=& \lim_{x \rightarrow 0} \frac{1}{x} \left[ x-\frac{7x^3}{3\cdot 1!} +  \frac{15x^4}{4\cdot 2!} - \cdots \right]\\
+=& \lim_{x \rightarrow 0}\left[ 1-\frac{7x^2}{3\cdot 1!} +  \frac{15x^3}{4\cdot 2!} - \cdots \right]\\
+=&1.
+\end{align}
+
+Hence **3** is correct choice. 
+
+******
+**Question 3:** Which of the following subset of $\newcommand{\R}{\mathbb{R}}\R^n$ is compact(with respect to the usual topology of $\R^n)?$
+
+1. $\{ (x_1, x_2, \ldots, x_n) : |x_i|<1,~1 \leq i \leq n\}$
+2. $\{ (x_1, x_2, \ldots, x_n) : x_1 + x_2 + \cdots + x_n = 0\}$
+3. $\{ (x_1, x_2, \ldots, x_n) : x_i>0,~1 \leq i \leq n\}$
+4. $\{ (x_1, x_2, \ldots, x_n) : 1 \leq x_i \leq 2^i\}$
+
+**Answer:** Here, we need to apply Heine-Borel Theorem, which says that *any subset of $\R^n$ is compact if and only if, it is closed and bounded*. 
+
+The subset in choice 1 is bounded but not closed. The subset in choice 2 and 3 are not bounded. While the set in option 4 is both closed and bounded. 
+
+Hence **4** is correct choice. 
+
+*****
+**Question 4:** Let $f:X \rightarrow X$, such that $f(f(x)) = x$ for all $x \in X$. Then 
+
+1.  $f$ is one-one and onto.
+2.  $f$ is one-to-one, but not onto.
+3.  $f$ is onto but not one-to-one.
+4.  $f$ need not be either one-to-one or onto.
+
+**Answer:**  In general, 
+> If $f:X \rightarrow Y$ and $g:Y\rightarrow X$ such that, the following diagram commutes,
+>\begin{matrix}
+ &X \quad \xrightarrow{\phantom{csir}i\phantom{csir}} \quad X& \\
+ &{\scriptsize{f}}{\huge\searrow}\quad {\huge \nearrow}{\scriptsize{g}}&\\
+& Y
+\end{matrix}
+Then $f$ is one-one and $g$ is onto functions. 
+
+In this problem $f$ and $g$ are the same, hence $f$ is both one-one and onto. 
+
+Hence **1** is correct choice. 
+
+*****
+**Question 5:** A polynomial of odd degree with real coefficients must have 
+
+1. at least one real root. 
+2.  no real root.
+3.  only real roots. 
+4.  at least one root which is not real. 
+
+**Answer:** A polynomial of odd degree will change it's sign at $+\infty$ and $-\infty$. Hence by intermediate value theorem, it cross $y=0$ somewhere.
+
+Hence **1** is correct choice. 
+

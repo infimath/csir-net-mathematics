@@ -1,0 +1,59 @@
+---
+layout: post
+title: Dense Subset of Metric Space
+tags: [Metric Space]
+---
+
+**Question 1:** Let $(X,d)$ be a metric space and let $A \subset X$. For $x \in X$, define $$d(x,A)= \inf \{d(x,a): a \in A\}.$$   If $d(x,A)=0$ for all $x \in X$, then which of the following assertions must be true?
+
+1. $A$ is compact 		
+2. $A$ is closed 
+3. $A$ is dense in $X$ 
+4. $A=X$
+
+**Answer:** As we know that the closure of $A\subset X$ is defined as 
+>- Let $A\subset X$, then the closure of $A$ is denoted by $\overline{A}$ is given by  $$\overline{A}=\{x\in X: d(x,A)=0\}.$$
+>- A subset $A$ of metric space $X$ is called dense if it's closure is whole $X$, $i.e.$, $\overline{A}=X$
+
+Here $\overline{A}=X$, hence $A$ is dense in $X$.
+
+Hence **3** correct choice.
+
+------
+**Question 2:** For a non-empty subset $S$ and a point $x$ in a connected metric space $(X, d)$, let $d(x,S) =$ inf$\{d(x,y): y \in S\}$. Which of the following statements is/are correct?
+
+1. If $S$ is closed and $d(x,S) > 0$ then $x$ is not an accumulation point of $S$ 
+2. If $S$ is open and $d(x,S) > 0$ then $x$ is not an accumulation point of $S$ 
+3. If $S$ is closed  and $d(x,S) > 0$ then $S$ does  not contain  $x$ 
+4. If $S$ is closed  and $d(x,S) = 0$ then $x \in S$
+
+**Answer:** Consider each option one by one,
+
+**Option 1, 2 and 3:** when $d(x,S) > 0$, then $x$ is an exterior point of $S$. Hence option 1 and 2 are false while 3 is true. 
+
+**Option 4:**  If $d(x,S) = 0$, then $x \in \overline{S}$. Since $S$ is closed we have $S=\overline{S}$. Hence this option is correct.
+
+Hence **3 and 4** are correct choices.
+
+------
+**Question 3:** which of the following set are dense in $\mathbb{R}^2$ with respect to usual topology
+
+1. $\{(x,y)\in \mathbb{R}^2: x \in \mathbb{N} \}$ 
+2. $\{(x,y)\in \mathbb{R}^2: x+y \in \mathbb{Q} \}$ 
+3. $\{(x,y)\in \mathbb{R}^2: x+y^2=5 \}$ 
+4. $\{(x,y)\in \mathbb{R}^2: xy \neq 0 \}$ 
+
+**Answer:** We need to understand when a set not dense in any metric space. 
+>A set $A \subseteq X$ is not dense $X$. If there exist a $x\in X$ and a real number $r>0$ such that $B(x,r)\cap A =\phi$.
+
+Now it each case we try to draw such open balls.
+
+**Option 1:** This set consist all lines parallel to $y-$axis and passing thorough the points $(n,0)\in \mathbb{N}$. Then a open ball of radius $1/2$ at $(-1,0)$ will not intersect with this set. Hence it is not dense.
+
+**Option 2:** Note $\mathbb{Q}\times \mathbb{Q}$ is a dense subset of $\mathbb{R}^2$. For all $(a,b)\in \mathbb{Q}\times \mathbb{Q}$ we have $a+b\in \mathbb{Q}$. Hence it is dense.
+
+**Option 3:** The given equation $y^2=5-x$ is equation of a parabola. The ball of radius $1$ centered at $(10,0)$ will certainly not intersect with this curve. Hence it is not dense. 
+
+**Option 4:** The subset in this choice is whole plane removing $x-$axis and $y-$axis. Any ball centered at $x-$axis and $y-$axis with positive radius will intersect with this set. Hence dense.
+
+Hence **2 and 4** are correct choice. 

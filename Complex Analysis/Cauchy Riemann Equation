@@ -1,0 +1,79 @@
+---
+layout: post
+title: Cauchy Riemann Equation and Harmonic Function
+tags: [Analytic Function]
+---
+
+###### Important Definition and Theorems
+**Definition 1:** Let $f(z)=u(x,y)+iv(x,y)$ be a function form complex numbers to complex numbers, then the following set of equation is called Cauchy Riemann equation.
+$$\boxed{u_x=v_y \quad \text{ and } \quad u_y=-v_x}$$
+
+**Theorem 1:** If $f$ is differentiable at $z_0$, then it satisfy C-R equation.
+
+**Note:** Thus C-R equation is a necessary condition for the differentiability of a complex functions. For sufficiency we need existence and continuity of partial derivatives in a open set containing $z_0$.
+But the following theorem doesn't require extra condition, which make this equation probably the most important equation of complex analysis.
+
+**Theorem 2:** Goursat's theorem asserts that $f$ is analytic(differentiable at each point) in an complex domain(open and connected) Ω if and only if it satisfies the Cauchy–Riemann equation in the domain.
+
+**Definition 2:** A function $f:\mathbb{R}^2 \rightarrow \mathbb{R}$ is called harmonic if it satisfies Laplace equation $i.e.$,
+$$\nabla^2f=0 \quad \Leftrightarrow \quad f_{xx}+f_{yy}=0.$$
+
+**Theorem 3:** If $f(z)=u(x,y)+iv(x,y)$ is analytic in a domain Ω then each $u$ and $v$ are harmonic. Converse is also true and moreover if $u$ is harmonic then there exist another harmonic function $v$ such that $f(z)=u(x,y)+iv(x,y)$ is analytic.
+
+******
+**Question 1:** Let $f : \mathbb{C} \rightarrow \mathbb{C} $ be a complex valued function given by
+$$ f(z) = u(x,y) + iv(x,y) .\newcommand{\pdd}[2]{\dfrac{\partial^2 #1}{\partial #2^2}}$$
+Suppose that $v(x,y) = 3xy^2$. Then
+
+1. $f$ cannot be holomorphic on $\mathbb{C}$ for any choice of $u$
+2. $f$ is  holomorphic on $\mathbb{C}$ for a suitable choice of $u$
+3. $f$ cannot be holomorphic on $\mathbb{C}$ for all choices of $u$
+4. $v$ is not differentiable as a function of $x$ and $y$.
+
+**Answer:** Test weather the given function is harmonic,
+$$v_{xx}+v_{yy}=6y$$
+The given function is harmonic on $x-$axis but we can't extend it on any open set. Hence $f$ can't be holomorphic.
+
+Hence **1** is correct choice.
+
+*****
+**Question 2:** Let $f:\mathbb{C} \rightarrow \mathbb{C}$ be a complex valued function of the form $f(x,y) = u(x,y) + i v(x,y)$. Suppose that $u(x,y) = 3x^2y$. Then
+
+1. $f$ cannot be holomorphic on $\mathbb{C}$ for any choice of $v$.
+2. $f$ is holomorphic on $\mathbb{C}$ for a suitable choice of $v$
+3. $f$ is holomorphic on $\mathbb{C}$ for all choices of $v$
+4. $u$ is not differentiable.
+
+**Answer:** Same as above,
+$$v_{xx}+v_{yy}=6x$$
+The given function is harmonic on $y-$axis but we can't extend it on any open set. Hence $f$ can't be holomorphic.
+
+Hence **1** is correct choice.
+
+*****
+**Question 3:** Let $u(x + iy) = x^3 - 3xy^2 + 2x$. For which of the following function $v$, is $u + iv$ is a holomorphic on $\mathbb{C}$?
+
+1. $v(x + iy) = y^3 - 3x^2y + 2y$
+2. $v(x + iy) = 3x^2y - y^3 + 2y$
+3. $v(x + iy) = x^3 - 3xy^2 + 2x$
+4. $v(x + iy) = 0$
+
+**Answer:** We have to use C-R equation to find such function $v$,
+$$u_x=v_y \Rightarrow v_y=3x^2-3y^2+2$$ Integrating w.r.t $y$, we get
+$$v = 3x^2y -y^3 +2y+\phi(x) \tag{*}$$
+To find $\phi(x)$ we have to use other equation,
+\begin{align}v_x=-u_y &\Rightarrow 6xy+\phi'(x)=6xy \cr &\Rightarrow \phi'(x)=0\cr &\Rightarrow \phi(x)=0\end{align}
+
+Hence **2** is correct choice.
+
+*****
+**Question 4:** Let $f:\mathbb{C} \rightarrow \mathbb{C}$ be a analytic function. For $z = x + iy$, let $u,v:\mathbb{R}^2 \rightarrow \mathbb{R}$ be such that $u(x,y) = \mbox{Re}f(z)$ and $v(x,y) = \mbox{Im}f(z)$. Which of the following are correct?
+
+1. $\pdd{u}{x} + \pdd{u}{y} = 0$
+2. $\pdd{v}{x} + \pdd{v}{y} = 0$
+3. $\frac{\partial^2 u}{\partial x \partial y} - \frac{\partial^2 u}{\partial y \partial x} = 0$
+4. $\frac{\partial^2 v}{\partial x \partial y} - \frac{\partial^2 v}{\partial y \partial x} = 0$
+
+**Answer:** Both $u$ and $v$ are harmonic function.
+
+Hence **1 and 2** are correct choices.

@@ -1,0 +1,166 @@
+---
+layout: post
+title: Problems on Series of Real Number
+tags: [Sequence and Series]
+---
+
+####Important results on Convergence of Series
+
+######**Necessary Condition for Convergence:** 
+If $\sum a_n$ converges then $\lim_{n \to \infty}a_n=0$.
+
+######**Ratio test:** 
+This is also known as D'Alembert's criterion. Suppose that there exists r such that
+$$\newcommand{\R}{\mathbb{R}}\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right| = r.$$
+
+- If $r < 1$, then the series is absolutely convergent. 
+- If $r > 1$, then the series diverges. 
+- If $r = 1$, the ratio test is inconclusive, and the series may converge or diverge.
+
+######**Root test:**
+This is also known as the nth root test or Cauchy's criterion. Define r as follows:
+$$r = \limsup_{n \to \infty}\sqrt[n]{|a_n|},$$
+
+- If r < 1, then the series converges. 
+- If r > 1, then the series diverges. 
+- If r = 1, the root test is inconclusive, and the series may converge or diverge.
+
+######**Integral test:**
+The series can be compared to an integral to establish convergence or divergence. Let $f:[1,\infty)\to\R_+$ be a non-negative and monotone decreasing function such that $f(n) = a_n$. If
+
+$$\int_{1}^{\infty} f(x)\, dx = \lim_{t \to \infty} \int_{1}^{t} f(x)\, dx < \infty,$$
+then the series converges or diverges simultaneously.
+
+######**Direct comparison test:** 
+If the series $\sum_{n=1}^\infty b_n$ is an absolutely convergent series and $|a_n|\le |b_n|$ for sufficiently large n , then the series $\sum_{n=1}^\infty a_n$ converges absolutely.
+
+######**Limit comparison test:**
+If $\left \{ a_n \right \}, \left \{ b_n \right \} > 0$, and the limit $\lim_{n \to \infty} \frac{a_n}{b_n}$ exists, is finite and is not zero, then $\sum_{n=1}^\infty a_n$ converges if and only if $\sum_{n=1}^\infty b_n$ converges.
+
+######**Cauchy condensation test:**
+Let $\left \{ a_n \right \}$ be a positive non-increasing sequence. Then the sum $A = \sum_{n=1}^\infty a_n$ converges if and only if the sum $A^* = \sum_{n=0}^\infty 2^n a_{2^n}$ converges. Moreover, if they converge, then $A \leq A^* \leq 2A$ holds.
+
+######**Abel's test:** 
+Suppose the following statements are true:
+
+- $\sum a_n$  is a convergent series, and
+- ${b_n}$ is a bounded monotone sequence.
+
+Then $\sum a_nb_n$  is also convergent.
+
+######**Alternating series test:** 
+This is also known as the Leibniz criterion. If 
+
+- $\{a_n\}$ is a sequence monotonically decreasing sequence of positive numbers, and 
+- $\lim_{n \to \infty}a_n=0$.
+
+Then $\sum (-1)^na_n$ is convergent.
+
+****
+**Question 1:** Which of the following series is convergent?
+
+1. $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n+1}-\sqrt{n}}$
+2. $\sum_{n=1}^{\infty} \frac{\sin n}{n^2}$
+3. $\sum_{n=1}^{\infty} (-1)^n \log n$
+4. $\sum_{n=1}^{\infty} \frac{\log n}{n}$
+
+**Answer:** Checking each series separately, 
+
+**Option 1:** Let $a_n=\frac{1}{\sqrt{n+1}-\sqrt{n}}$. On rationalizing the denominator we get 
+$$\begin{align}a_n &=\frac{1}{\sqrt{n+1}-\sqrt{n}} \times \frac{\sqrt{n+1}+\sqrt{n}}{\sqrt{n+1}+\sqrt{n}}\\ & =\sqrt{n+1}+\sqrt{n} \end{align}$$
+Since $\lim_{n \rightarrow \infty}a_n=\infty$, hence this series will diverge.
+
+**Option 2:** For all $n$, $\vert \frac{\sin n}{n^2} \vert \leq \vert \frac{1}{n^2} \vert $, hence by comparision test the series converges absolutely, hence it will converge.
+
+**Option 3:** Since $lim_{n \rightarrow \infty}(-1)^n \log n$ does not exist, hence the given series diverges. 
+
+**Option 4:** For sufficiently large $n$, $\frac{\log n}{n}\geq \frac{1}{n}$. Since $\sum 1/n $ diverges, hence the given series will also diverge.
+
+Hence **2** is correct choice.
+
+******
+**Question 2:** Using the fact that $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}=\log 2$, $\sum_{n=1}^{\infty} \frac{(-1)^n}{n(n+1)}$ equals
+
+1. $1-2 \log 2$
+2. $1+2 \log 2$
+3. $(\log 2)^2$
+4. $-(\log 2)^2$
+
+**Answer:** Given series can be written as 
+\begin{align*}
+\require{cancel}&\sum_{n=1}^{\infty} \frac{(-1)^n}{n(n+1)}&\\=& \sum_{n=1}^{\infty} \frac{(-1)^n[(n+1)-n])}{n(n+1)}&\cr 
+=& \sum_{n=1}^{\infty} \frac{(-1)^n(n+1)-(-1)^nn)}{n(n+1)}&\cr 
+=& \sum_{n=1}^{\infty}\left [ \frac{(-1)^n\cancel{(n+1)}}{n\cancel{(n+1)}}+\frac{(-1)^{n+1}\cancel{n}}{\cancel{n}(n+1)}\right ]&\cr 
+=&\sum_{n=1}^{\infty}\frac{(-1)^n}{n}+\sum_{m=2}^{\infty}\frac{(-1)^m}{m} & (m=n+1)\cr
+=&\log 2+ (\log 2+1)=1+2 \log 2 & (-1+\sum_{n=2}^{\infty}\frac{(-1)^n}{n}=\log 2)
+\end{align*}
+
+Hence **2** is correct choice.
+
+-----
+**Question 3:** Using the fact that $\sum_{n=1}^{\infty} \frac{1}{n^2}=\frac{\pi^2}{2}$, $\sum_{n=1}^{\infty} \frac{1}{(2n+1)^2}$ equals
+
+1. $\frac{\pi^2}{12}$
+2. $\frac{\pi^2}{12} -1$
+3. $\frac{\pi^2}{8}$
+4. $\frac{\pi^2}{8}-1$
+
+**Answer:** Here, 
+\begin{align*}
+\frac{\pi^2}{2} & = \frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots \cr 
+&= \left[ \frac{1}{1^2}+\frac{1}{3^2}+\cdots \right]+\left[ \frac{1}{2^2}+\frac{1}{4^2}+\cdots \right] \cr 
+&=\left[ \frac{1}{1^2}+\frac{1}{3^2}+\cdots \right]+ \frac{1}{2^2}\cdot \left[ \frac{1}{1^2}+\frac{1}{2^2}+\cdots \right] \cr
+&= \left[ \frac{1}{1^2}+\frac{1}{3^2}+\cdots \right]+ \frac{1}{2^2}\cdot \frac{\pi^2}{2} \end{align*}
+Hence, 
+\begin{align}\left[ \frac{1}{1^2}+\frac{1}{3^2}+\cdots \right] &=  \frac{\pi^2}{2} \left ( 1-\frac{1}{2^2} \right )=\frac{3\pi^2}{8} \end{align}
+
+****
+**Question 4:** Let $\{a_n\},\{b_n\}$ be sequence of real numbers satisfying $|a_n| \leq |b_n|$ for all $n \geq 1$. Then
+
+1. $\sum a_n$ converges whenever $\sum b_n$ converges
+2. $\sum a_n$ converges absolutely whenever $\sum b_n$ converges absolutely
+3. $\sum b_n$ converges whenever $\sum a_n$ converges
+4. $\sum b_n$ converges absolutely whenever $\sum a_n$ converges absolutely
+
+**Answer:** By comparison test, $\{b_n\}$ converges absolutely implies $\{a_n\}$ converges absolutely. 
+
+Hence **2** is correct choice.
+
+******
+**Question 5:** If $\sum_{n=1}^{\infty} a_n$ is absolutely convergent then which of the following is NOT true?
+
+1. $\sum_{m=n}^{\infty} a_m \rightarrow 0$ as $n \rightarrow \infty$
+2. $\sum_{n=1}^{\infty} a_n \sin n$ is convergent
+3. $\sum_{n=1}^{\infty} e^{a_n}$ is divergent
+4. $\sum_{n=1}^{\infty} a_n^2$ is divergent
+
+**Answer:** Checking each option one by one, 
+
+**Option 1:** $\sum a_n$ is convergent series, hence by Cauchy criteria for convergence of series, for all $\epsilon >0$ there exist an $N\in \mathbb{N}$ such that for all $m,n \geq N$, such that $m>n$ we have 
+$$\vert a_n+a_{n+1}+\cdots + a_m \vert \leq \epsilon $$ As $m \to \infty$, we get
+$$\sum_{m=n}^{\infty} a_m \leq \epsilon$$
+But epsilon can be made arbitrarily small, hence we get the assertion true in this option.
+$$\lim_{n \to \infty}\sum_{m=n}^{\infty} a_m = 0.$$
+
+**Option 2:** Since $\vert a_n \sin n \vert \leq \vert a_n \vert$ and $\sum a_n$ is absolutely convergent series, hence by comparison test we get, $\sum_{n=1}^{\infty} a_n \sin n$ is absolutely convergent series.
+
+**Option 3:** Here we have, 
+$$\lim_{n \to \infty}e^{a_n} = e^{\lim_{n \to \infty}a_n}=e^0=1.$$
+Hence the given series will diverge.
+
+**Option 4:** $\sum a_n$ is convergent series, hence $\lim_{n \to \infty}a_n=0$, then there exist $N \in \mathbb{N}$ such that for all $n > N$, we have $\vert a_n \vert < 1 \Rightarrow \vert a_n^2 \vert < \vert a_n \vert <1$. By comparison test we get $\sum_{n = N}^{\infty}a_n^2$ is absolutely convergent. Also note that 
+>The convergence and divergence of series will not change if we remove finite number of terms from the series. 
+
+Hence the given series is convergent.
+
+Hence **4** is correct choice.
+
+<!--
+**Question:** Let $\{a_k \}$ be an unbounded, strictly increasing sequence of positive real numbers and $x_k = (a_{k+1} - a_k )/a_{k + 1}$. Which of the following statements is/are correct?
+
+1. For all $n \geq m$, $\sum_{k=m}^n x_k > 1 - \frac{a_m}{a_n}$ 
+2. For all $n \geq m$, $\sum_{k=m}^n x_k > \frac{1}{2}$ 
+3. $\sum_{k=m}^n x_k $ converges to finite limit. 
+4. $\sum_{k=m}^n x_k $ diverges to $\infty$  
+
+-->

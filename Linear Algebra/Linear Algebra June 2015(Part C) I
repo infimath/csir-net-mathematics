@@ -1,0 +1,110 @@
+---
+layout: post
+title: CSIR-NET June 2015 Linear Algebra(Part C) I
+tags: [2015]
+---
+
+**Question 1:** Let
+$$A = \pmatrix{a & b & c \cr 0 & a & d \cr 0 & 0 & a }$$
+be a $3 \times 3$ matrix where $a, b, c, d$ are integers. Then, we mush have:
+
+1. If $a \neq 0$, there is a polynomial $\newcommand{\Q}{\mathbb{Q}}p \in \Q[x]$ such that $p(A)$ is he inverse of $A$.
+2. For each polynomial $\newcommand{\Z}{\mathbb{Z}}q \in \Z[x]$, the matrix
+$$q(x) = \pmatrix{q(a) & q(b) & q(c) \cr 0 & q(a) & q(d) \cr 0 & 0 & q(a)}.$$
+3. If $A^n = 0$ for some positive integer $n$, then $A^3 = 0$.
+4. $A$ commutes with every matrix of the form
+$$\pmatrix{a' & 0 & c' \cr 0 & a' & 0 \cr 0 & 0 & a' }.$$
+
+**Answer:** Checking each option one by one,
+
+**Option 1:** When $a \neq 0$, then the matrix $A$ is invertible(since the determinant of $A$ is non zero). Then characteristic polynomial is,
+$$\begin{align}\chi (x) &= (x - a)^3 \\&= x^3 - 3ax^2 + 3a^2x -a^3\end{align}$$
+satisfies by $A$ $i.e.$,
+ $$A^3 - 3aA^2 + 3a^2A -a^3I = 0 $$
+Mulitpliying by $A^{-1}$ both sides,
+ $$A^2 - 3aA + 3a^2I -a^3A^{-1} = 0 $$
+ Hence,
+ $$A^{-1} = \frac{1}{a^3}(A^2 - 3aA + 3a^2I)$$
+ Thus $A^{-1}$ is given by polynomial over field of rationals.
+
+**Option 2:** By direct checking we see that,
+$$A^ 2 \neq \pmatrix{a^2 & b^2 & c^2 \cr 0 & a^2 & d^2 \cr 0 & 0 & a^2 }.$$
+Hence this option is not true.
+
+**Option 3:** If $A^n =0$, then the determinant of $A$ is 0. Hence $a^3 = 0 \Rightarrow a = 0$, hence $A^3 = 0$.
+
+**Option 4:** We see that the matrix commutes by direct multiplication.
+
+Hence **1, 3 and 4** are correct choice.
+
+*****
+**Question 2:** Let $S$ be the set of $3 \times 3$ real matrices $A$ with
+$$A^TA = \pmatrix{1&0&0 \cr 0&0&0 \cr 0&0&0}.$$
+Then the set $S$ contains
+
+1. a nilpotent matrix
+2. a matrix of rank one
+3. a matrix of rank two
+4. a non-zero skew-symmetric matrix.
+
+**Answer:** We can observe that the following nilpotent matrix will satisfy the given condition,
+$$\pmatrix{0&0&0 \cr 0&0&0 \cr 1&0&0}.$$
+Hence option 1 is true.
+
+For other options we have to use the theorem,
+> The nullspace of $A$ and $A^TA$ are same.
+
+Since the $A^TA$ has rank one hence $A$ has to be rank one.  The above theorem will eliminate other two cases(A non-zero skew symmetric matrix has rank 2).
+
+Hence **1 and 2** are correct choice.
+
+****
+**Question 3:** Consider non-zero vector spaces $V_1, V_2, V_3, V_4$ and linear transformations $\phi_1:V_1 \rightarrow V_2$, $\phi_2: V_2 \rightarrow V_3$  and  $\phi_3: V_3 \rightarrow V_4$ such that Ker $\phi_1 = 0$, Range $\phi_1=$ Ker $\phi_2$, Range $\phi_2=$ Ker $\phi_3$, Range $\phi_3=V_4$. Then
+
+1. $\sum_{i=1}^4(-1)^i$ dim $V_i = 0$.
+2. $\sum_{i=1}^4(-1)^i$ dim $V_i > 0$
+3. $\sum_{i=1}^4(-1)^i$ dim $V_i < 0$
+4. $\sum_{i=1}^4(-1)^i$ dim $V_i \neq 0$
+
+**Answer:** This problem is based on application of rank-nullity theorem.
+$$
+\begin{align}
+\text{ Range } \phi_1 &=  \text{ Ker } \phi_2 \\
+ \text{ Ker }\phi_3 &= \text{ Range } \phi_2
+\end{align}
+$$
+Adding both equation we get,
+$$
+\begin{align}
+&\text{ Range } \phi_1  +  \text{ Ker }\phi_3 \\
+&= \text{ Ker } \phi_2 + \text{ Range } \phi_2 \\
+&= \text{ dim }V_2 \tag{3.1}
+\end{align}
+$$
+
+Also,
+$$\begin{align}& \text{ Ker } \phi_1 + \text{ Range } \phi_1 =  \text{ dim }V_1 \\ \Rightarrow &\boxed{\text{ Range } \phi_1 = \text{ dim }V_1}.\end{align}$$
+Using this in above equation we get,
+$$ \text{ dim }V_2 =  \text{ dim }V_1 +  \text{ Ker }\phi_3 \tag{3.2}$$
+Also,
+$$\begin{align}&\text{ Ker } \phi_3 + \text{ Range } \phi_3 =  \text{ dim }V_3 \\ \Rightarrow & \boxed{\text{ Ker } \phi_3 = \text{ dim }V_3 - \text{ dim }V_4}.\end{align}$$
+Using this in above equation we get,
+$$ \text{ dim }V_2 =  \text{ dim }V_1 +  \text{ dim }V_3 - \text{ dim }V_4$$
+Hence,
+$$\sum_{i=1}^4(-1)^i \text{ dim }V_i = 0$$
+
+Hence **1** is correct choice.
+
+*****
+**Question 4:** Let $S: \Bbb R^n \rightarrow \Bbb R^n$ be given by $S(v) = \alpha v$ for a fixed $\alpha \in \Bbb R, \alpha \neq 0$.
+Let $T: \Bbb R^n \rightarrow \Bbb R^n$ be a linear transformation such that $B = \{v_1, \ldots, v_n \}$ is a set of linearly eigenvectors of $T$. Then
+
+1. The matrix of $T$ with respect to $B$ is diagonal.
+2. The matrix of $(T-S)$ with respect to $B$ is diagonal.
+3. The matrix of $T$ with respect to $B$ is not necessarily diagonal, but is upper triangular.
+4. The matrix of $T$ with respect to $B$ is diagonal but he matrix of $(T-S)$ with respect to $B$ is not diagonal.
+
+**Answer:** The linear transformation $T$ has full set of linearly independent eigenvalues that span $\Bbb R^n$, hence $T$ is diagonalizable.
+Since any non-zero vector are eigenvector of $S$, hence $S$ is diagonalizable with respect to $B$. Since $T$ and $S$ has same set of eigenvalues hence $(T-S)$ will also be diagonalizable with respect to $B$.
+
+Hence **1 and 2** are correct choice.

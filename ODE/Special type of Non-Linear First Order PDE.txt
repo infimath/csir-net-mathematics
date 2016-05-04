@@ -1,0 +1,89 @@
+---
+layout: post
+title: Special type of Non-Linear PDE
+tags: [PDE]
+---
+
+**Type I:** (Equation Involving only $p$ and $q$)
+If the equation involving only $p$ and $q$, then the PDE will be of the form 
+$$ f(p,q)=0. \tag{1}$$
+**Solution:** The Charpit's equation will take the form
+$$\frac{dx}{f_p}=\frac{dy}{f_q}=\frac{dz}{pf_p+qf_y}=\frac{dp}{0}=\frac{dq}{0}$$
+One solution will be $p=a$(Analogously we can take $q=b$), where $a$ is a arbitrary constant. Putting this in $(1)$ we get, 
+$$q= Q(a),$$
+The solution will be given by following exact differential equation
+$$\begin{align}& dz=adx+Q(a)dy \\ \Rightarrow &\boxed{z=ax+Q(a)y+b}.\end{align}$$
+
+
+**Type II:** (Equation does not involving independent variable $x$ and $y$)
+The PDE will look like 
+$$f(z,p,q)=0 \tag{2}$$
+
+**Solution:** The Charpit's equation will look like 
+$$\frac{dx}{f_p}=\frac{dy}{f_q}=\frac{dz}{pf_p+qf_y}=\frac{dp}{-pf_z}=\frac{dq}{-qf_z}$$
+From last two terms we get $p=aq$, putting this in $(2)$, we get $$q=Q(z,a) \text{ and } p=aQ(z,a)$$  The solution will be given by following exact differential equation 
+\begin{align*} dz &= aQ(z,a)dx + Q(z,a) dy \cr
+\frac{dz}{Q(z,a)} &= adx+ dy \cr \int \frac{dz}{Q(z,a)} &= ax+ y + b. \end{align*}
+
+**Type III:** (Separable Type)
+A first order PDE is separable if it can be written of the form of $$f(x,p)=g(y,q) \tag{3}$$
+
+**Solution:** Here the solution is obtained by taking $$f(x,p) = g(y,q) = a$$
+Solving for $p$ and $q$, we get $$p = P(x,a) \text{ and } q=Q(y,a)$$ The solution will be obtained by following exact differential equation 
+$$ dz = P(x,a)dx+Q(y,a)dy$$
+
+**Type IV:** (Clairaut's From)
+This type of equation look like 
+$$z=px+qy+f(p,q) \tag{4}$$
+
+**Solution:** The solution will be 
+$$\boxed{z=ax+by+f(a,b)}.$$
+
+******
+**Question 1:**  Let $u=u(x, y)$ be the complete integral of the PDE $$\frac{\partial u}{\partial x}\cdot \frac{\partial u}{\partial y} = xy$$ passing through the points $(0,0,1)$ and $(0,1,\frac{1}{2})$ in the $x-y-u$ space. Then the value of $u(x, y)$ evaluated at $(-1,1)$ is 
+
+$1.~ 0 \quad 2.~ 1 \quad 3.~ 2 \quad 4.~ 3$ 
+
+**Answer:** The given pde is $pq=xy$ is of separable type since we can write it as $p/x=y/q = a$. Then we get $p$ and $q$ as 
+$$p=ax \text{ and } q= y/a$$
+The solution is obtained from
+$$\begin{align}&du = ax \, dx + \frac{y}{a}dy \\ \Rightarrow & \boxed{u(x,y) = ax^2/2+ y^2/2a +b} \end{align}$$
+As it passes through $(0,0,1)$ and $(0,1,\frac{1}{2})$, we get 
+\begin{align*}& u(0,0)=1 & \Rightarrow &\boxed{b= 1} \cr &u(0,1)=\frac{1}{2} & \Rightarrow & \frac{1}{2a}+1= \frac{1}{2} \\ && \Rightarrow & \frac{1}{2a}= - \frac{1}{2}\\ && \Rightarrow & \boxed{a = -1} \end{align*}
+Hence,
+$$u(x,y)=-\frac{x^2+ y^2}{2} +1 \Rightarrow u(-1,1)=0.$$
+
+Hence **1** is correct choice.
+
+*****
+**Question 2:** Let $z=z(x, y)$ be a solution of $$\frac{\partial z}{\partial x}\cdot \frac{\partial z}{\partial y} = 1$$ passing through $(0, 0, 0)$. Then $z(0,1)$ is 
+
+$1.~ 0 \quad 2.~ 1 \quad 3.~ 2 \quad 4.~ 4$
+
+**Solution:** The PDE contains only $p$ and $q$, Hence $p=a$ and $q=1/a$, then the solution will be 
+$$z(x,y)=ax+y/a+b$$
+It passes through $(0, 0, 0)$, hence $b=0$. It lead to $$z(0,1)=1/a$$
+Which can take any non-zero value.
+
+Hence **2, 3 and 4** are correct choice.
+
+******
+**Question 3:** Consider the first order PDE $p +q=pq$ where $p=\frac{\partial z}{\partial x},q=\frac{\partial z}{\partial y}$. Then which of the following are correct? 
+
+1. The Charpit's equations for the above PDE reduce to $\frac{dx}{1-q}=\frac{dy}{1-p}=\frac{dz}{-pq}=\frac{dp}{p+q}=\frac{dq}{0}.$
+2. A solution of the Charpit's equation is $q=b$, where $b$ is a constant. 
+3. The corresponding value of $p$ is $p=\frac{b}{b-1}$.
+4. A solution of the equation is $z=\frac{b}{b-1}+by+a$, where $a$ and $b$ are constants.
+
+**Answer:** The partial differential equation consist of only $p$ and $q$ as given in Type I.
+
+**Option 1:** In Charpit's equation denominator corresponding to terms having $dp$ should be zero. Hence option 1 is false.
+
+**Option 2:** $q=b$ will be a solution of Charpit's equation.
+
+**Option 3:** Putting $q=b$ we get $p+b=pb \Rightarrow p= \frac{b}{b-1}$.
+
+**Option 4:** Hence the solution will be 
+$$z = \frac{b}{b-1}x+by+a $$
+
+Hence **2, 3 and 4** are correct choice.

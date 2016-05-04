@@ -1,0 +1,79 @@
+---
+layout: post
+title: Problems on Mobius Transformation
+tags: [Analytic Function]
+---
+
+**Question 1:** Define
+\begin{align*}
+H^+ = \{z \in \mathbb{C} : y > 0\} \\
+H^- = \{z \in \mathbb{C} : y < 0\} \\
+D^+ = \{z \in \mathbb{C} : x > 0\} \\
+D^- = \{z \in \mathbb{C} : x < 0\}
+\end{align*}
+The function $f(z) = \frac{z}{3z + 1}$
+
+
+1. Maps $H^+$ onto $H^+$ and $H^-$ onto $H^-$
+2. Maps $H^+$ onto $H^-$ and $H^-$ onto $H^+$
+3. Maps $H^+$ onto $D^+$ and $H^-$ onto $D^-$
+4. Maps $H^+$ onto $D^-$ and $H^-$ onto $D^+$
+
+**Answer:** Such problems solved by application following two theorem, $\newcommand{\set}[1]{\left \{ {#1} \right \}}$
+> 1. Any **Mobius transform** map a generalized circle(a line or circle) to a generalized circle. Since three points determines a generalized circle uniquely, hence image of these three point will completely determine the image of the given generalized circle.
+> 2. Mobius transform preserve the orientation of the generalized circle.
+
+Here we have to find the image of $x-$axis and $y-$axis
+$$f(-1)=\frac{1}{2}, f(0)=0, f(\infty)=\frac{1}{3},f(-i)=\frac{1}{3+i}=\frac{3-i}{\sqrt{10}}$$
+
+The image of real axis in green, while the image of imaginary axis will be drawn in red.
+![image under Mobius transformation](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/mobius%20transform.png)
+
+Here we need to understand that the real axis map to real axis with same orientation.
+
+Hence **1** is correct choice.
+
+-----
+**Question 2:** Let $z \in \mathbb{C}$ of the form $z = x + iy$, define
+\begin{align*}
+H^+ = \set{z \in \mathbb{C} : y > 0} \\
+H^- = \set{z \in \mathbb{C} : y < 0} \\
+D^+ = \set{z \in \mathbb{C} : x > 0} \\
+D^- = \set{z \in \mathbb{C} : x < 0}
+\end{align*}
+The function $f(z) = \frac{2z + 1}{5z + 3}$
+
+1. Maps $H^+$ onto $H^+$ and $H^-$ onto $H^-$
+2. Maps $H^+$ onto $H^-$ and $H^-$ onto $H^+$
+3. Maps $H^+$ onto $D^+$ and $H^-$ onto $D^-$
+4. Maps $H^+$ onto $D^-$ and $H^-$ onto $D^+$
+
+**Answer:** The given Mobius transformation maps
+$$f(-1/2)=0,f(0)=1/3,f(\infty)=2/5$$
+Thus this given Mobius transform map $x-$axis to itself with same orientation, hence upper half plane and lower half plane map to itself.
+
+Hence **1** is correct choice.
+
+------
+**Question 3:** Let $f(z) = \frac{1+z}{1-z}$. Which of the following is/are true?
+
+1. $f$ maps $\set{|z| < 1}$ onto $\set{\mbox{Re } z >0}$.
+2. $f$ maps $\set{|z| < 1, \mbox{Im } z > 0}$ onto $\set{\mbox{Re } z >0, \mbox{Im }z > 0}$.
+3. $f$ maps $\set{|z| < 1, \mbox{Im } z < 0}$ onto $\set{\mbox{Re } z >0, \mbox{Im }z < 0}$.
+4. $f$ maps $\set{|z| < 1}$ onto $\set{\mbox{Im } z >0}$.
+
+**Answer:** In this problem we have to find the image of unit circle and imaginary axis under the given transformation.
+
+
+**Option 1 and 4:** To get the image of unit circle choose points $-1,i,1$, then it's image
+$$f(-1)=0,f(i)=\frac{1+i}{1-i}=i,f(1)=\infty$$
+In this figure green circle map to red line.
+![mobius transformation](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/mobius%20transform%202.png)
+
+Note, the interior of unit circle comes in right side of the direction in which points are chosen. The image of this unit circle is imaginary axis with positive direction and right side of this is $\set{\mbox{Re } z >0}$, hence **1** is correct choice while **4** is false.
+
+**Option 2 and 3:** In this case we also need to find the image of real axis.
+$$f(-1)=0,f(0)=1,f(1)=\infty$$
+Hence real axis map to itself with same orientation, hence upper half plane and lower half plane map to itself. So both **2** and **3** are correct.
+
+Combining all we get **1, 2 and 3** are correct choices.

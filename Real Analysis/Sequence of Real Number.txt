@@ -1,0 +1,103 @@
+---
+layout: post
+title: Problems on Sequence of Real Number
+tags: [Sequence and Series]
+---
+
+**Question 1:** Let $a_n=\sin(\pi/n)$. For the sequence $a_1, a_2, \cdots$ the supremum is 
+
+1. $0$ and it is attained
+2. $0$ and it is not attained
+3. $1$ and it is attained
+4. $1$ and it is not attained
+
+**Answer:** The sine function has range $[-1,1]$, hence $a_n \leq 1$. Note, for $n=2$, $i.e.$. $a_2=\sin(\pi/2)=1$, hence $1$ is the supremum and it is attained.
+
+Hence **4** is correct choice.
+
+****
+**Question 2:** Which of the following is/are correct?
+
+1. $n \log(1+ \frac{1}{n+1}) \rightarrow 1$ as $n \rightarrow \infty$
+2. $(n+1) \log(1+ \frac{1}{n+1}) \rightarrow 1$ as $n \rightarrow \infty$
+3. $n^2 \log(1+ \frac{1}{n}) \rightarrow 1$ as $n \rightarrow \infty$
+4. $n \log(1+ \frac{1}{n^2}) \rightarrow 1$ as $n \rightarrow \infty$
+
+**Answer:** The given limit is in indeterminate form of type $\infty \cdot 0$. Recall,
+>$$\lim_{x \rightarrow 0} \frac{\log(1+x)}{x}= 1$$
+
+**Option 1:** Let $m=1/(n+1) \Rightarrow n=1/m-1$, now the given limit in terms of $m$ we have 
+\begin{align*}&\lim_{m \rightarrow 0}\left (\frac{1}{m}-1 \right )\log(1+m)\\=&\lim_{m \rightarrow 0} \frac{\log(1+m)}{m}- \lim_{m \rightarrow 0} \log(1+m)\cr
+=& 1-0=1
+\end{align*}
+
+**Option 2:** Let $m=1/(n+1) \Rightarrow n+1=1/m$, now the given limit in terms of $m$ we have 
+$$\lim_{m \rightarrow 0} \frac{\log(1+m)}{m}= 1$$
+
+**Option 3:** Let $m=1/n \Rightarrow n=1/m$, now the given limit in terms of $m$ we have 
+\begin{align}&\lim_{m \rightarrow 0} \frac{\log(1+m)}{m^2} & \left( \frac{0}{0}\text{ Form}\right )\\ =& \lim_{m \rightarrow 0}\frac{1}{2m(1+m)}\\=&\infty \end{align}
+
+**Option 4:** Let $m=1/n^2 \Rightarrow n=1/\sqrt{m}$, now the given limit in terms of $m$ we have 
+\begin{align}&\lim_{m \rightarrow 0} \frac{\log(1+m)}{\sqrt{m}}\\ =& \lim_{m \rightarrow 0} \frac{\log(1+m)}{m}\cdot \sqrt{m} \\=&1\times 0=0.\end{align}
+
+Hence **1 and 2** are correct choice.
+
+*****
+**Question 3:** $\lim_{n \rightarrow \infty} \frac{1}{\sqrt{n}}\left (\frac{1}{\sqrt{1} + \sqrt{3}} + \frac{1}{\sqrt{3} + \sqrt{5}} + \cdots + \frac{1}{\sqrt{2n - 1} + \sqrt{2n + 1}}\right )\require{cancel}$ equals 
+
+1. $\sqrt{2}$
+2. $\frac{1}{\sqrt{2}}$
+3. $\sqrt{2} + 1$
+4. $\frac{1}{\sqrt{2} + 1 }$
+
+**Answer:** It is a kind of Telescopic series.
+\begin{align*}&\lim_{n \rightarrow \infty} \frac{1}{\sqrt{n}}\left (\frac{1}{\sqrt{1} + \sqrt{3}} + \frac{1}{\sqrt{3} + \sqrt{5}} + \cdots + \frac{1}{\sqrt{2n - 1} + \sqrt{2n + 1}}\right ) \cr
+=&\lim_{n \rightarrow \infty} \frac{1}{\sqrt{n}}\left (\frac{\cancel{\sqrt{3}}-\sqrt{1}}{2} + \frac {\cancel{\sqrt{5}} - \cancel{\sqrt{3}}}{ 2 } + \cdots + \frac{\sqrt{2n + 1}-\cancel{\sqrt{2n - 1}}}{ 2 }\right )\cr
+=&\lim_{n \rightarrow \infty} \frac{1}{2\sqrt{n}}(\sqrt{2n + 1}-\sqrt{1}) \cr
+=& \lim_{n \rightarrow \infty}\frac{1}{2}\left (\sqrt{2+\frac{1}{n}}-\frac{1}{\sqrt{n}}\right )\cr
+=&\frac{\sqrt{2}}{2}\\
+=&\frac{1}{\sqrt{2}}
+\end{align*}
+
+Hence **2** is correct choice.
+
+******
+**Question 4:** If $\{x_n \}$ and $\{y_n \}$ are sequence of real numbers, which of the following is/are true?
+
+1. $\limsup (x_n+y_n) \leq \limsup x_n + \limsup y_n$
+2. $\limsup (x_n+y_n) \geq \limsup x_n + \limsup y_n$
+3. $\liminf (x_n+y_n) \leq \liminf x_n + \liminf y_n$
+4. $\liminf (x_n+y_n) \geq \liminf x_n + \liminf y_n$
+
+**Answer:** Consider,
+$$\begin{align*}&\sup \{x_n+y_n:n\geq k\} \\ \leq &\sup \{x_n:n\geq k\}+\sup \{y_n:n\geq k\}\end{align*}$$
+Then taking the limit we get, 
+\begin{align*}&\lim_{k \rightarrow \infty}\sup \{x_n+y_n:n\geq k\} \\ \leq &\lim_{k \rightarrow \infty} \sup \{x_n:n\geq k\}+\lim_{k \rightarrow \infty} \sup \{y_n:n\geq k\}\cr
+\limsup (x_n+y_n) & \leq \limsup x_n + \limsup y_n
+\end{align*}
+Analogously we can show for infrimum,
+$$\liminf (x_n+y_n) \geq \liminf x_n + \liminf y_n$$
+
+Hence **1 and 4** are correct choices.
+
+*****
+**Question 5:** Let $p(x)$ be a polynomial in the real variable $x$ of degree $5$. Then $\lim_{n\rightarrow \infty} \frac{p(n)}{2^n} $ is 
+
+$1.~5 \quad 2.~1 \quad 3.~0 \quad 4.~\infty $ 
+
+**Answer:** The exponential function grows much faster than any polynomial function, hence $n \to \infty$ given function will approach to $0$.
+
+Hence **3** is correct choice. 
+
+***
+**Question 5:** Let $\{a_n\}$, $\{b_n\}$ be given bounded sequence of positive real numbers. Then (Here $a_n \uparrow a $ means $a_n$ increases to $a$ as $n$ goes to $\infty $, similarly, $b_n \uparrow b $ means $b_n$ increases to $b$ as $n$ goes to $\infty $ )
+
+1. If $a_n \uparrow a $, then $\sup_{n \geq 1}(a_n b_n) = a(\sup{n \geq n} b_n)$
+2. If $a_n \uparrow a $, then $\sup_{n \geq 1}(a_n b_n) < a(\sup{n \geq n} b_n)$
+3. If $b_n \uparrow b $, then $\inf_{n \geq 1}(a_n b_n) = (\inf{n \geq n} a_n)b$
+4. If $b_n \uparrow b $, then $\inf_{n \geq 1}(a_n b_n) > (\inf{n \geq n} a_n)b$
+
+**Answer:** Recall,
+>1. A monotonically increasing sequence bounded above is convergent and it converge to it's supremum.
+>2. Similarly, a monotonically decreasing sequence bounded below is convergent and it will converge to it's infrimum.
+

@@ -1,0 +1,125 @@
+---
+layout: post
+title: Zeros and Poles of Analytic Function
+tags: [Analytic Function]
+---
+
+#### Important Definition and Theorems
+**Definition:** A point $z_0$ is called a zero of order $m$ for the function $f$ if $f$ is analytic at $z_0$ and $f$ and its first $m-1$ derivatives vanish at $z_0$, but $f^{(m)}(z_0) \neq 0$.
+
+
+**Theorem 1:** If $f$ has a zero of order $m$ at $z_0$, then $1/f$ has a pole of order $m$ at $z_0$. Conversely if $f$ has pole of order $m$ at $z_0$, then $1/f$ have removable singularity at $z_0$, and if we define $(1/f)(z_0)=0$, then $1/f$ has a zero of order $m$ at $z_0$.
+
+**Theorem 2:** Let $f$ be analytic at $z_0$. Then $f$ has a zero of order $m$ at $z_0$ if and only if $f$ can be written as
+$$f(z)= (z-z_0)^m g(z)$$
+Where $g$ is analytic at $z_0$ and $g(z_0) \neq 0$.
+
+**Theorem 3:** A function $f$ has a pole of order $m$ if and only if in some punctured neighborhood of $z_0$
+$$f(z) = \frac{g(z)}{(z-z_0)^m}$$
+Where $g$ is analytic at $z_0$ and $g(z_0) \neq 0$
+
+******
+**Question 1:** Consider the function $f(z) = z^2 (1- \cos z), z \in \mathbb{C}$. Which of the following are correct?
+
+1. The function $f$ has zeros of order $2$ at $0$
+2. The function $f$ has zeros of order $1$ at $2 \pi n,~ n = \pm 1, \pm 2, \cdots $
+3. The function $f$ has zeros of order $4$ at $0$
+4. The function $f$ has zeros of order $2$ at $2 \pi n,~ n = \pm 1, \pm 2, \cdots $
+
+**Answer:** Given function is product of two function $z^2$ and $1-\cos z$. $z^2$ has only zero at $0$ of order $2$. So we have to find the zeros of $g(z)=1-\cos z$.
+$$1-\cos z = 0  \Rightarrow \cos z = 1  \Rightarrow \boxed{z = 2n \pi}$$
+Now, $g'(2n \pi)=\sin (2n\pi) =0$ and $g''(2n \pi)=\cos (2 n \pi )=1\neq 0$. Hence $1-\cos z$ have zero of order $2$ at each $2n \pi$ such that $n \in \mathbb{Z}$.
+
+Since $z^2 $ has zero of order $2$, hence the given function has zero of order $4$ at $0$. At all other points $i.e.$, $2 \pi n,~ n = \pm 1, \pm 2, \cdots $ we have zero of order $2$.
+
+Hence **3 and 4** are correct choices.
+
+******
+**Question 2:** Which of the following functions $f$ are entire functions and have simple zeros at $z = ik$ for all $k \in \mathbb{Z}$
+
+1. $f(z) = a_nz^n + a_{n-1}z^{n-1} + \cdots + a_0$ for some $n\geq 1$ and some $a_0, a_1, \cdots ,a_n \in \mathbb{C}$.
+2. $f(z) = a \sin 2\pi i z$, for some $a \in \mathbb{C}$.
+3. $f(z) = b \cos 2\pi (i z - 1/4)$, for some $b \in \mathbb{C}$.
+4. $f(z) = e^{cz}$, for some $c \in \mathbb{C}$.
+
+**Answer:** All the function are [entire](http://en.wikipedia.org/wiki/Entire_function). Checking each option one by one,
+
+**Option 1:** By Fundamental theorem of algebra a polynomial of degree $n$ can have at most $n$ roots, hence we can't get infinite roots $ik$ for all $k \in \mathbb{Z}$.
+
+**Option 2:** $ f(z)=a \sin 2\pi i z=0 \Rightarrow 2 \pi iz = n \pi\Rightarrow z = \frac{n}{2i}=-\frac{ni}{2}$.
+Since $n$ is any integer, then for all even integers we get zeros at all $ik$ such that $k \in \mathbb{Z}$.
+Also $f'(ik)=a2\pi i\cos (2\pi i \cdot ik)= a2\pi i\cos (2\pi k)=a2\pi i \neq 0$. Hence we get simple zero.
+
+**Option 3:** $b \cos 2\pi (i z - 1/4)=0 \Rightarrow 2\pi (i z - 1/4) = \frac{(2n+1)\pi}{4}$.
+On simpification we get $z=-i \frac{2n +3 }{8}$, which can not produce any $ik$ such that $k \in \mathbb{Z}$.
+
+**Option 4:** Exponential function never equal to zero.
+
+Hence **2** is correct choices.
+
+*****
+**Question 3:** For $z \in \mathbb{C}$, define $f(z) = \frac{e^z}{e^z - 1} $. Then
+
+ 1. $f$ is entire
+ 2. The only singularities of $f$ are poles
+ 3. $f$ has infinitely many poles on the imaginary axis
+ 4. Each pole of $f$ is simple
+
+**Answer:** First we will try to find the zeros of denominator of the given function.
+$$g(z)=e^z - 1 = 0 \Rightarrow \boxed{z = 2n \pi i}$$
+Also $g'(2n \pi i)=e^{2n \pi i}=1 \neq 0$. Hence $g$ has zero of order $1$ at $z=2n \pi i$.
+
+The numerator of given function is $e^z$, which is analytic everywhere and non-zero at $z=2n\pi i $. Hence the given function has pole of order one(also called simple pole) at $2n \pi i$.
+
+Hence **2, 3 and 4** are correct choices.
+
+******
+**Question 4:** At $z= 0$ the function $f(z) = \frac{e^z + 1}{e^z - 1 }$ has
+
+1. A removable singularity
+2. A pole
+3. An essential singularity
+4. The residue of $f(z)$ at $z = 0$ is $2$.
+
+**Answer:** Same as above at $z = 0$, then denominator has a zero of order $1$ and numerator is non-zero and analytic at $z=0$, hence it has a simple pole at $z=0$.
+
+Also we know from residue calculus,
+> If $f$ has a pole of order $m$ at $z_0$, then
+> <center>$Res(f,z_0)=\lim_{z \to z_0}\frac{1}{(m-1)!}\dfrac{d^{m-1}}{dz^{m-1}}\left[ (z-z_0)f(z)\right ]$</center>
+
+$$Res(f,0)=\lim_{z \to 0}z\cdot \frac{e^z + 1}{e^z - 1 }=\frac{\lim_{z \to 0}e^z + 1}{\lim_{z \to 0}\frac{e^z - 1}{z} }=\frac{2}{1}=2.$$
+
+Hence **2 and 4** are correct choice.
+
+******
+**Question 5:** Let $f,~g$ be meromorphic function on $\mathbb{C}$. If $f$ has a zero of order $k$ at $z = a$ and $g$ has a pole of order $m$ at $z = 0$ then $g(f(z))$ has
+
+1. A zero of order $km$ at $z = a$
+2. A pole of order $km$ at $z = a$
+3. A zero of order $ |k - m| $ at $z = a$
+4. A pole of order $ |k - m| $ at $z = a$
+
+**Answer:** $f$ has zero of order $k$ at $z=a$. Then there exist a non vanishing analytic function $\phi(z)$ at $z=a$ such that
+$$f(z)=(z-a)^k\phi(z)$$
+Also $g$ has pole of order $m$ at $z=0$. Then there exist a non zero analytic function $\psi(z)$ at $z=0$ such that
+$$g(z)=\frac{\psi(z)}{z^m}$$
+Then $g\circ f$ will look like
+$$\begin{align}g(f(z))&=\frac{\psi((z-a)^k\phi(z))}{((z-a)^k\phi(z))^m}\\ &=\frac{\psi((z-a)^k\phi(z))}{(z-a)^{km}(\phi(z))^m}\end{align}$$
+Hence $g\circ f$ will have pole of order $km$.
+
+Hence **2** is correct choice.
+<!--
+
+-----
+**Question 5:** Let $f(z) = \frac{z-1}{\exp \left (\frac{2 \pi i}{z}\right ) - 1}$. Then,
+
+
+1. $f$ has an isolated singularity at $z = 0$.
+2. $f$ has an removable singularity at $z = 0$.
+3. $f$ has infinitely many poles.
+4. each pole of $f$ is of order $1$.
+
+**Answer:** Consider the denominator
+\begin{align} \exp \left (\frac{2 \pi i}{z}\right ) - 1 = 0 & \Rightarrow \exp \left (\frac{2 \pi i}{z}\right ) = 1 \cr & \Rightarrow \exp \left (\frac{2 \pi i}{z}\right ) = \exp(i 2 n \pi ) \cr & \Rightarrow \frac{2 \pi i}{z} =i 2 n \pi  \cr & \Rightarrow z = \frac{ 1}{n}  \end{align}
+
+-->

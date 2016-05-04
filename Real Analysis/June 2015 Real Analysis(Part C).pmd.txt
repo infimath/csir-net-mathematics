@@ -1,0 +1,131 @@
+---
+layout: post
+title: CSIR-NET June 2015 Real Analysis(Part C)
+tags: [2015, Differentiation, Continuity, Sequence and Series, Improper Integral]
+---
+
+**Question 1:** Let $a$ be positive real number. Which of the following integral are convergent?
+
+1. $\int_0^a \frac{1}{x^4} dx.$
+2. $\int_0^a \frac{1}{\sqrt{x}} dx.$
+3. $\int_4^{\infty} \frac{1}{x \log_e x } dx.$
+4. $\int_5^{\infty} \frac{1}{x (\log_e x)^2} dx.$
+
+**Answer:** Solving this improper integral one by one,
+
+**Option 1:** The improper integral,
+$$\int_0^a \frac{1}{x^4} dx = \lim_{\epsilon\to 0}\left[\cfrac{-3}{x^3}\right]_{\epsilon}^{a}$$
+will diverge.
+
+**Option 2:** The improper integral,
+$$\int_0^a \frac{1}{\sqrt{x}} dx = \frac{1}{2}\lim_{\epsilon\to 0}\left[\sqrt{x}\right]_{\epsilon}^{a} = \frac{\sqrt{a}}{2},$$
+hence it will converge.
+
+**Option 3:** The improper integral,
+$$\begin{align}\int_4^{\infty} \frac{1}{x \log_e x } dx &=\int_4^{\infty} \frac{d( \log_e x)}{\log_e x }\\ &=\lim_{a\to \infty}\left[ \log_e( \log_e x)\right]_4^{a},\end{align}$$
+will diverge.
+
+**Option 4:** The improper integral,
+$$\begin{align}\int_5^{\infty} \frac{1}{x (\log_e x)^2 } dx &=\int_5^{\infty} \frac{d( \log_e x)}{(\log_e x)^2 } \\ & =\lim_{a \to \infty}\left[\frac{-1}{\log_e x}\right]_5^{a}\\
+&=\lim_{a \to \infty}\left[\frac{-1}{\log_e a} + \frac{1}{\log_e 5} \right ] \\
+&= \frac{1}{\log_e 5}.\end{align}$$
+Clearly, it converges.
+
+Hence **2 and 4** are correct choices.
+
+***
+**Question 2:** Which of the following sets of functions are uncountable?
+
+1. $\{f\vert f:\Bbb N \to \{1,2\}\}$
+2. $\{f\vert f:\{1,2\} \to \Bbb N  \}$
+3. $\{f\vert f:\{1,2\} \to \Bbb N, f(1)\leq f(2)  \}$
+4. $\{f\vert f:\Bbb N \to \{1,2\},f(1)\leq f(2)\}$
+
+**Answer:** The cardinality of each choice is determined as follows,
+
+**Option 1:** The set has cardinality $2^{\Bbb N},$ which is uncountable(equivalent to $\Bbb R$).
+
+**Option 2:** The set has cardinality $\Bbb N^2 \sim \Bbb N\times \Bbb N,$ which is countable as *finite Cartesian product of countable set is countable*.
+
+**Option 3:** Here we impose extra condition on $f$, the
+$$\begin{align}
+&\vert  \{f\vert f:\{1,2\} \to \Bbb N, f(1)\leq f(2)  \} \vert \\
+\leq &\vert  \{f\vert f:\{1,2\} \to \Bbb N\}\vert
+\end{align}$$
+Hence it will also countable.
+
+**Option 4:**
+$$\begin{align}
+&\vert \{f\vert f:\Bbb N \to \{1,2\},f(1)\leq f(2)\} \vert \\
+\geq & \vert \{f\vert f:\Bbb N \setminus \{1,2\}  \to \{1,2\},f(1)\leq f(2)\} \vert \\
+= & 2^{\vert \Bbb N \vert -2}
+\end{align}$$
+This is uncountable, hence the given set will be uncountable.
+
+Hence **1 and 4** are correct choices.
+
+***
+**Question 3:** For $n \geq 2,$ let $a_n = \frac{1}{n\log n}$
+
+1. The sequence $\{a_n\}_{n=2}^{\infty}$ is convergent.
+2. The series $\sum_{n=2}^{\infty}a_n$ is convergent.
+3. The series $\sum_{n=2}^{\infty}a_n^2$ is convergent.
+4. The series $\sum_{n=2}^{\infty}(-1)^na_n$ is convergent.
+
+**Answer:** Checking each option one by one,
+
+**Option 1:** The sequence is convergent to zero.
+
+**Option 2:**
+> In general, for any $p>0$ the series
+> $$ \sum \frac{1}{n(\log n)^p}$$
+>converges if $p>1$ and diverges if $p<1$ (for proof use integral test).
+
+Hence the series $\{a_n\}_{n=2}^{\infty}$ is divergent.
+
+**Option 3:** For sufficiently large $n$,
+$$n^2 \leq (n \log n )^2 \Rightarrow \frac{1}{n^2}\geq \frac{1}{(n \log n )^2}$$
+Since the series $\sum \frac{1}{n^2}$ is convergent, hence by comparison test $\{a_n\}_{n=2}^{\infty}$ is also convergent.
+
+**Option 4:** Since the sequence, $\{a_n\}_{n=2}^{\infty}$ is decreasing and converges to $0$, hence by alternating series test $\{a_n\}_{n=2}^{\infty}$ is convergent.
+
+Hence **1, 3 and 4** are correct choice.
+
+****
+**Question 4:** Let $p_n(x) = x^n, x\in \Bbb R$ and let
+$$\mathcal{P} = \text{ span }\{p_0, p_1, p_2, \ldots \}$$
+Then,
+
+1. $\mathcal{P}$ is the vector space of all real valued continuous function of $\Bbb R$.
+2. $\mathcal{P}$ is a subspace of all real valued continuous function of $\Bbb R$.
+3. $\{p_0, p_1, p_2, \ldots \}$ is linearly independent set in the vector space of all continuous function on $\Bbb R$.
+4. Trigonometric function belongs to $\mathcal{P}$.
+
+**Answer:** The catch is in the definition of *span of a set*, the span of $S$ is defined as the set of all finite linear combinations of elements of $S$.
+
+The span is always a subspace. Take any transcendental function, for example $\sin x$ can't be written as polynomial hence doesn't contain in the span of $p_i(x)$.
+
+Since $x^n$ can't be written as linear combination of lowest powers, hence it is linearly independent.
+
+Hence **2 and 3** are correct.
+
+****
+**Question 5:** Let $\{a_1, a_2, \ldots \}$ be a sequence of real numbers. For any $k\geq 1,$ let $s_n = \sum_{k=0}^{n}a_{2k}$. Which of the following statements are correct?
+
+1. If $\lim_{n \to \infty} s_n$ exists, then $\sum_{m=0}^{\infty}a_m$ exists.
+2. If $\lim_{n \to \infty} s_n$ exists, then $\sum_{m=0}^{\infty}a_m$ need not exists.
+3. If $\sum_{m=0}^{\infty}a_m$ exists, then $\lim_{n \to \infty} s_n$ exists.
+4. If $\sum_{m=0}^{\infty}a_m$ exists, then $\lim_{n \to \infty} s_n$ need not exists.
+
+**Answer:** The series $s_n$ contains element of even index, so we can construct sequence with $0$ at even position and $\Bbb N$ at odd indices, $i.e.$, the sequence will look like,
+$$1, 0, 2, 0,3, 0,\ldots$$
+Then $s_n$ is all $0$, but $\sum_{m=0}^{\infty}a_m$ is unbounded, hence it will not exist.
+
+Also consider $a_n = \frac{(-1)^n}{n}$, then the series $\sum_{m=0}^{\infty}a_m$ exists by alternate series test, but
+$$\begin{align}
+s_n&=\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\cdots\\
+&=\frac{1}{2}\left[1+\frac{1}{2}+\frac{1}{3}+\cdots\right]
+\end{align}$$
+diverges, since $\sum \frac{1}{n}$ is unbounded.
+
+Hence **2 and 4** are correct choices.

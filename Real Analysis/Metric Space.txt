@@ -1,0 +1,62 @@
+---
+layout: post
+title: Definition and Examples of Metric Space
+tags: [Metric Space]
+---
+
+**Question 1:** Which of the following is/are metrics on $\mathbb{R}$?
+
+1. $d(x,y)= \min(x,y)$
+2. $d(x,y)= |x-y|$
+3. $d(x,y)= |x^2-y^2|$
+4. $d(x,y)= |x^3-y^3|$
+
+**Answer:** We have to check from the definition of metric space,
+>A metric $d$ on set $X$ is a function from $X\times X$ to $\mathbb{R}$, which satisfies the following properties For all $x,y,z \in X$
+>
+1. $d(x,y)\geq 0$.
+2. $d(x,y) = 0$ if and only if $x=y$.
+3. $d(x,y) = d(y,x)$
+4. $d(x,y) \leq d(x,z)+d(z,y)$
+>
+Then the pair $(X,d)$ is called a metric space.
+
+
+**Option 2:** Take $x= -1$ and $y=1$ then $d(-1,0)= \min(-1,0)=-1<0$. Hence false.
+**Option 2:** It will satisfy all the property(using the properties of modulus).
+**Option 3 and 4:** First three axioms will be satisfied trivially, need to check triangle inequality for all $x,y,z \in \mathbb{R}$ we have
+\begin{align*}
+|x^2-y^2| &= |x^2-z^2+z^2-y^2| \leq |x^2-z^2|+|z^2-y^2|\\
+|x^3-y^3| &= |x^3-z^3+z^3-y^3| \leq |x^3-z^3|+|z^3-y^3|
+\end{align*} Hence both are metric space.
+
+Hence **2,3 and 4** are correct choices.
+
+*****
+**Question 2:** Which of the following are matrices on $\mathcal{C}=\{f:[0,1] \rightarrow \mathbb{R} \text{ is a continuous function}\}$
+
+1. $d(f,g)= \sup\{|f(x)-g(x)|:x \in [0,1]\}$
+2. $d(f,g)= \inf\{|f(x)-g(x)|:x \in [0,1]\}$
+3. $d(f,g)=\int_0^1|f(x)-g(x)|dx $
+4. $d(f,g)=\sup\{|f(x)-g(x)|:x \in [0,1]\} + \int_0^1|f(x)-g(x)|dx$
+
+**Answer:** Note,
+**Option 1 and 3:** Only non-trivial to check the triangle inequality
+\begin{align*}\forall x\in [0,1] \text{ we have }|f(x)-g(x)|  \leq &|f(x)-h(x)|+|h(x)-g(x)|\\ \sup\{|f(x)-g(x)|:x \in [0,1]\} \leq &\sup\{|f(x)-h(x)|:x \in [0,1]\} \\&+\sup\{|h(x)-g(x)|:x \in [0,1]\} \\ \text{Also, }\int_0^1|f(x)-g(x)|dx \leq & \int_0^1|f(x)-h(x)|dx \\& + \int_0^1|h(x)-g(x)|dx
+\end{align*}  Hence both are metric.
+**Option 2:** Let $f(x),g(x)$ are two different function such that they intersect at least one point then  $\inf\{|f(x)-g(x)|:x \in [0,1]\} = 0$, Hence it does not satisfy axiom 2 for metric. 
+
+**Option 4:** Note this metric is sum of two metric, which is also metric by following theorem.
+ 
+>**Theorem:** If $d_1$ and $d_2$ are metrics on $X$. Then for all $x,y\in X$ $d(x,y)=d_1(x,y)+d_2(x,y)$ is also a metric on $X$.
+
+>To prove we have to check each axiom, 
+1. $d(x,y)=d_1(x,y)+d_2(x,y) \geq 0$
+2. $d(x,y)=d_1(x,y)+d_2(x,y)=0$, Since both terms are positive it will force $d_i(x,y)=0$ for $i=1,2$.
+3. $d(x,y)=d_1(x,y)+d_2(x,y)=d_1(y,x)+d_2(y,x)=d(y,x)$
+4. Since $d_i(x,y) \leq d_i(x,z)+d_i(z,y)$ for $i=1,2$. Hence 
+\begin{align*}d(x,y)&=d_1(x,y)+d_2(x,y)\\ & \leq [d_1(x,z)+d_1(z,y)]+[d_2(x,z)+d_2(z,y)]\\&=[d_1(x,z)+d_2(z,y)]+[d_1(x,z)+d_2(z,y)]\\&=d(x,z)+d(z,y)\end{align*}
+
+Hence **1, 3 and 4** are correct choices.
+
+

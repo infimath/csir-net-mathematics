@@ -1,0 +1,13 @@
+---
+layout: post
+title: GS Section 1.3 Problems 10 - 19
+tags: [Gilbert Strang]
+---
+
+-------
+This series of post contain solution of selective exercises from the book "**Linear Algebra and Its Application, 4e**" by **Gilbert Strang**.
+
+-----------
+This set of problems are based on the study of 3 by 3 systems.
+
+#####Problem 10.

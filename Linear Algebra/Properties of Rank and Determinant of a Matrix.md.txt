@@ -1,0 +1,69 @@
+---
+layout: post
+title: Properties of Rank and Determinant of a Matrix
+tags: [Determinant, Matrix]
+---
+
+**Question 1:** Let $A,B$ be $n\times n$ real matrices. Which of the following statements is correct?
+
+1. $\text{rank }(A+B)=\text{rank }(A)+\text{rank }(B)$
+2. $\text{rank }(A+B)\leq \text{rank }(A)+\text{rank }(B)$
+3. $\text{rank }(A+B)=\min\{\text{rank }(A),\text{rank }(B)\}$
+4. $\text{rank }(A+B)=\max\{\text{rank }(A),\text{rank }(B)\}$
+
+**Answer:** This is a basic result in linear algebra
+>$$\text{rank }(A+B)\leq \text{rank }(A)+\text{rank }(B)$$
+
+We can easily find counter examples of others as follows,
+
+For 1: Take $A = I_n$ and $B =-I_n$
+
+For 3 and 4: Take $A = \begin{pmatrix}I_l & 0 \\ 0 & 0 \end{pmatrix}$ and $B = \begin{pmatrix}0 & 0 \\ 0 & I_m \end{pmatrix}$, such that $1 < l,m < n$
+
+Hence option **2** is correct.
+
+**** 
+**Question 2:**  Let $D$ be non-zero $n \times n$ real matrix with $n \geq 2$. Which of the following implication is valid? 
+
+1.  $\det(D)=0 \text{ implies } \text{rank }(D)=0$ 
+2.  $\det(D)=1 \text{ implies } \text{rank }(D)\neq 1$
+3.  $\text{rank }(D)=1 \text{ implies } \det(D)\neq 1$
+4.  $\text{rank }(D)=n \text{ implies } \det(D) \neq 1$
+
+**Answer:** For a $n \times n$ matrix $A$ we have
+>$$\det A \neq 0 \Leftrightarrow \text{rank }A = n $$
+
+*Option 1:* If determinant of a matrix is $0$, then rank will not equal to $n$, but it can be $0, 1, \cdots, n-1$. Hence wrong option.
+
+*Option 2:* If determinant is $1$, that is non-zero, hence rank will be $n$, but $n \geq 2$. Hence wrong option.
+
+*Option 3:* Rank of matrix is $1 < n$, hence determinant will be $0$, that is not equal to $1$. Hence correct option.
+
+*Option 4:* Rank of matrix is $n$, hence determinant will be non-zero, hence it can take $1$ also. Hence wrong option.
+
+Hence option **3** is correct.
+
+**** 
+**Question 3:** Let $A$ and $B$ be $n \times n$ real matrices such that $AB=BA=0$ and $A+B$ is invertible. Which of the following are always true?
+
+1.  $\text{rank }(A)=\text{rank }(B)$
+2.  $\text{rank }(A)+\text{rank }(B)=n$
+3.  $\text{nullity }(A)+\text{nullity }(B)=n$
+4.  $A-B$ is invertible.
+
+**Answer:** Let's check each option separately.
+
+*Option 1:* Take $A = \begin{pmatrix}I_l & 0 \\ 0 & 0 \end{pmatrix}$ and $B = \begin{pmatrix}0 & 0 \\ 0 & I_m \end{pmatrix}$, such that $1 < l \neq m < n$. Then this option will be wrong.
+
+*Option 2:* As we know $\text{rank }(A+B)\leq \text{rank }(A)+\text{rank }(B)$ and $(A+B)$ is invertible hence $\text{rank }(A+B)=n$. Thus we get
+$$n \leq \text{rank }(A)+\text{rank }(B) \tag{1}.$$
+Also, $$\begin{align}AB = 0 \Rightarrow &\text{Im }(B) \subset \text{ ker }(A)\\ \Rightarrow & \text{ rank }(B) \leq \text{ nullity }(A).\end{align}$$ 
+Using rank nullity theorem, we get
+$$\begin{align}&\text{ rank }(B) \leq n - \text{ rank }(A)  \\ \Rightarrow&  \text{ rank }(A)+\text{ rank }(B) \leq n \tag{2}.\end{align}$$
+Combining (1) and (2) we get the required equality.
+
+*Option 3:* Use $\text{rank }A = n-\text{nullity }A$
+
+*Option 4:* Observe $(A + B)^2 = A^2 + B^2 = (A-B)^2$, but $A+B$ is invertible hence $A-B$ will be also invertible.
+
+Hence options **2, 3 and 4** are correct.

@@ -1,0 +1,123 @@
+---
+layout: post
+title: Problems on Schwarz Lemma
+tags: [Analytic Function, Schwarz Lemma]
+---
+
+#### Statement of Schwarz Lemma
+
+If $f:\mathbb{D} \rightarrow \mathbb{D}$ is a holomorphic function such that $f(0)=0$, then
+
+1. $| f(z)| \leq |z|$
+2. If there exist $z_0$ such that $|f(z_0)|=|z_0|$ with $z_0 \in \mathbb{D}$. Then $f$ is a rotation.
+3. $|f'(0)| \leq 1$, equality holds if and only if $f$ is a rotation.
+
+
+#### Schwarz Pick Lemma
+
+Let $f:\mathbb{D} \rightarrow \mathbb{D}$ is holomorphic such that $|f(z)| \leq 1$  for all $z \in \mathbb{D}$. If $f(a) = b $ for some $a, b \in \mathbb{D}$, then
+$$|f'(a)|  \leq \frac{1-|b|^2}{1-|a|^2}.$$
+
+$$\newcommand{\set}[1]{\left \{ #1 \right \}} \newcommand{\smallb}[1]{\left ( #1 \right )} \newcommand{\C}{\mathbb{C}}$$
+## Previous year CSIR-NET questions
+
+-----
+**Question 1:** Let $f$ be a holomorphic function on $D=\set{z \in \C: |z| < 1}$ such that $|f(z)| \leq 1$. Define $g:D \rightarrow \C$ by
+$$g(z) = \begin{cases} \frac{f(z)}{z} & \mbox{if } z \in D, z \neq 0 \\
+f'(0) & \mbox{if } z =0  \end{cases}$$
+which of the following statements are true?
+
+1. $g$ is holomorphic on $D$
+2. $|g(z)| \leq 1$ for all $z \in D$
+3. $|f'(z)| \leq 1$ for all $z \in D$
+4. $|f'(0)| \leq 1$
+
+**Answer:** Looking each option one by one,
+
+**Option 1:** Since $f$ is holomorphic on $D$, $g$ will be holomorphic on $D\setminus \{0\}$. At $0$ $f(0)=0$ so we get a removable singularity, hence $g$ will be holomorphic on $D$
+
+**Option 2:** Since $f$ satisfies the condition of Schwartz Lemma we have
+$$|f(z)| \leq |z| \Rightarrow |g(z)| = \left |\frac{f(z)}{z} \right | \leq 1.$$
+Hence true.
+
+**Option 3:** By Cauchy estimate we know that
+> Let $f$ be an analytic function on closed disk $\overline{D}=\{z:|z-z_0|\leq R\}$ and $|f(z)|\leq M$ in the disk. Then,
+> $$\left |f^{(n)(z)} \right | \leq \frac{n!M}{R^n} $$
+
+Since for all $z \in D$, $|f(z)| \leq |z| \leq 1$, hence by Cauchy estimate, we get in the disk
+$$f'(z)\leq 1$$
+Hence this is true option.
+
+**Option 4:** This is true by Schwartz lemma.
+
+Hence **all** are correct choices.
+
+--------
+**Question 2:** Let $f:D \rightarrow D $ be holomorphic with $f(0) = 0$ and $f(1/2) = 0$, where $D = \set{z:|z|<1}$. Which of the following statements are correct?
+
+1. $|f'(1/2)| \leq 4/3$
+2. $|f'(0)| \leq 1$
+3. $|f'(1/2)| \leq 4/3$ and  $|f'(0)| \leq 1$
+4. $f(z) = z , z \in D$
+
+**Answer:** Using Schwartz pick lemma we have
+$$f'(1/2)\leq \frac{1}{1-(1/2)^2}=4/3.$$
+
+Option 2 is true by Schwartz lemma. Option 3 is combination of 1 and 2.
+
+**Option 4:** $f(1/2)=1/2 \neq 0$, hence false.
+
+Hence **1, 2 and 3** are correct choices.
+
+
+-------
+**Question 3:** Let $f:D \rightarrow D$ be a holomorphic function with $f(0) = 0$, where $D$ is the open unit disc $\set{z \in \C: |z| < 1}$. Then
+
+1. $|f'(0)| = 1$
+2. $|f'\smallb{\frac{1}{2}}| \leq  \frac{1}{2}$
+3. $|f'\smallb{\frac{1}{2}}| \leq  \frac{1}{4}$
+4. $|f'\smallb{ 0 }| \leq  \frac{1}{2}$
+
+
+
+--------
+**Question:** Let $D = \set{z\in \C: |z| < 1}$. Which of the following are correct?
+
+1. There exists a holomorphic function $f:D\rightarrow D$ with $f(0) = 0$ and $f'(0) = 2$
+2. There exists a holomorphic function $f:D\rightarrow D$ with $f \smallb{\frac{3}{4}} = \frac{3}{4}$ and $f'\smallb{\frac{2}{3}} = \frac{3}{4}$
+3. There exists a holomorphic function $f:D\rightarrow D$ with $f \smallb{\frac{3}{4}} = \frac{-3}{4}$ and $f'\smallb{\frac{2}{3}} = \frac{-3}{4}$
+4. There exists a holomorphic function $f:D\rightarrow D$ with $f \smallb{\frac{1}{2}} = \frac{-1}{2}$ and $f'\smallb{\frac{1}{4}} = 1$
+
+**Answer:** Checking each option one by one,
+------
+**Option 1:** By Schwartz lemma, we have $|f'(0)|\leq 1$ but here $2>1$, hence not possible.
+
+**Option 2, 3 and 4:** Here we have a point such that $|f(z_0)|=|z_0|$, then by Schwartz lemma $f$ will be a rotation. $i.e.$, $f$ will look like
+$$f(z)=\alpha z \quad : \quad |\alpha|=1  $$
+Then $f'(z)=\alpha $, which will be constant. As we know derivative at some point ($f'(2/3)=3/4$), hence $\alpha = 3/4$, but $|3/4| \neq 1$. Which is a contradiction. No such $f$ will exist.
+
+-------
+**Question:** Let $D = \set{z \in \C : |z| < 1}$. Then three exists a holomorphic function $f: D\rightarrow \overline{D}$ with $f(0) = 0$ with the property
+
+1. $f'(0) = \frac{1}{2}$
+2. .
+2. $| f\smallb{\frac{1}{3}} | = \frac{1}{4}$
+3. $ f\smallb{\frac{1}{3}} = \frac{1}{4}$
+4. $|f'(0) |  = \sec \frac{\pi}{6}$
+
+
+-----------
+**Question:** Let $f$ be a non-constant holomorphic function in the unit disc $\set{|z| < 1}$ such that $f(0) = 1$. Then it is necessary that
+
+1. there are infinitely many points $z$ in the unit disc such that $|f(z)| = 1$.
+2. $f$ is bounded.
+3. there are at most finitely  many points $z$ in the unit disc such that $|f(z)| = 1$.
+4. $f$ is a rational function.
+
+
+problem on se
+--------
+
+Here we have a fixed point $f(3/4)=3/4$, then by Schwartz lemma $f$ will be a rotation. $i.e.$, $f$ will look like
+$$f(z)=\alpha z \quad : \quad |\alpha|=1  $$
+Then $f'(z)=\alpha $, which will be constant. As we know derivative at some point ($f'(2/3)=3/4$), hence $\alpha = 3/4$, but $|3/4| \neq 1$. Which is a contradiction. No such $f$ will exist.

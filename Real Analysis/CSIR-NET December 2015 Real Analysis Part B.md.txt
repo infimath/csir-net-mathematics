@@ -1,0 +1,121 @@
+---
+layout: post
+title: CSIR-NET December 2015 Real Analysis(Part B)
+tags: [2015, Differentiation, Continuity, Sequence and Series]
+---
+
+**Question 1:** Let $\newcommand{\R}{\mathbb{R}}f:\R \to \R$ be a twice continuously differentiable function, with 
+$f(0)=f(1)=f'(0)=0$. Then 
+
+1. $f''$ is the zero function.
+2. $f''(0)$ is zero.
+3. $f''(x)=0$ for some $x \in (0,1)$.
+4. $f''$ never vanishes
+
+**Answer:** Here we have to apply Rolle's theorem twice. 
+
+Since $f(0)=f(1)=0$ and $f$ is differentiable, hence there exist $c\in (0,1)$ such that $f'(c)=0$
+
+Again $f'(0)=f'(c)=0$ and $f'$ is differentiable, hence there exist $x \in (0,c)\subset(0,1)$ such that $f''(x)=0$.
+
+Hence **3** is correct choice. 
+
+*** 
+**Question 2:** Let $S_n=\sum_{k=1}^n\frac{1}{k}$. Which of the following is true?
+
+1. $ S_{2^n}\geq \frac{n}{2}$ for every $n\geq 1$.
+2. $S_n$ is a bounded sequence. 
+3. $\vert S_{2^n} - S_{2^{n-1}}\vert  \to 0$ as $n\to \infty$.
+4. $\frac{S_n}{n}\to 1$.
+
+**Answer:** First consider a simple case of $n=3$. 
+$$
+\begin{align}
+S_{2^3} &= 1 + \frac{1}{2}+ \color{blue} {\frac{1}{3}+\frac{1}{4}}+\color{red}{\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}} \\
+&>  1 +\frac{1}{2}+\color{blue}{\frac{1}{4}+\frac{1}{4}}+\color{red}{\frac{1}{8} +\frac{1}{8} +\frac{1}{8} +\frac{1}{8}}\\
+&= 1+  \frac{1}{2}+ \color{blue}{\frac{1}{2}}+ \color{red}{\frac{1}{2}} \\
+&= 1+  \frac{3}{2}\\
+&> \frac{3}{2}.
+\end{align}
+$$
+In general, 
+$$
+\begin{align}
+S_{2^n} &> 1 +  \left[ \frac{1}{2}+ \cdots+ \frac{1}{2}\right] \tag{n-times}\\
+&= 1 +\frac{n}{2}\\
+&> \frac{n}{2}.
+\end{align}
+$$
+
+Hence **1** is correct choice. 
+
+****
+**Qeustion 3:** Let $f: [0,\infty) \to [0,\infty)$ be a continuous function. Which of the follwing is correct?
+
+1. There is $x_0 \in [0,\infty)$ such that $f(x_0)=x_0$.
+2. If $f(x)\geq M$ for all $x \in [0,\infty)$ for some $M>0$, then there exists $x_0 \in [0,\infty)$ such that $f(x_0) = x_0$. 
+3. If $f$ has a fixed point, then it must be unique. 
+4. $f$ does not have a fixed point unless it is differentiable on $(0,\infty)$.
+
+**Answer:** For fixed point it is enough to find the solution of $g(x) = f(x)-x = 0$. 
+
+Let $0$ is a fixed point then we are done. Else, $f(0) > 0$ as the range is $[0,\infty)$. But function $f$ is bounded hence $g(x)=f(x)-x$ will be negative somewhere. Hence by intermediate value theorem, we get a soluton of $g(x)=0$. 
+
+Hence **3** is correct choice. 
+
+*** 
+**Qeustion 4:** For $(x,y) \in \Bbb R^2$ with $(x,y)\neq(0,0)$, let $\theta = \theta(x,y)$ be the unique real number such that $-\pi < \theta \leq \pi$ and $(x,y) = (r\sin \theta, r \cos \theta )$, where $r = \sqrt{x^2 + y^2}$. Then the resulting function $\theta : \Bbb R^2 \setminus \{(0,0)\} \to \Bbb R$ is 
+
+1. differentiable.
+2. continuous, but not differentiable.
+3. bounded, but not continuous. 
+4. neither bounded, not continuous. 
+
+**Answer:** Here we will face discontinuity if we go around a circle. For example take $r=1$, then we have 
+$$ \lim_{\theta \to \pi^+} \theta(\cos \theta ,\sin \theta )=\pi \neq -\pi =\lim_{\theta \to \pi^-} \theta(\cos \theta ,\sin \theta )$$ 
+
+Hence the function is not conituous. Also, the range is $(-\pi, \pi]$, hence it is bounded. 
+
+Hence **3** is correct choice. 
+
+****
+**Question 5:** $~~\lim_{n \to \infty} \cfrac{1}{\sqrt{n}}\left (\cfrac{1}{\sqrt{2}+\sqrt{4}} +\cfrac{1}{\sqrt{4}+\sqrt{6}}+\cdots + \cfrac{1}{\sqrt{2n}+\sqrt{2n+2}}\right )$ is
+
+1. $\sqrt{2}$
+2. $\frac{1}{\sqrt{2}}$
+3. $\sqrt{2} + 1$ 
+4. $\frac{1}{\sqrt{2} + 1}$
+
+**Answer:** By rationalising the denominator of each term, we get 
+$$ 
+\begin{align}
+&\cfrac{1}{\sqrt{2}+\sqrt{4}} +\cfrac{1}{\sqrt{4}+\sqrt{6}}+\cdots + \cfrac{1}{\sqrt{2n}+\sqrt{2n+2}}\\
+&= \cfrac{1}{\sqrt{2}+\sqrt{4}}\times \cfrac{\sqrt{4}-\sqrt{2}}{\sqrt{4}-\sqrt{2}} + \cfrac{1}{\sqrt{4}+\sqrt{6}}\times \cfrac{\sqrt{6}-\sqrt{4}}{\sqrt{6}-\sqrt{4}} \\
+&\phantom{csir}+\cdots + \cfrac{1}{\sqrt{2n}+\sqrt{2n+2}}\times \cfrac{\sqrt{2n+2}-\sqrt{2n}}{\sqrt{2n+2}-\sqrt{2n}}\\
+&= \require{cancel}\cfrac{\cancel{\sqrt{4}}-\sqrt{2}}{2} + \cfrac{\cancel{\sqrt{6}}-\cancel{\sqrt{4}}}{2} + \cdots +\cfrac{\sqrt{2n+2}-\cancel{\sqrt{2n}}}{2}\\
+&=\cfrac{\sqrt{2n+2}-\sqrt{2}}{2}. 
+\end{align}
+$$
+Hence, the limit becomes 
+$$
+\begin{align}
+&\lim_{n \to \infty} \cfrac{1}{\sqrt{n}}\times \cfrac{\sqrt{2n+2}-\sqrt{2}}{2} \\&= \lim_{n \to \infty}\cfrac{1}{\sqrt{2}}\times \cfrac{\sqrt{n+1}-1}{\sqrt{n}}\\
+&= \cfrac{1}{\sqrt{2}}\times\lim_{n \to \infty}\left[ \sqrt{1+\cfrac{1}{n}}- \sqrt{\cfrac{1}{n}}\right ]\\
+&= \cfrac{1}{\sqrt{2}}
+\end{align}
+$$
+
+Hence **2** is correct choice. 
+
+***** 
+**Question 6:** Let $A$ be a closed subset of $\Bbb R$, $A \neq \phi$, $A \neq \Bbb R$. 
+Then $A$ is 
+
+1. the closure of the interior of $A$. 
+2. a countable set. 
+3. a compact set. 
+4. not open. 
+
+**Answer:** Closed set satisfy $A = \overline{A} = \overline{\text{Int }A}$.
+
+Hence **1** is correct choice. 

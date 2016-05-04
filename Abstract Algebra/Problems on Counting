@@ -1,0 +1,44 @@
+---
+layout: post
+title: Problems on Counting
+tags: Counting
+---
+
+**Question 1:** The number of surjective maps from a set of $4$ elements to a set of $3$ elements is
+
+$1.~36 \quad 2.~64 \quad 3.~69 \quad 4.~81$
+
+**Answer:** Let $A$ be a $4$ elements set and $B$ be a $3$ elements set. Here we need to find number of surjective maps between $A$ onto $B$. The idea is to partition the set $A$ into $3$ non-empty subset and assign each subset to a element of $B$.
+Different partition of set $A$ into $3$ non-empty subset is equal to $\binom{4}{2}$, it can be represented by following figure(more generally it is given by *Starling number* of second kind)
+   ![partition](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/partition.png)
+Thus we got a total of $6$ partition. Each partition corresponds to $3!$ surjective maps. Hence total number of surjective maps $= 6 \times 3! = 36$.
+
+Hence **1** is correct choice.
+
+*****
+**Question 2:** An ice cream shop sells ice cream in five possible flavors: Vanilla, Chocolate, Strawberry, Mango and Pineapple. How many combinations of three scoop cones are possible? [Note: The repetition of flavors allowed but the order in which the flavors are chosen does not matter.]
+
+$1.~10 \quad 2.~20 \quad 3.~35 \quad 4.~243$
+
+**Answer:** Let's count the possibilities one by one
+1. All 3 cones are of same flavor,  we have $5$ possibilities.
+2. All 3 cones are of different flavor, we have $\binom{5}{3} = \frac{5!}{3!\cdot2!} = 10$ possibilities.
+3. 2 are of same flavor and 1 of different flavor, then we have $5 \times 4 = 20$ possibilities.
+Hence total choice is $5+10+20 = 35$.
+
+Hence **3** is correct choice.
+
+******
+**Question 3:** We are given a class consisting of $4$ boys and $4$ girls. A committee that consists of a President, a Vice-President and a Secretary is to be chosen among the $8$ students of the class. Let $a$ denote the number of ways of choosing the committee in such a way that the committee has at least one boy and at least one girl. Let $b$ denote the number of ways of choosing the committee in such a way that the number of girls is greater than or equal to that of the boys. Then
+
+\begin{align*}&1. ~a = 288 &2. ~a = 168 \\ &3.~b = 144 &4.~b = 192 \end{align*}
+
+**Answer:** First we will choose a group of three people satisfying the condition and then multiply by $3!$, since the places are distinguishable.
+
+**Committee a:** Choosing at least one boy and one girl = (Choosing 2 boy and 1 girl) + (Choosing 1 boy and 2 girl) = $2\binom{4}{2}\binom{4}{1}= 48$.
+Hence no of ways choosing committee a = $48 \times 6 = 288$.
+
+**Committee b:** Choosing a committee in such a way that the number of girls is greater than or equal to that of the boys = (Choosing 2 girl and 1 boy)= $\binom{4}{2}\binom{4}{1}= 24$.
+Hence no of ways choosing committee a = $24 \times 6 = 144$.
+
+Hence **1** and **3** are correct options.

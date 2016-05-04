@@ -1,0 +1,92 @@
+---
+layout: post
+title: Problems on Determinants
+tags: [Determinant]
+---
+
+**Question 1:** The determinant of the matrix
+$$\begin{pmatrix}1 & 0 & 0 & 0 & 0 & 2 \\ 0 & 1 & 0 & 0 & 2 & 0 \\ 0 & 0 & 1 & 2 & 0 & 0 \\ 0 & 0 & 2 & 1  &0 &  0 \\ 0 & 2 & 0 & 0 & 1 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 \end{pmatrix} $$  is
+
+1.  $0$   2.  $-9$    3. $-27$   4.  $1$
+
+**Answer:** The determinant of a matrix $A$ can be computed from it’s Echelon Form using following formula.
+
+>$$\text{det }(A) = (-1)^{\text{(#Permutations Required)}} \times(\text{Product of Diagonal Entries})$$
+
+Here,
+$$\begin{pmatrix}1 & 0 & 0 & 0 & 0 & 2 \\ 0 & 1 & 0 & 0 & 2 & 0 \\ 0 & 0 & 1 & 2 & 0 & 0 \\ 0 & 0 & 2 & 1  &0 &  0 \\ 0 & 2 & 0 & 0 & 1 & 0 \\ 2 & 0 & 0 & 0 & 0 & 1 \end{pmatrix} \xrightarrow{\text{ Convert to EF }} \begin{pmatrix} 1 & 0 & 0 & 0 & 0 & 2 \\ 0 & 1 & 0 & 0 & 2 & 0 \\ 0 & 0 & 1 & 2 & 0 & 0 \\ 0 & 0 & 0 & -3  &0 &  0 \\ 0 & 0 & 0 & 0 & -3 & 0 \\ 0 & 0 & 0 & 0 & 0 & -3 \end{pmatrix}$$
+Also note that we don’t require any permutation during the conversation to Echelon Form. Hence the determinant of the given matrix using above formula will be = $(-3) \times (-3) \times (-3) = -27$
+
+Hence option **3** is correct.
+ 
+*** 
+**Question 2:**  The determinant of the $n \times n$ permutation matrix 
+$$ \begin{pmatrix}&&&&1 \\ & & & 1 &  \\ & & \vdots & & \\ & 1  && & \\1 &&&& \end{pmatrix} $$
+1.  $(-1)^n$      2. $(-1)^{\lfloor \frac{n}{2} \rfloor}$    3. $-1$    4. $1$
+**Answer:** Last question formula is also useful here. We need only permutation to convert it into identity matrix which is also a Echelon form. Observe that,
+$$ \begin{pmatrix}&&&&1 \\ & & & 1 &  \\ & & \vdots & & \\ & 1  && & \\1 &&&& \end{pmatrix} \xrightarrow{R_1 \leftrightarrow R_n} \begin{pmatrix}1 &&&& \\ & & & 1 &  \\ & & \vdots & & \\ & 1  && & \\ &&&& 1 \end{pmatrix}$$
+Similarly we can interchange 2nd row with 2nd last row and so on. Clearly it requires $n/2$ permutation when $n/2$ is even, but we need only $(n - 1)/2$ permutations when $n$ is odd to convert it to identity matrix. Hence for all $n$, det = $(-1)^{\lfloor \frac{n}{2} \rfloor}$.
+
+That is option **2** is correct.
+
+******
+**Question 3:**  The determinant 
+$$ \begin{vmatrix} 1 & 1+x & 1+x+x^2 \\ 1 & 1 + y & 1 + y + y^2 \\ 1 & 1 + z & 1 + z + z^2  \end{vmatrix} $$
+is equal to
+
+ 1. $(z-y)(z-x)(y-x)$
+ 2. $(x-y)(x-z)(y-z)$
+ 3. $(x-y)^2(y-z)^2(z-x)^2$
+ 4. $(x^2-y^2)(y^2-z^2)(z^2-x^2)$
+
+**Answer:** Here,
+$$
+\begin{align*} &\begin{vmatrix} 1 & 1+x & 1+x+x^2 \\ 1 & 1 + y & 1 + y + y^2 \\ 1 & 1 + z & 1 + z + z^2  \end{vmatrix} \\ &= \begin{vmatrix} 1 & 1+x & 1+x+x^2 \\ 0 & y-x & y -x + y^2 -x^2 \\ 0 & z - x & z -x+ z^2 - x^2 \end{vmatrix} \\ &= (y-x)(z-x)\begin{vmatrix} 1 & 1+x & 1+x+x^2 \\ 0 & 1 & 1 + y + x \\ 0 & 1 &  1+ z + x \end{vmatrix} \\ &= (y-x)(z-x)\begin{vmatrix} 1 & 1+x & 1+x+x^2 \\ 0 & 1 & 1 + y + x \\ 0 & 0 &  z-y \end{vmatrix} \\ &= (y-x)(z-x)(z-y) \end{align*}
+$$
+Hence option **1** is correct.
+ 
+**** 
+**Question 4:**  Let $A_{n\times n}= (a_{ij}), n\geq 3$, where $a_{ij}=(b_i^2-b_j^2), i,j=1,2,\cdots ,n$ for some distinct real numbers $b_1, b_2, \cdots , b_n$. Then $\det(A)$ is
+ 
+1. $\prod_{i< j}(b_i-b_j)$    2. $\prod_{i< j}(b_i+b_j)$    3. $0$    4. $1$
+
+**Answer:** Although the matrix skew-symmetric hence the determinant should be zero for $n$ is odd but it what about when $n$ is even ,
+$$ \begin{align*} &\begin{vmatrix}b_{1}^{2} - b_{1}^{2} & b_{2}^{2} - b_{1}^{2} & \cdots\\ b_{2}^{2} - b_{1}^{2} & b_{2}^{2} - b_{2}^{2} & \cdots\\ \vdots & \vdots & \ddots\\ b_{n}^{2} - b_{1}^{2} & b_{2}^{2} - b_{n}^{2} & \cdots \end{vmatrix} \\&= \begin{vmatrix}b_{1}^{2} & b_{2}^{2} - b_{1}^{2} & \cdots\\ b_{2}^{2} & b_{2}^{2} - b_{2}^{2} & \cdots\\ \vdots & \vdots & \ddots\\ b_{n}^{2} & b_{2}^{2} - b_{n}^{2} & \cdots \end{vmatrix} + \begin{vmatrix}b_{1}^{2} & b_{2}^{2} - b_{1}^{2} & \cdots\\ b_{1}^{2} & b_{2}^{2} - b_{2}^{2} & \cdots\\ \vdots & \vdots & \ddots\\ b_{1}^{2} & b_{2}^{2} - b_{n}^{2} & \cdots \end{vmatrix}\\ &= \begin{vmatrix}b_{1}^{2} & b_{2}^{2} & \cdots\\ b_{2}^{2} & b_{2}^{2} & \cdots\\ \vdots & \vdots & \ddots\\ b_{n}^{2} & b_{2}^{2} & \cdots \end{vmatrix}+\begin{vmatrix}b_{1}^{2} & b_{1}^{2} & \cdots\\ b_{2}^{2} & b_{2}^{2} & \cdots\\ \vdots & \vdots & \ddots\\ b_{n}^{2} & b_{n}^{2} & \cdots \end{vmatrix} \\ &=0 \end{align*}
+$$ 
+
+Hence option **3** is correct.
+
+------ 
+**Question 5:**  Let $A$ be a $5\times 5$ skeq-symmetric matrix with entries in $\mathbb{R}$ and $B$ be the $5\times 5$ matrix whose $(i,j)^{th}$ entry is the binomial coefficient $\begin{pmatrix} i \\ j \end{pmatrix} $ for $1\leq i \leq j \leq 5$. Consider the $10 \times 10$ matrix, given in block form by
+$$C=\begin{pmatrix} A & A+B \\ 0 & B \end{pmatrix} $$
+Then
+
+1. $\det C=1 or -1$.    2. $\det C=0$.    3. trace $C=0$   4. trace $C =5$.
+
+**Answer:** Here $C$ is a block diagonal matrix hence det($C$) = det($A$) det($B$), also trace($C$) = trace($A$) + trace($B$). Hence to solve the problem it is enough to determine determinant and trace of $A$ and $B$ separately.
+
+The determinant and trace of a skew symmetric matrix of odd order is zero. $i.e.$, det($A$) = trace($A$) = $0$.
+$B$ is a upper triangular matrix hence det will be product of diagonals also note that  trace will be sum of diagonals. Hence det($B$) = $\prod_{1\leq i = j \leq 5} \begin{pmatrix} i \\ j \end{pmatrix}  $ = $1$. Also trace($B$) =  $\sum_{1\leq i = j \leq 5} \begin{pmatrix} i \\ j \end{pmatrix} = 5$
+
+Hence, det($C$) = det($A$) det($B$) = $0 \times 1 = 0$, also trace det($C$) = det($A$) + det($B$) = $0+ 5 = 5$.
+
+Hence **2 and 4** are correct options.
+
+-------
+**Question 6:**  The matrix $A =\begin{pmatrix} 5 & 9 & 8 \\ 1 & 8 &2\\ 9 & 1 & 0 \end{pmatrix}$ satisfies:
+
+1. $A$ is invertible and the invese has all integer entries.
+2. det$(A)$ is odd.
+3. det$(A)$ is divisible by $13$.
+4. det$(A)$ has at least two prime divisors.
+
+**Answer:** Let’s compute the determinant by,
+$$ \det(A)  = 9 \begin{vmatrix} 9 & 8 \\  8 &2 \end{vmatrix}- 1 \begin{vmatrix} 5 & 8 \\ 1 &2 \end{vmatrix} =  -414-2 = - 416$$
+1. If $A$ has integer entries then $\det A$ will also be integer. Also  $A^{-1}$ is integer entries then $ \det A^{-1}$ will also be integer. Now $\det A \det A^{-1} = 1$, hence $\det  = \pm 1$. $i.e.$,
+If $A$ and $A^{-1}$ are matrices with integer entries, then $\det A = \pm 1$.
+Hence option 1 is false.
+2. $416$ is even, hence false.
+3. Since $13 | 416$, it’s true.
+4. Certainly $13$ and $2$ are factors of $416$, hence true.
+
+Hence option **3 and 4** are correct.

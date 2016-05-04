@@ -1,0 +1,60 @@
+---
+layout: post
+title: Second order ODE
+tags: [ODE]
+---
+
+**Question:** Let $y_1(x)$ and $y_2(x)$ form a fundamental set of solutions of $$\dfrac{d^2y}{dx^2}+p(x) \dfrac{dy}{dx}+q(x)y = 0,~a\leq x \leq b,$$ where $p(x)$ and $q(x)$  are real valued continuous functions on $[a,b]$. If $x_0$ and $x_1$, with $x_0<x_1$, are consecutive zeros of $y_1(x)$ in $(a, b)$, then 
+
+1. $y_1(x)=(x-x_0)q_0(x),$ where $q_0(x)$ is continuous on $[a,b]$ with $q_0(x_0) \neq 0$.
+2. $y_1(x)=(x-x_0)^2p_0(x),$ where $p_0(x)$ is continuous on $[a,b]$ with $p_0(x_0) \neq 0$.
+3. $y_2(x)$ has no zeros in $(x_0,x_1)$.
+4. $y_2(x_0)=0$ but $y_2'(x_0) \neq 0$.
+
+----
+**Question:** Let $V$ be the set of all solutions of the ODE $u''(t)-4u'(t) + 3u(t)=0,~t \in \mathbb{R}$. Then $V$ 
+
+1. is a real vector space of dimension $2$. 
+2. is a vector space of dimension $1$. 
+3. contains only the trivial function $u \equiv 0$.
+4. contains exactly two functions. 
+
+**Answer:** The characteristic equation corresponding to the above ODE will be  $$r^2-4r+3=0 \Rightarrow (r-1)(r-3)=0 \Rightarrow r=1,3$$ Then the fundamental set of solution will be $u_1(t)=e^t$ and $u_2(t)=e^{3t}$. As both goes to infinity as $t \rightarrow \infty$, only bounded solution will be the trivial solution. 
+
+Hence **3** is correct choice.
+
+
+**Question:** The general solution of the differential equation $$\dfrac{d^2y}{dx^2}+y=0,~x\in(-\infty, \infty)$$ Where $f$ is a function on $(-\infty, \infty)$ is (where $A, B, C$ and $k$ are arbitrary constants) 
+
+1. $y(x)= A \cos x+B \sin x+\int_0^xf(t) \sin(x-t)dt$
+2. $y(x)= \cos (x+k)+C\int_0^xf(t) \sin(x-t)dt$
+3. $y(x)= A \cos x+B \sin x+\int_0^xf(x-t) \sin(x-t)dt$
+4. $y(x)= A \cos x+B \sin x+\int_0^xf(x+t) \cos(x-t)dt$
+
+
+**Question:** The solution of the boundary value problem $$\dfrac{d^2y}{dx^2}+y=\text{cosec } x;~0<x<\frac{\pi}{2},~y(0)=0,~y\left(\frac{\pi}{2}\right) \text{ is}$$
+
+1. convex 
+2. concave 
+3. negative
+4. positive
+
+
+
+**Qeustion:** Let $y$ be a nontrival solution of the boundary value problem $$y"+xy=0,~ x \in [a, b],~y(a)=y(b)=0$$ then 
+
+1. $b>0$.
+2. $y$ is monotone in $(a, 0)$ if $a<0<b$. 
+3. $y'(a)=0$.
+4. $y$ has infinitely many zeros in $[a,b]$.
+
+
+----
+**Question:** Let $$\dfrac{d^2y}{dx^2}-q(x)y=0,~0\leq x \leq \infty, y(0)=1,\dfrac{dy}{dx}(0)=1,$$ where $q(x)$ is a positive monotonically increasing continuous function. Then
+
+1. $y(x) \rightarrow \infty \text{ as }x \rightarrow \infty$
+3. $\dfrac{dy}{dx} \rightarrow \infty \text{ as }x \rightarrow \infty$
+4. $y(x)$ has finitely many zeros in $[0, \infty)$
+4. $y(x)$ has infinitely many zeros in $[0, \infty)$
+
+**Answer:** By classical theorem of 

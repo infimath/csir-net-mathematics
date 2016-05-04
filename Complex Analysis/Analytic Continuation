@@ -1,0 +1,106 @@
+---
+layout: post
+title: Problems on Analytic Continuation
+tags: [Analytic Function]
+---
+
+###### Important Theorems
+**Theorem 1:** If $f$ and $g$ are analytic in a domain $D$ and $f = g$ in some open disk contained in $D$, then $f=g$ throughout $D$.
+
+**Theorem 2:** If $f$ and $g$ are analytic in a domain $D$ and $f(z_n) = g(z_n)$ for an infinite sequence of distinct point $\{z_n\}$ converging to a point $z_0$ in $D$, then $f = g$ throughout $D$.
+
+**Note:** These theorem are called **Identity theorems**.
+
+****
+**Question 1:** Let $D = \{z \in \Bbb C : |z| < 1\}$  be the unit disc. Let $f:D \rightarrow \Bbb C$ be an analytic function satisfying $f \left (\frac{1}{n}\right) = \frac{2n}{3n + 1}$ for  $n\geq 1$. Then
+
+1. $f(0) = \frac{2}{3}$
+2. $f$ has a simple pole at $z = -3$
+3. $f(3) = \frac{1}{3}$
+4. No such $f$ exists.
+
+**Answer:** Here $\frac{1}{n} \to 0 \in D$ and
+$$f\left (\frac{1}{n}\right )= \frac{2}{3+1/n}$$
+Now consider the function,
+$$g(z)=\frac{2}{3+z}$$
+Then $f \left (\frac{1}{n}\right ) =g \left (\frac{1}{n}\right )$ for each point in the sequence, hence we get $f=g$.
+
+By direct checking we see that $g$ satisfies 1, 2 and 3.
+
+Hence **1, 2 and 3** are correct choices.
+
+*****
+**Question 2:** Let $\Bbb C \rightarrow \Bbb C$ be a meromorphic function analytic at $0$ satisfying $f\left(\frac{1}{n}\right ) = \frac{n}{2n+1}$ for $n \geq 1$, Then
+
+1. $f(0) = 1/2$
+2. $f$ has a simple pole at $z = -2$
+3. $f(2) = 1/4$
+4. no such meromorphic function exists
+
+**Answer:** Same as above $0$ is the accumulation point of the given sequence $\{\frac{1}{n} \}$. Again,
+$$f\left( \frac{1}{n} \right )= \frac{1}{2+1/n}$$
+Then $g(z)=\frac{1}{2+z}$, will be an analytic function such that $f$ and $g$ are equal on those point of sequence. Hence both are equal.
+
+Clearly 1, 2 and 3 option are true by direct substitution.
+
+Hence **1, 2 and 3** are correct choice.
+
+*****
+**Question 3:** Let $f$ be an holomorphic function on the unit disc $\{|z| < 1\}$ in the complex plane. Which of the following is/are necessarily true?
+
+1. If for each positive integer $n$  we have $f\left ( \frac{1}{n}\right )= \frac{1}{n^2}$ then $f(z) = z^2$ on the unit disc.
+2. If for each positive integer $n$  we have $f\left ( 1 - \frac{1}{n}\right ) = \left ( 1 - \frac{1}{n} \right )^2$ then $f(z) = z^2$ on the unit disc.
+3. $f$ cannot satisfy  $f\left( \frac{1}{n}\right ) = \frac{(-1)^n}{n}$ for each positive integer $n$.
+4. $f$ cannot satisfy  $f\left (\frac{1}{n}\right ) = \frac{1}{n + 1}$ for each positive integer $n$.
+
+**Answer:** Checking each option one by one,
+
+**Option 1:** Here $\frac{1}{n} \to 0 \in D$. Consider $g(z)=z^2$, then $f$ and $g$ are equal at each point of sequence. Hence true.
+
+**Option 2:** Here $1-\frac{1}{n} \to 1 \notin D$, hence the requirement of the theorem is not fulfilled. It is not necessarily true.
+
+**Option 3:** Assume there is an analytic function $f$ such that $f\left (\frac{1}{n}\right ) = \frac{(-1)^n}{n}$, then $f$ is continuous at $0$,
+$$f(0)=\lim_{n \to \infty } f\left ( \frac{1}{n}\right ) =\lim_{n \to \infty } \frac{(-1)^n}{n}=0.$$
+Then
+$$\begin{align}f'(0)&= \lim_{x \to 0} \frac{f(x)-f(0)}{x} \\ &=\lim_{n \to \infty } \frac{f\left ( \frac{1}{n} \right ) }{\frac{1}{n}} \\ & =\lim_{n \to \infty }\frac{(-1)^n/n}{1/n} \\ & =\lim_{n \to \infty }(-1)^n.\end{align}$$
+Since the function is not differentiable at $0$, hence can't be analytic.
+
+**Option 4:** The function $f(z)=\frac{z}{z+1}$ satisfies the value at $1/n$ and analytic in open disk. Hence this option is false.
+
+Hence **1 and 3** are correct choice.
+
+******
+**Question 4:** Let $f:\Bbb C \rightarrow \Bbb C$ be an entire function and let $g:\Bbb C \rightarrow \Bbb C$ be defined by $g(z) = f(z) - f(z+1)$ for $z \in \Bbb C$. Which to the following statements are true?
+
+1. if $f\left ( \frac{1}{n}\right )=0$ for all positive integers $n$, then $f$ is a constant function
+2. if $f\left (n\right )=0$ for all positive integers $n$, then $f$ is a constant function
+3. if $f\left ( \frac{1}{n}\right )=f\left (\frac{1}{n}+1\right )$ for all positive integers $n$, then $g$ is a constant function
+4. if $f\left( n\right )=f \left ( n+1\right )$ for all positive integers $n$, then $f$ is a constant function
+
+**Answer:** Checking each option one by one,
+
+**Option 1:** Since $0$ is the accumulation point and the function $f$ is analytic at $0$, hence it zero everywhere. Hence true.
+
+**Option 2:** Consider the function $f(z)=\sin (\pi z)$, then $f$ is zero for all positive integers but it is not constant. Hence false.
+
+**Option 3:** Here $g(1/n)=f(1/n)-f(1/n-1)=0$ and $0$ is the accumulation point where $g$ is analytic. Hence it will be identically zero. Hence true.
+
+**Option 4:** Same counterexample in option 2 will work here $i.e.$, $f(z)=\sin (\pi z)$, we have $f(n)=f(n+1)=0$.
+
+Hence **1 and 3** are correct choice.
+<!--
+
+-------
+**Question:** Let $f,~g$ be holomorphic functions defined on $A \cup D$, where
+\begin{align*}
+A & = \set{z \in \C : \frac{1}{2} < |z| < 1} \text{ and } \\
+D & = \set{z \in \C : |z - 2| < 1 }.
+\end{align*}
+Which of the following statements are correct?
+
+1. if $f(z)g(z) = 0$ for all $z \in A \cup D$, then either $f(z) = 0$ for all $z \in A $ or $g(z)= 0$ for $z \in A$
+2. if $f(z)g(z) = 0$ for all $z \in  D$, then either $f(z) = 0$ for all $z \in D $ or $g(z)= 0$ for $z \in D$
+3. if $f(z)g(z) = 0$ for all $z \in A$, then either $f(z) = 0$ for all $z \in A $ or $g(z)= 0$ for $z \in A$
+4. if $f(z)g(z) = 0$ for all $z \in A \cup D$, then either $f(z) = 0$ for all $z \in A \cup D $ or $g(z)= 0$ for $z \in A \cup D$
+
+-->

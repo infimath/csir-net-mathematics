@@ -1,0 +1,100 @@
+---
+layout: post
+title: Autonomous First Order ODE
+tags: [Autonomous]
+---
+
+A differential equation is called **autonomous** if it has no independent term. Hence a first order general ode will look like
+$$\dfrac{dy}{dt} = f(y) \phantom{csir net}\text{  [Independent of $t$]}.$$
+
+**Qualitative Treatment of Autonomous ODE**
+**STEP I:** Find the critical points $y_0$(solution of $f(y)=0$). These are horizontal solution of the given ode.
+![csir-net-math](https://googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/Horizontal%20solution%20of%20ODE.png)
+
+Since two solutions(called integral curve) can't intersect, hence other solution will be in the region bounded by these horizontal solution.
+**STEP II:** As we have partition the space with horizontal solution, now identify the region with $f(y)>0$ and $f(y)<0$.
+
+![csir-net-math](https://googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/region%20of%20ODE.png)
+
+**STEP III:** As we know that 
+\begin{align*}
+\left [\dfrac{dy}{dt} = f(y) \right ]
+\begin{matrix} >0 &\Rightarrow y(t)\text{ is increasing}\\
+<0 &\Rightarrow y(t)\text{ is decreasing}
+\end{matrix}
+\end{align*}
+Hence the solution will look like
+
+![csir-net-math](https://googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/plot%20of%20solution%20of%20autonomous%20ODE.png)
+
+**NOTE 1:** Since $f(y)$ is independent of $t$, all solution in a region will be translation of a particular solution along the $t-$axis.
+**NOTE 2:** Solution tends to converge towards $y_1$ in the neighborhood of $y_1$, which an example of a stable critical point. While solutions tend to diverge form $y_2$ in the neighborhood of $y_2$, which is an example of unstable critical point.
+
+****
+**Question 1:** Let $P$ be a polynomial of degree $N$, with $N \geq 2$. Then the initial value problem $$u'(t)=P(u(t)),~u(0)=1$$ has always
+
+1. A unique sloution in $\mathbb{R}$
+2. $N$ number of distinct solution in $\mathbb{R}$
+3. No solution in any interval containing $0$ for some $P$.
+4. A unique solution in an interval containing $0$.
+
+**Answer:** This is a autonomous ODE with $y=u(t)$, and the solution (integral curve) will pass through $(0,1)$. Since only one integral curve will pass through any point, hence we get a unique solution in an interval containing $0$. 
+
+Hence **1** is correct choice.
+
+******
+**Question 2:** Let $y_1(x)$ and $y_1(x)$ be the solution of the differential equation $\dfrac{dy}{dt} = y + 17$ with initial condition $y_1(0)=0,y_2(0)=1$. Then 
+
+1. $y_1$ and $y_2$ will never intersect.
+2. $y_1$ and $y_2$ will intersect at $x=17$.
+3. $y_1$ and $y_2$ will intersect at $x=e$.
+4. $y_1$ and $y_2$ will intersect at $x=1$.
+
+**Answer:** Here $y_1$ and $y_2$ pass through $(0,0)$ and $(0,1)$ respectively. Horizontal solution will pass through $y = -17$, both the point lies the region above it and the solution will be increasing, so it can't pass through two vertical points.
+
+Hence **1** is correct choice.
+
+*****
+**Question 3:** The differential equation $\dfrac{dy}{dt} =60(y^2)^{1/5};x>0~y(0)=0$ has 
+
+1. a unique solution. 
+3. no solution. 
+2. two solutions. 
+4. infinite number of solutions. 
+
+**Answer:** Here the horizontal solution is the $x-$axis($y=0$). The given point lies in this line, hence unique solution.
+
+Hence **1** is correct choice.  
+
+******
+**Question 4:** Consider the initial value problem (IVP) 
+$$\dfrac{dy}{dt}=y^2, y(0)=1, (x,y)\in \mathbb{R}\times \mathbb{R}.$$ Then there exists a unique solution of the IVP on 
+
+1. $(- \infty, \infty)$
+2. $(- \infty, 1) $
+3. $(-2,2)$
+4.  $(1, \infty)$
+
+**Answer:** Here $x-$axis is the only horizontal solution of the ODE. This will also partition the plane in upper($y>0$) and lower($y<0$). Since the point $(0,1)$ in upper half plane hence we get unique solution in $(1, \infty)$ only.
+
+Hence **4** is correct choice.
+
+*****
+**Question 5:** Let $y:\mathbb{R} \rightarrow \mathbb{R}$ satisfy the initial value problem 
+$$y'(t)=1-y^2,t\in \mathbb{R},~y(0)=0.$$ Then 
+
+
+1. $y(t_1)=1$ for some $t\in R$. 
+2. $y(t)>-1$ for all $t\in R$.
+3. $y$ is strictly increasing in $\mathbb{R}$. 
+4. $y$ is increasing in $(0, 1)$ and decreasing in $(1,\infty)$. 
+
+**Answer:** Here $f(y)=1-y^2=(1-y)(1+y)$, so $y=\pm 1$ are two horizontal solution of the given ode
+\begin{matrix}
+\text{Region 1}&y > 1 & f(y) < 0 & y(t) \text{ is decreasing}\\
+\text{Region 2}&-1>y>1 & f(y) > 0 &y(t) \text{ is increasing}\\
+\text{Region 3}&y <-1 & f(y) < 0 & y(t) \text{ is decreasing}\\
+\end{matrix}
+The required integral curve will pass through $(0,0)$, which lies in region 2, so the solution is increasing and bounded by $y \in (-1,1)$. Here 2nd and 4th option are correct.
+
+Hence **2 and 4** are correct choices.

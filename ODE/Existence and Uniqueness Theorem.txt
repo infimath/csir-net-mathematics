@@ -1,0 +1,78 @@
+---
+layout: post
+title: Existence and Uniqueness Theorem 
+tags: [ODE]
+---
+
+####Existance Theorem
+Let $R: | x-x_0 | < a, | y - y_0 | < b $ be a rectangle. If $f(x,y)$ is continuous and bounded in $R$ $i.e.$, there is a number $K$ such that 
+$$|f(x,y) |  \leq K ~ \forall ~(x,y) \in R,$$
+Then the IVP
+$$y'(x)=f(x,y),~y(x_0)=y_0$$
+has least one solution $y(x)$. This solution is defined for all $x$ in the interval 
+$$|x-x_0 | < \alpha,\text{ where } \alpha = \min\{a, \frac{a}{K}\}$$
+
+####Uniqueness Theorem
+Let $R: | x-x_0 | < a, | y - y_0 | < b $ be a rectangle. If $f(x,y)$ and $\dfrac{\partial f}{\partial y}$ are continuous and bounded in $R$ $i.e.$, there exist two numbers $K$ and $M$ such that $$|f(x,y) |  \leq K \text{ and }|\dfrac{\partial f}{\partial y}| \leq M\quad  \forall ~(x,y) \in R,$$
+Then the IVP
+$$y'(x)=f(x,y),~y(x_0)=y_0$$
+has unique solution $y(x)$. This solution is defined for all $x$ in the interval 
+$$|x-x_0 | < \alpha,\text{ where } \alpha = \min\{a, \frac{a}{K}\}$$
+
+Note: For uniqueness it is enough to satisfy the Lipschitz condition with respect to $y$ in $R$ $i.e.$, there exist a number $M$ such that 
+$$|f(x,y_2)-f(x,y_1)| \leq M \quad \forall (x,y_1),(x,y_2) \in R$$ 
+
+######Special Case: Linear First Order Ode
+Consider the IVP
+$$y' + p(t)y = q(t), \quad y(t_0) = y_0.$$
+If $p(t)$ and $q(t)$ are continuous functions on an open interval $\alpha < t_0 < \beta$, then there exists a unique solution to the IVP defined on the interval $(\alpha, \beta)$.
+
+****
+**Question 1:** Consider the equation
+$$\dfrac{dy}{dt}=(1+f^2(t))y(t),\quad y(0)=1:t\geq 0$$ 
+where $f$ is a bounded continuous function on $[0,\infty)$. Then
+ 
+1. This equation admits a unique solution $y(t)$ and further $\lim_{n \rightarrow \infty}y(t)$ and is finite.
+2. This equation admits two linearly independent solutions. 
+3. This equation admits a bounded solution for which $\lim_{n \rightarrow \infty}y(t)$ does not exist. 
+4. This equation admits a unique solution $y(t)$ and further, $\lim_{t \rightarrow \infty}y(t)=\infty$.
+
+**Answer:** The given ODE is linear and $(1+f^2(t))$ is continuous function on $[0,\infty)$, hence solution will exist and it will be unique.
+
+The ODE is separable hence we can solve it as,
+$$ y=Ce^{\int (1+f^2(t))dt } $$
+
+Note 
+$$\begin{align}&& 1+f^2(t) &\geq &1 \\ &\Rightarrow & \int_{0}^{\infty} (1+f^2(t))dt &=& \infty \\ &\Rightarrow  & \lim_{t \rightarrow \infty}y(t)&=& \infty\end{align}.$$
+
+Hence **4** is correct choice.
+
+*****
+**Question 2:** Consider the initial value problem 
+$$\newcommand{\R}{\mathbb{R}}y'(t)=f(t)y(t), \quad y(0)=1$$
+Where $f:\mathbb{R} \rightarrow \mathbb{R}$ is continuous. Then this Initial value problem has 
+
+1. infinitely many solutions for some $f$, 
+2. a unique solution $\R$, 
+3. no solution in $\R$ for some $f$.
+4. a solution in an interval containing $0$, but not on $\R$ for some $f$. 
+
+**Answer:** This is linear first order ODE hence continuity of $f$ will be enough for uniqueness and existence of the solution. Hence a unique solution will exist in $\R$
+
+Hence **2** is correct choice.
+
+******
+**Question 3:** Consider the initial value problem $$\dfrac{dy}{dx}=xy^{1/3}, \quad y(0)=0, (x,y)\in \R \times \R$$
+Then, which of the following are correct? 
+
+1. The function $f (x, y) =xy^{1/3}$ does not satisfy a Lipschitz condition with respect to y in any neighbourhood of $y=0$
+2. There exists a unique solution for the IVP 
+3. There exists no solution for the IVP 
+4. There exist more than one solution for the IVP 
+
+**Answer:** This is a non-linear ODE. Since $f(x,y)=xy^{1/3}$ is continuous in entire domain hence solution exist. 
+Also,
+$$\dfrac{\partial f}{\partial y}=x\frac{1}{3y^{2/3}}$$
+This is not continuous at $y=0$, hence it will not satisfy the Lipschitz Condition.
+
+Hence **1 and 4** are correct.

@@ -1,0 +1,82 @@
+---
+layout: post
+title: GS Section 1.3 Problems 1 - 9
+tags: [Gilbert Strang]
+---
+
+-------
+This series of post contain solution of selective exercises from the book "**Linear Algebra and Its Application, 4e**" by **Gilbert Strang**.
+
+-----------
+
+
+#####Problem 1.
+The given system of linear equation is 
+\begin{align}
+3x +2y &= 10 \\
+6x + 4y &= c 
+\end{align}
+Doing elimination on this system we get, 
+\begin{align}
+3x +2y &= 10 \\
+0 &= c - 20
+\end{align}
+The system will inconsistent when $c - 20 \neq 0$ $\Rightarrow \boxed{c\neq20}$. Consider $c = 10$, then the given system will have no solution. 
+
+The system will have infinitely many solution if $c - 20 = 0$ $\Rightarrow \boxed{c = 20}$.
+
+#####Problem 2. 
+We have to eliminate coefficient of $x $ in second equation. Hence required multiple of equation $1$ to be subtracted in $2$ will be given by $-1 - (2c) = 0$ $\Rightarrow \boxed{c = -1/2}$.
+
+The triangular system we get after this elimination will be 
+\begin{align}
+2x -4y &= 6 \\
+3y &= 3
+\end{align}
+Solving by back-substitution $y = 1$ and $x = (6+4)/2=5$.
+
+
+#####Problem 3.
+To make the given system singular, both line should be parallel
+$$\frac{2}{4} = \frac{b}{8} \Rightarrow b = 4.$$
+The solution will have solution if both the lines are multiple of each other $i.e.$,
+$$\frac{2}{4} = \frac{4}{8} = \frac{16}{g} \Rightarrow 32.$$
+
+#####Problem 4.
+$\ell = 10/2=5 $ and the system obtained after this step will be 
+\begin{align}
+\boxed{2}x &+ 3y & = 1 \\ &\boxed{-6}y &= 6 
+\end{align}
+
+#####Problem 5.
+Solving above equation by back-substitution we get, $y = -1$, putting this in first equation we get, $2x-3=1 \Rightarrow x = 2$.
+
+#####Problem 6.
+We need $\ell = c/a$ and the system obtained after elimination will be 
+\begin{align}
+\boxed{a}x &+ by  &= f \\ 
+&\boxed{d - \frac{bc}{a}}y & = g
+\end{align}
+Second pivot is missing then $d - \frac{bc}{a}=0$ $\Rightarrow ad =bc$.
+
+#####Problem 7.
+For solution we must have,
+$$\frac{3}{6}= \frac{-2}{-4} = \frac{b_1}{b_2} \Rightarrow 2b_1 = b_2.$$
+The column picture will consist of two columns $u=3\begin{bmatrix}1 \\2 \end{bmatrix}$ and $v=2\begin{bmatrix}1 \\2 \end{bmatrix}$. Clearly both vectors lie on a line, so they can't generate whole plane.
+
+#####Problem 8.
+For $a =0$ we get missing pivot at first equation but the elimination breakdown temporarily because this can be fixed by a row exchange. 
+
+To breakdown elimination permanently we have to make the system singular
+$$\frac{a}{4} = \frac{3}{6} \Rightarrow a = 2.$$
+
+#####Problem 9.
+Again for $k = 0$ we get missing pivot at equation $1$, but this get fixed by row exchange hence we get unique solution.
+
+For other case we have to make the system singular, then
+$$\frac{k}{3} = \frac{3}{k} \Rightarrow k^2 = 9 \Rightarrow k = \pm3.$$
+For $k = -3$ the given equation are $-1$ multiple of each other, hence we get $\infty $ of solution.
+
+For $k =3$,  we get 
+$$\frac{3}{3} = \frac{3}{3} \neq  \frac{6}{-6} .$$
+Hence no solution.

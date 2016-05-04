@@ -1,0 +1,79 @@
+---
+layout: post
+title: GS Section 1.2 Problems 13 - 21
+tags: [Gilbert Strang]
+---
+
+-------
+This series of post contain solution of selective exercises from the book "**Linear Algebra and Its Application, 4e**" by **Gilbert Strang**.
+
+-----------
+
+
+#####Problem 13.
+**Row Picture:** Here we have two linear equation in three unknown. Since each linear equation represent a plane in $\mathbb{R}^3$, hence we have $2$ planes in $\mathbb{R}^3$.
+
+**Column Picture:** For each unknown we have a vector in $\mathbb{R}^2$, hence we have $3$ vectors in $\mathbb{R}^2$.
+
+#####Problem 14. 
+1. Line 
+2. Column vectors in $\mathbb{R}^4$
+3. Column Vectors
+
+#####Problem 15. 
+Given system of linear equation 
+$$\begin{align}x &-2y &= 0 \\ x &+\phantom{2}y &= 6 \end{align}$$
+
+#####Problem 16.
+Fix $z =2$, we get the equation 
+$$\begin{align}x &+y &= 0 \\ x &- y &= 2\end{align}$$
+Solving we get, $x = 1, y = -1$. Hence point $P(1,-1, 2)$ 
+
+Again fix $z = 0$, we get the system of equation 
+$$\begin{align}x &+y &= 6\\ x &- y &= 4\end{align}$$
+On solving we get $x  = 5, y = 1$. Hence the point of intersection will be $Q(5,1,0)$.
+
+Midpoint of $PQ$ = $\left (\frac{5+1}{2}, \frac{1-1}{2},\frac{0+2}{2}\right )=(3,0,1)$.
+
+#####Problem 17.
+1. Linear combination of first two 
+2. $(1,1,0)$ and $(0,1,1)$
+3. $c = 10$
+
+#####Problem 18.
+$u = 0 ,v = 0, w = 1$ then we have 
+$$ \begin{matrix} 8=8\\9=9\\7=7\end{matrix} \quad \Rightarrow \quad (u,v,w) = (0,0,1).$$
+
+#####Problem 19.
+1. intersect
+
+#####Problem 20. 
+Consider a system of linear equations 
+\begin{align}
+&x &+\phantom{2} y& + z& = 2 &&(20.1)\\
+&x &+2 y& + z& = 3 &&(20.1)
+\end{align}
+The system of linear equation obtained after adding equation $(20.1)$ in $(20.2)$ as follows
+\begin{align}
+&\phantom{2} x &+\phantom{2} y& + \phantom{2} z& = 2 &&(20.3)\\
+&2x &+3 y& + 2z& = 5 &&(20.4)
+\end{align}
+**Row Picture:** The plane represented by each equation has been changed because the second equation has been changed.
+
+**Column Picture:** The column vectors in given system of linear equation is $$u = \begin{pmatrix}1 \\1 \end{pmatrix} \quad v =\begin{pmatrix}1 \\2 \end{pmatrix} \quad w = \begin{pmatrix}1 \\1 \end{pmatrix}$$ 
+In new system of linear equation the column is $$u'= \begin{pmatrix}1 \\2 \end{pmatrix} \quad v' =\begin{pmatrix}1 \\3 \end{pmatrix} \quad w' = \begin{pmatrix}1 \\2 \end{pmatrix}$$ Clearly the vectors has changed.
+
+**Solution:** Let $(\overline{x}, \overline{y},\overline{z})$ is a solution of given system then in new system we have 
+\begin{align}
+&\phantom{2} \overline{x} &+\phantom{2} \overline{y}& + \phantom{2} \overline{z}& = 2 \\
+&2\overline{x} &+3 \overline{y}& + 2\overline{z}& = ( \overline{x} + \overline{y} + \overline{z})+ ( \overline{x}+2\overline{y}+ \overline{z})=2+3=5
+\end{align}
+Clearly this also satisfies the new system of linear equation, hence the solution remain unchanged.
+
+#####Problem 21. 
+1. Point
+
+The given system of linear equation is 
+$$x \begin{pmatrix}1\\0\\0\\0\end{pmatrix}+y \begin{pmatrix}1\\1\\0\\0\end{pmatrix}+z \begin{pmatrix}1\\1\\1\\0\end{pmatrix}+w \begin{pmatrix}1\\1\\1\\1\end{pmatrix}=x \begin{pmatrix}3\\3\\3\\2\end{pmatrix}$$
+By adding third column with two times last column of LHS, we get the vector in RHS. Hence $(x,y,z,w)=(0,0,1,2)$ will be a solution of given system.
+

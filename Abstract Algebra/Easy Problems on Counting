@@ -1,0 +1,57 @@
+---
+layout: post
+title: Easy Problems on Counting
+tags: Counting
+---
+
+**Question 1:** The number of $4$ digit numbers with no two digits common is
+
+$1. ~4536 \quad 2.~3024 \quad 3.~5040  \quad 4.~4823 $
+
+**Answer:** This is a simple question of counting, suppose we have 4 boxes and we have to fill it with a single digit in each box with above constrains
+\begin{array}{|c|c|c|c|} \hline1st & 2nd & 3rd & 4th \\ \hline  \end{array}
+
+ 1. For 1st place we can't put $0$, hence we have total, $10-1 = 9$, choices
+ 2. From 2nd  place and onward we can put $0$ but can't fill the digit already used, hence we have  $10 - 1 = 9$ choices.
+ 3. For 3rd place we have $10 - 2 = 8$ choices.
+ 4. For 4th place we have $10 - 3 = 7$ choices.
+
+Hence total possible digits $=  9 \times 9 \times 8\times 7 = 4536$.
+
+Hence **1** is correct choice.
+
+****
+**Question 2:** The number of words that can be formed by permuting the letters of **MATHEMATICS** is
+
+$1.~ 5040 \quad 2.~4989600 \quad 3. ~11! \quad 4. ~8! $
+
+**Answer:** Here **M, A, T** comes twice, hence total number of permutation will be $\frac{11!}{2! \cdot 2! \cdot 2! } = 4989600$.
+
+Hence **2** is correct choice.
+
+***
+**Question 3:** Let $M=\{(a_1,a_2,a_3):a_i \in \{1,2,3,4\},a_1+a_2+a_3=6\}$, Then the number of elements in $M$ is
+
+$1.~8 \quad 2.~9 \quad 3.~10 \quad4.~12$
+
+**Answer:** Count the triplets
+1. $1+2+3 = 6$, we have $3! = 6$ choices.
+2. $1 +1+4 = 6$, we have $3!/2! = 3$  choices.
+3. $2+2+2 = 6$, we have $3!/3! = 1$  choices.
+Hence we have total $6+3+1 = 10$, choices.
+
+Hence **3** is correct choice.
+
+*****
+**Question 4:** In a group of $265$ persons, $200$ like singing, $110$ like dancing and $55$ like painting. If $60$ persons like both singing and dancing, $30$ like both singing and painting and $10$ like all three activities, then the number of persons who like *only* dancing and painting is
+
+$1. ~10 \quad 2.~20 \quad 3.~ 30 \quad 4.~40$
+
+**Answer:** The problem can be simply represented using Venn diagram as follows
+![sedit](https://4c430cc74fdb489bdc87fc280314be7ce9c05b71.googledrive.com/host/0B_xlLCDkRnz2WTBKdjhfZmlSZ2s/New%20Venn%20-%20Demo.png)
+Here we need to find $ n(A \cap B) - n(A \cap B \cap C)$. As we know that
+\begin{align*}n(A \cup B \cup C) =& n(A) + n(B) + n(C) - n(A \cap B) - n(A\cap C)\\& - n(B\cap C)  + n(A \cap B \cap C) \\
+n(A \cap B) - n(A \cap B \cap C) =&  n(A) + n(B) + n(C)- n(A\cap C) \\& - n(B\cap C) - n(A \cup B \cup C) \\
+=&110 + 55 +200 - 60 -30 - 265 = 10
+\end{align*}
+Hence **1** is correct option.

@@ -1,0 +1,87 @@
+---
+layout: post
+title: Problems on Classification of Second Order Linear PDE
+tags: [PDE]
+---
+
+A general linear PDE of 2nd order look like $$au_{xx}+bu_{xy}+cu_{yy}+du_x+eu_y+fu+g=0 \tag{*}$$ where $a,b,\ldots , g$ are functions of $x$ and $y$.
+
+Depending on the value of $a,b$ and $c$, given PDE can be classified into three regions.
+1. **Parabolic:** $b^2-4ac=0$
+2. **Elliptic:** $b^2-4ac<0$
+3. **Hyperbolic:** $b^2-4ac>0$
+
+******
+**Question 1:** The second Order partial differential equation 
+\begin{align*}\frac{(x-y)^2}{4}u_{xx}&+ (x-y)\sin(x^2+y^2)u_{xy}+\cos^2(x^2+y^2)u_{yy}&=0\\
+&+(x-y)u_x+\sin^2(x^2+y^2)u_{y}+u& \end{align*}
+
+1. Elliptic in the region $\{(x,y:x\neq y,x^2+y^2<\pi/6)\}$
+2. Hyperbolic in the region $\{(x,y:x\neq y,\frac{\pi}{4}<x^2+y^2<\frac{3 \pi}{4}\}$
+3. Elliptic in the region $\{(x,y:x\neq y,\frac{\pi}{4}<x^2+y^2<\frac{3 \pi}{4}\}$
+4. Hyperbolic in the region $\{(x,y:x\neq y, x^2+y^2<\frac{\pi}{4}\}$
+
+**Answer:** Comparing the given PDE with $(*)$ we get $$a = \frac{(x-y)^2}{4},\quad  b=(x-y)\sin(x^2+y^2), \quad c= \cos^2(x^2+y^2) $$
+Then,
+\begin{align*}\Delta&=b^2-4ac 
+\\&= [(x-y)\sin(x^2+y^2)]^2-4\cdot \frac{(x-y)^2}{4} \cdot \cos^2(x^2+y^2)\cr
+&=(x-y)^2(\sin^2(x^2+y^2)-\cos^2(x^2+y^2))\cr
+&= -(x-y)^2\cos(2(x^2+y^2))
+\end{align*}
+Now 
+\begin{align*}
+\text{Elliptic: }\Delta < 0 \Rightarrow & \{(x,y):x\neq y,-\frac{\pi}{2}<2(x^2+y^2)<\frac{\pi}{2}\} \cr 
+&=\{(x,y):x\neq y,(x^2+y^2)<\frac{\pi}{4}\} \cr
+\text{Hyperbolic: }\Delta > 0 \Rightarrow & \{(x,y):x\neq y,\frac{\pi}{2}<2(x^2+y^2)<\frac{3\pi}{2}\} \cr 
+&=\{(x,y):x\neq y,\frac{\pi}{4}<(x^2+y^2)<\frac{3\pi}{4}\}
+\end{align*}
+
+Hence **1 and 2** are correct choice.
+
+*******
+**Question 2:** The partial differential equation $$yu_{xx}+xu_{yy}=0$$ is hyperbolic in 
+
+1. the second and fourth quadrants. 
+2. the second and third quadrants. 
+3. the first and second quadrants. 
+4. the first and third quadrants. 
+
+**Answer:** Comparing the given PDE with $(*)$ we get $$a = y,\quad  b=0, \quad c= x $$ Then,
+$$b^2-4ac = 0^2-4\cdot y \cdot x=-4xy $$
+For hyperbolic region we have $b^2-4ac>0$, hence
+$$-4xy>0\Rightarrow xy<0 \Rightarrow \text{ 2nd and 4th quadrant}.$$
+
+Hence **1** is correct choice.
+
+******
+**Question 3:** The second order PDE $$u_{yy}-u_{xx}+x^3u=0$$ is 
+ 
+1. elliptic for all $\newcommand{\R}{\mathbb{R}} x\in \R,y\in \R$. 
+2. parabolic for all $x\in \R,y\in \R$.  
+3. elliptic for all $x\in \R, y <0$.
+4. hyperbolic for all $x\in \R, y <0$. 
+
+**Answer:** Comparing the given PDE with $(*)$ we get $$a = -1,\quad  b=0, \quad c= 1 $$ Then,
+$$b^2-4ac = 0^2-4\cdot (-1) \cdot 1= 4>0 \Rightarrow \text{ Hyperbolic}$$
+
+Hence **4** is correct choice.
+
+*******
+**Question 4:** Let $a, b, c$ be continuous functions defined on $\R^2$. Let $V_1, V_2, V_3$ be nonempty subset of $\R^2$ such that $V_1\cup V_2\cup V_3=\R^2$
+and the PDE $$a(x, y)u_{xx} +b(x, y)u_{xy} + c(x, y)u_{yy} =0 $$ is elliptic in $V_1$ , parabolic in $V_2$ and hyperbolic in $V_3$ , then 
+
+1. $V_1, V_2$ and $V_3$ are open sets in $\R^2$ 
+2. $V_1$ and $V_3$ are open sets in $\R^2$ 
+3. $V_1$ and $V_2$ are open sets in $\R^2$ 
+4. $V_2$ and $V_3$ are open sets in $\R^2$ 
+
+**Answer:** Consider a function $f:\R^2 \rightarrow \R$ such that $f(x,y)=b^2-4ac$, then $f$ will be a continuous function provided $a,b$ and $c$ are continuous functions of $x$ and $y$. Then 
+$$V_1= f^{-1}(-\infty,0), \quad V_2= f^{-1}(0), \quad V_3= f^{-1}(0,\infty)$$
+
+>As we know that for a continuous function, inverse image of open set is open, analogously inverse image of closed set is closed. 
+
+- $(-\infty,0)$ is open, hence $V_1$ is open.
+- $\{0\}$ is closed, hence $V_2$ is closed.
+- $(0,\infty)$ is open, hence $V_3$ is open.
+
+Hence **2** is correct choice.

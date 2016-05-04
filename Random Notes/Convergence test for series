@@ -1,0 +1,51 @@
+####Important results on Convergence of Series
+
+######**Necessary Condition for Convergence:**
+If $\sum a_n$ converges then $\lim_{n \to \infty}a_n=0$.
+
+######**Ratio test:**
+This is also known as D'Alembert's criterion. Suppose that there exists r such that
+$$\newcommand{\R}{\mathbb{R}}\lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right| = r.$$
+
+- If $r < 1$, then the series is absolutely convergent.
+- If $r > 1$, then the series diverges.
+- If $r = 1$, the ratio test is inconclusive, and the series may converge or diverge.
+
+######**Root test:**
+This is also known as the nth root test or Cauchy's criterion. Define r as follows:
+$$r = \limsup_{n \to \infty}\sqrt[n]{|a_n|},$$
+
+- If r < 1, then the series converges.
+- If r > 1, then the series diverges.
+- If r = 1, the root test is inconclusive, and the series may converge or diverge.
+
+######**Integral test:**
+The series can be compared to an integral to establish convergence or divergence. Let $f:[1,\infty)\to\R_+$ be a non-negative and monotone decreasing function such that $f(n) = a_n$. If
+
+$$\int_{1}^{\infty} f(x)\, dx = \lim_{t \to \infty} \int_{1}^{t} f(x)\, dx < \infty,$$
+then the series converges or diverges simultaneously.
+
+######**Direct comparison test:**
+If the series $\sum_{n=1}^\infty b_n$ is an absolutely convergent series and $|a_n|\le |b_n|$ for sufficiently large n , then the series $\sum_{n=1}^\infty a_n$ converges absolutely.
+
+######**Limit comparison test:**
+If $\left \{ a_n \right \}, \left \{ b_n \right \} > 0$, and the limit $\lim_{n \to \infty} \frac{a_n}{b_n}$ exists, is finite and is not zero, then $\sum_{n=1}^\infty a_n$ converges if and only if $\sum_{n=1}^\infty b_n$ converges.
+
+######**Cauchy condensation test:**
+Let $\left \{ a_n \right \}$ be a positive non-increasing sequence. Then the sum $A = \sum_{n=1}^\infty a_n$ converges if and only if the sum $A^* = \sum_{n=0}^\infty 2^n a_{2^n}$ converges. Moreover, if they converge, then $A \leq A^* \leq 2A$ holds.
+
+######**Abel's test:** 
+Suppose the following statements are true:
+
+- $\sum a_n$  is a convergent series, and
+- ${b_n}$ is a bounded monotone sequence.
+
+Then $\sum a_nb_n$  is also convergent.
+
+######**Alternating series test:**
+This is also known as the Leibniz criterion. If
+
+- $\{a_n\}$ is a sequence monotonically decreasing sequence of positive numbers, and
+- $\lim_{n \to \infty}a_n=0$.
+
+Then $\sum (-1)^na_n$ is convergent.

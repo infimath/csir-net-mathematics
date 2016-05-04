@@ -1,0 +1,37 @@
+---
+layout: post
+title: Finding Last Digit
+tags: [Modular Arithmetic]
+---
+
+**Question 1:** The unit digit of $2^{100}$ is
+
+$1.~2 \quad 2.~4 \quad3.~6 \quad4.~8$
+
+**Answer:** This problem can be solved by basic idea of periodicity. Calculating few terms mod $10$,
+
+|$2^1$ | $2^2$ | $2^3$ | $2^4$ | $2^5 $|$ 2^6$|
+|:----|:-----|:------|:----|:------|:----|
+|$2  $ |  $4 $ |  $8 $ |  $6 $ |  $2$  |  $4 $|
+
+We can see that the periodicity is $4$. 
+Hence $2^{k + 4n}= 2^k $ for $k =\{1,2,3,4\}$.
+Here $2^{100} = 2^{4+ 24\cdot 4} = 2^4 = 6$.
+
+Hence **3** is correct answer.
+
+****
+**Question 2:** The last digit of $38^{2011}$ is
+
+$1.~6 \quad 2.~2 \quad 3.~4 \quad 4.~8$
+
+**Answer:** First note that $38 = 8$ (mod $10$).
+Compute the periodicity of $8$ mod $10$.
+|$8^1$ | $8^2$ | $8^3$ | $8^4$ | $8^5 $|
+|:----|:-----|:------|:----|:------|
+|$8  $ |  $4 $ |  $2 $ |  $6 $ |  $8$  |
+Again the period is $4$. 
+Hence $38^{2011} = 8^{2011}= 8^{3 + \text{ multiple of }4} = 8^3 = 2$.
+
+Hence **2** is the correct choice.
+

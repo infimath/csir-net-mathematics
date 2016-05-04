@@ -1,0 +1,45 @@
+---
+layout: post
+title: Problems on System of ODE's 
+tags: [ODE]
+---
+
+**Question 1:** Consider the first order system of linear equations 
+$$\dfrac{dX}{dt}=AX;A=\begin{bmatrix}\phantom{-}3 & \phantom{-}2 \cr -2 & -1\end{bmatrix}; X=\begin{bmatrix}x_1(t) \cr x_2(t)\end{bmatrix}$$
+Then 
+
+1. the coefficient matrix A has a repeated eigenvalue $\lambda =1$
+2. there is only one linearly independent eigenvector $X=\begin{bmatrix}\phantom{-}1 \cr -1\end{bmatrix}$
+3. the general solution of the ODE is $(aX_1 + bX_2)e^t $, where $a$ and $b$ are arbitrary 
+constants and $X=\begin{bmatrix}\phantom{-}1 \cr -1\end{bmatrix}$ and $X_2 = \begin{bmatrix} t \cr \frac{1}{2}-t \end{bmatrix}$
+4. the vectors $X_1$  and $X_2$ in the option 3 given above are linearly independent 
+
+-------
+**Question 2:** Let $y(t)=\begin{pmatrix}y_1(t) & y_2(t) \end{pmatrix} $ satisfy  
+$$\dfrac{dy}{dt}=Ay;t>0,y(0)=\begin{pmatrix}0 & 1 \end{pmatrix}$$
+where $A$ is a $2\times 2$ constafit matnx with real entnes satisfying trace $A=0$ and $\det A >0$. Then $y_1(t)$ and $y_2(t)$ both are 
+
+1. monotonically decreasing function of $t$.
+2. monotonically increasing function of $t$.
+3. oscillating function of $t$.
+4. constant function of $t$.
+
+------
+**Question 3:** Consider the system of ODE 
+$$\dfrac{dY}{dx}=AY, Y(0)=\begin{bmatrix}\phantom{-}2 \cr -1\end{bmatrix}$$
+Where $A = \begin{bmatrix}1 & \phantom{-}2 \cr 0 & -1\end{bmatrix}$ and $Y=\begin{bmatrix}y_1(t) \cr y_2(t)\end{bmatrix}$. Then 
+
+1. $y_1(x) \rightarrow \infty$ and $y_2(x) \rightarrow 0$ as $x \rightarrow \infty$.
+2. $y_1(x) \rightarrow 0$ and $y_2(x) \rightarrow 0$ as $x \rightarrow \infty$.
+3. $y_1(x) \rightarrow \infty$ and $y_2(x) \rightarrow -\infty$ as $x \rightarrow -\infty$.
+4. $y_1(x),y_2(x) \rightarrow -\infty$ as $x \rightarrow -\infty$.
+
+**Question 4:** Let $A = \begin{pmatrix}0&1&0 \cr 0&0&1 \cr 0&0&0\end{pmatrix}$ and $y=\begin{pmatrix} y_1(t) \cr y_2(t) \cr y_3(t)\end{pmatrix}$ satisfy 
+$$\dfrac{dy}{dx}=Ay;t>0;y(0)=\begin{pmatrix}1 \cr 1 \cr 1\end{pmatrix}$$
+Then 
+
+1. $y_1(t)= 1 + t + \frac{t^2}{2},~y_2(t)=1+t,~y_3(t)=1.$
+2. $y_1(t)= 1 + t{2},~y_2(t)=1+t + \frac{t^2},~y_3(t)=1.$
+3. $y_1(t)= 1,~y_2(t)=1+t,~y_3(t)=1+ t + \frac{t^2}{2}.$
+4. $y_1(t)=e^{tA}y(0).$
+

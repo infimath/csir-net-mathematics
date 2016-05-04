@@ -1,0 +1,17 @@
+---
+layout: post
+title: Question on Dimension of Symmetric Matrix
+tags: [Dimension, Symmetric Matrix]
+---
+
+**Question:** The dimension of vector space of all symmetric matrices of order $n \times n(n \geq 2)$ with entries and trace equal to zero is
+1. $(n^2-n)/2-1$    2. $(n^2+n)/2-1$     3. $(n^2-2n)/2-1$    4.  $(n^2+2n)/2-1$
+**Answer:** Calculating dimension can be thought as counting problem. The total dimension of $n \times n$ matrix is $n^2$ and each constrain(equation) reduces the dimension by one.
+Here the given matrix is symmetric $i.e.$, we already have $a_{ij} = a_{ji}$ for all $i,j$. So a symmetric matrix already put $\frac{1}{2}n(n-1)$ constrain on square matrix of dimension. Hence dimension of symmetric matrix is $n^2 - \frac{1}{2}n(n-1) = \frac{1}{2}n(n+1)$.
+In this particular question, one more constrain has been imposed $i.e$, trace equal to $0 \Rightarrow \sum_{i} a_{ii} = 0$. Total dimension of given problem is $\frac{1}{2}n(n+1) - 1 = \frac{1}{2}(n^2+n) - 1 $
+
+Hence option **2** is correct.
+
+-----
+**Question:**  The dimension of the vector space of all symmetric matrices $A=(a_{jk})$ of order $n\times n(n\geq 2)$ with real entries, $a_{11}=0$ is
+1.  $(n^2+n-4)/2$    2. $(n^2+n+4)/2$     3. $(n^2+n-3)/2$     4. $(n^2+n+3)/2$
