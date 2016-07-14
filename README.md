@@ -12,7 +12,7 @@ You need to know the following softwares to contrubute to the project.
 - Github
 
 
-###Steps to follow:
+### Please these steps, so that our work remain organized:
 
 1. Sine up for a github account if you don't have one. 
 2. Fork this repository 
